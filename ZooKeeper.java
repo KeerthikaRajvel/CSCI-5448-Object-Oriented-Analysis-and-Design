@@ -22,14 +22,8 @@ public class ZooKeeper {
         for(int i=0;i<animals.length;i++)
         {
             System.out.println("Zookeeper : Calling "+animals[i].name+" the "+animals[i].getClass().getName()+"!!!");
-            if(!animals[i].getClass().getName().equals("Giraffe")) //Checks if the animal's class is not Giraffe
-            {
-                animals[i].makeNoise();
-            }
-            else // SubClass Giraffe misbehaves
-            {
-                animals[i].randomBehavior(1); //flag used to check if the randomly generated response matches the expected response
-            }
+            animals[i].makeNoise();
+
         }
     }
     public void feed(Animal[] animals) //ZooKeeper feeds all the animals
@@ -37,14 +31,7 @@ public class ZooKeeper {
         for(int i=0;i<animals.length;i++)
         {
             System.out.println("Zookeeper : Feeding "+animals[i].name+" the "+animals[i].getClass().getName()+"!!!");
-            if(!animals[i].getClass().getName().equals("Giraffe")) //Checks if the animal's class is not Giraffe
-            {
-                animals[i].feed();
-            }
-            else // SubClass Giraffe misbehaves
-            {
-                animals[i].randomBehavior(2); //flag used to check if the randomly generated response matches the expected response
-            }
+            animals[i].feed();
         }
     }
     public void exercise(Animal[] animals) //ZooKeeper makes all the animals exercise
@@ -52,14 +39,7 @@ public class ZooKeeper {
         for(int i=0;i<animals.length;i++)
         {
             System.out.println("Zookeeper : Making "+animals[i].name+" the "+animals[i].getClass().getName()+" exercise.");
-            if(!animals[i].getClass().getName().equals("Giraffe")) //Checks if the animal's class is not Giraffe
-            {
-                animals[i].roam();
-            }
-            else // SubClass Giraffe misbehaves
-            {
-                animals[i].randomBehavior(3); //flag used to check if the randomly generated response matches the expected response
-            }
+            animals[i].roam();
         }
 
     }
@@ -68,16 +48,9 @@ public class ZooKeeper {
         for(int i =0;i<animals.length;i++)
         {
             System.out.println("Zookeeper : Putting "+animals[i].name+" the "+animals[i].getClass().getName()+" to sleep.");
-            if(!animals[i].getClass().getName().equals("Giraffe")) //Checks if the animal's class is not Giraffe
-            {
-                animals[i].sleep();
-            }
-            else // SubClass Giraffe misbehaves
-            {
-                animals[i].randomBehavior(4); //flag used to check if the randomly generated response matches the expected response
-            }
+            animals[i].sleep();
         }
-        System.out.println("Zoo shut dowm.");
+        System.out.println(" ******** Zoo shut down ******** ");
     }
     public static void main(String[] args) throws FileNotFoundException {
 

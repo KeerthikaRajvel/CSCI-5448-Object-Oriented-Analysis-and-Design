@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.functions.FuncFalse;
+
 import java.util.Random;
 
 public class Animal { // Base Class
@@ -14,7 +16,6 @@ public class Animal { // Base Class
  public void makeNoise(){}
  public void feed(){}
  public void roam(){}
- public void randomBehavior(int flag){}//Only for the Subclass Giraffe
 
  public void sleep()
  {
@@ -36,25 +37,59 @@ class Giraffe extends Herbivore //Inherits the Class Herbivore
     public Giraffe(String name) {
         super(name);
     }
-    public void randomBehavior(int flag) //Random responses evoked.
+    public void makeNoise()
     {
         Random rand=new Random();
         int r=rand.nextInt((4 - 1) + 1) + 1; //Randomizing the Giraffe's response
-        if (r!=flag) //flag used to check if the randomly generated response matches the expected response. If no match, then it misbehaves.
-            System.out.println("*** Misbehavior ***");
         switch (r)
         {
-            case 1: this.makeNoise();break;
-            case 2: this.feed();break;
-            case 3: this.roam();break;
-            case 4: this.sleep();break;
+            case 1: this.makeNoise(r);break;
+            case 2: System.out.println("*** Misbehavior ***");super.feed();break;
+            case 3: System.out.println("*** Misbehavior ***");this.roam(r);break;
+            case 4: System.out.println("*** Misbehavior ***");super.sleep();break;
         }
     }
-    public void makeNoise()
+    public void feed()
+    {
+        Random rand=new Random();
+        int r=rand.nextInt((4 - 1) + 1) + 1; //Randomizing the Giraffe's response
+        switch (r)
+        {
+            case 1: System.out.println("*** Misbehavior ***");this.makeNoise(r);break;
+            case 2: super.feed();break;
+            case 3: System.out.println("*** Misbehavior ***");this.roam(r);break;
+            case 4: System.out.println("*** Misbehavior ***");super.sleep();break;
+        }
+    }
+    public void roam()
+    {
+        Random rand=new Random();
+        int r=rand.nextInt((4 - 1) + 1) + 1; //Randomizing the Giraffe's response
+        switch (r)
+        {
+            case 1: System.out.println("*** Misbehavior ***");this.makeNoise(r);break;
+            case 2: System.out.println("*** Misbehavior ***");super.feed();break;
+            case 3: this.roam(r);break;
+            case 4: System.out.println("*** Misbehavior ***");super.sleep();break;
+        }
+    }
+    public void sleep()
+    {
+        Random rand=new Random();
+        int r=rand.nextInt((4 - 1) + 1) + 1; //Randomizing the Giraffe's response
+        switch (r)
+        {
+            case 1: System.out.println("*** Misbehavior ***");this.makeNoise(r);break;
+            case 2: System.out.println("*** Misbehavior ***");super.feed();break;
+            case 3: System.out.println("*** Misbehavior ***");this.roam(r);break;
+            case 4: super.sleep();break;
+        }
+    }
+    public void makeNoise(int flag) //Method Overloading
     {
         System.out.println(this.name+" : I am a Giraffeee.");
     }
-    public void roam()
+    public void roam(int flag) //Method Overloading
     {
         System.out.println(this.name+" walks.");
     }

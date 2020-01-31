@@ -25,10 +25,9 @@ Pooh is waking up.
 --------------------------------------------------------
 Zookeeper : Calling Gabi the Giraffe!!!
 *** Misbehavior ***
-Gabi is going to sleep Zzzz.
+Gabi is eating greens.
 Zookeeper : Calling Geno the Giraffe!!!
-*** Misbehavior ***
-Geno walks.
+Geno : I am a Giraffeee.
 Zookeeper : Calling Gal the Goat!!!
 Gal : Bahhhhhh.
 Zookeeper : Calling Gag the Goat!!!
@@ -52,7 +51,7 @@ Pooh : Oink Oink.
 --------------------------------------------------------
 Zookeeper : Feeding Gabi the Giraffe!!!
 *** Misbehavior ***
-Gabi : I am a Giraffeee.
+Gabi walks.
 Zookeeper : Feeding Geno the Giraffe!!!
 *** Misbehavior ***
 Geno : I am a Giraffeee.
@@ -79,10 +78,9 @@ Pooh is eating greens and meat.
 --------------------------------------------------------
 Zookeeper : Making Gabi the Giraffe exercise.
 *** Misbehavior ***
-Gabi : I am a Giraffeee.
+Gabi is going to sleep Zzzz.
 Zookeeper : Making Geno the Giraffe exercise.
-*** Misbehavior ***
-Geno : I am a Giraffeee.
+Geno walks.
 Zookeeper : Making Gal the Goat exercise.
 Gal grazes.
 Zookeeper : Making Gag the Goat exercise.
@@ -107,7 +105,8 @@ Pooh jumps.
 Zookeeper : Putting Gabi the Giraffe to sleep.
 Gabi is going to sleep Zzzz.
 Zookeeper : Putting Geno the Giraffe to sleep.
-Geno is going to sleep Zzzz.
+*** Misbehavior ***
+Geno is eating greens.
 Zookeeper : Putting Gal the Goat to sleep.
 Gal is going to sleep Zzzz.
 Zookeeper : Putting Gag the Goat to sleep.
@@ -128,4 +127,4 @@ Zookeeper : Putting Pepa the Pig to sleep.
 Pepa is going to sleep Zzzz.
 Zookeeper : Putting Pooh the Pig to sleep.
 Pooh is going to sleep Zzzz.
-Zoo shut dowm.
+ ******** Zoo shut down ******** 
