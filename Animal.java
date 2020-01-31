@@ -1,5 +1,3 @@
-import com.sun.org.apache.xpath.internal.functions.FuncFalse;
-
 import java.util.Random;
 
 public class Animal { // Base Class
