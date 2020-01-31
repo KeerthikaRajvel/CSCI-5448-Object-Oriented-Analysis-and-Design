@@ -127,7 +127,7 @@ public class ZooKeeper {
 
         //Redirecting System.out.println() output to a file.
 
-        PrintStream o = new PrintStream(new File("dayatthezoo.out"));
+        PrintStream o = new PrintStream(new File("dayatthezoo.out")); //adapted from https://www.geeksforgeeks.org/redirecting-system-out-println-output-to-a-file-in-java/
         System.setOut(o);
 
         //ZooKeeper executing each of his responsibilities in order
