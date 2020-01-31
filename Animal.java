@@ -39,7 +39,7 @@ class Giraffe extends Herbivore //Inherits the Class Herbivore
     }
     public void makeNoise()
     {
-        Random rand=new Random();
+        Random rand=new Random(); // adapted from https://mkyong.com/java/java-generate-random-integers-in-a-range/
         int r=rand.nextInt((4 - 1) + 1) + 1; //Randomizing the Giraffe's response
         switch (r)
         {
