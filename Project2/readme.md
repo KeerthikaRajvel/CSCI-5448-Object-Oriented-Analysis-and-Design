@@ -11,7 +11,7 @@
 For this question, we implemented the startegy pattern. Our previous project had the following class structure : 
 ![Test Image 1](Animals.jpeg)
 Since the method 'roam()' varies among different kinds of animals, it is taken outside the class and encapsulated. We create a RoamBehaviour Interface that has a set of classes representing it's behaviour : WalkBehaviour, SwimBehaviour and RunBehaviour. The various subclasses then choose from these classes of behaviours. 
-The class diagram and sequence diagram for this is in the .doc file submitted. 
+The class diagram and sequence diagram for this is in the .doc file submitted. <br/>
 **Question 1(c)**<br/>
 For this question, we implemented the observer pattern.
 The Zoo keeper is the observable class and the Zoo announcer is the observer class.
