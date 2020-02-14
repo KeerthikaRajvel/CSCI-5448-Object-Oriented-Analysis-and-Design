@@ -1,14 +1,16 @@
 #------STRATEGY PATTERN IMPLEMENTATION-------#
 
 import abc
+import random
+
 class RoamBehaviour(abc.ABC): #Creating an interface of common behaviour "Roam"
     @abc.abstractmethod
     def roam(self,name):
         pass
-    
-#-----Set of Classes for the Roam Behaviour------# 
 
-class WalkBehaviour(RoamBehaviour): 
+#-----Set of Classes for the Roam Behaviour------#
+
+class WalkBehaviour(RoamBehaviour):
     def roam(self,name):
         print(name, " is walking.")
 
@@ -25,13 +27,13 @@ class SwimBehaviour(RoamBehaviour):
 
 class Observable(abc.ABC): #Creating an interface for the Publisher i.e. Zoo Keeper
     @abc.abstractmethod
-    def register_observer(self, observer): 
+    def register_observer(self, observer):
         pass
-    def remove_observer(self, observer): 
+    def remove_observer(self, observer):
         pass
-    def notify_observers(self): 
+    def notify_observers(self):
         pass
-        
+
 class Observer(abc.ABC): #Creating an interface for the Subscriber i.e. Zoo Announcer
     @abc.abstractmethod
     def update(self, task):
@@ -39,7 +41,7 @@ class Observer(abc.ABC): #Creating an interface for the Subscriber i.e. Zoo Anno
 
 class ZooKeeper(Observable): #Zoo Keeper implements the Observable interface
     def __init__(self,name):
-        '''function called automatically whenever a new objected is created to initialise the name of the ZooKeeper'''        
+        '''function called automatically whenever a new objected is created to initialise the name of the ZooKeeper'''
         self.name = name
         self.observers=[] #list of observers
         self.current_task=None #keeps track of the zoo keeper's current task
@@ -50,12 +52,12 @@ class ZooKeeper(Observable): #Zoo Keeper implements the Observable interface
     def notify_observers(self): #notifies all the observers when the zoo keeper's changes the task
         for observer in self.observers:
             observer.update(self.current_task)
-    def task_changed(self): 
+    def task_changed(self):
         self.notify_observers()
-    def set_task(self,task): 
-        self.current_task = task 
+    def set_task(self,task):
+        self.current_task = task
         self.task_changed()
-        
+
     #ZooKeeper Tasks
     def wakeUp(self,animals):
         self.set_task("wake")
@@ -104,7 +106,7 @@ class ZooAnnouncer(Observer):#Zoo Announcer implements the Observer interface
 
 class Animal:
     #Base class
-    
+
     def __init__(self,name):
         #function called automatically whenever a new objected is created to initialise the name of the Animal
         self.name = name
@@ -147,16 +149,36 @@ class Giraffe(Herbivore):
     #Inherits from class Herbivore
     def __init__(self,name):
         Animal.__init__(self,name)
-        self.roamBehaviour = WalkBehaviour(); #Setting roam behaviour in the sub class 
+        self.roamBehaviour = WalkBehaviour(); #Setting roam behaviour in the sub class
     def makeNoise(self):
+        r = random.randint(1,5)
+        switch(r):
+            case 1:
+                self.makeNoise(r)
+                break;
+            case 2:
+                print("*** Misbehavior ***"")
+                self.feed()
+                break;
+            case 3:
+                print("*** Misbehavior ***"")
+                self.sleep()
+                break;
+            case 4:
+                print("*** Misbehavior ***"")
+                self.roam()
+                break;
         print(self.name," : Giraffeeee")
+    def makeNoise(self,r):
+        print(self.name+"I am a Giraffeeeee.")
+    def feed(self)
 
-        
+
 class Goat(Herbivore):
     #Inherits from class Herbivore
     def __init__(self,name):
         Animal.__init__(self,name)
-        self.roamBehaviour = WalkBehaviour(); #Setting roam behaviour in the sub class 
+        self.roamBehaviour = WalkBehaviour(); #Setting roam behaviour in the sub class
     def makeNoise(self):
         print(self.name," : Baaaah")
 
@@ -165,15 +187,15 @@ class Crocodile(Carnivore):
     #Inherits from class Carnivore
     def __init__(self,name):
         Animal.__init__(self,name)
-        self.roamBehaviour = SwimBehaviour(); #Setting roam behaviour in the sub class 
+        self.roamBehaviour = SwimBehaviour(); #Setting roam behaviour in the sub class
     def makeNoise(self):
         print(self.name," : Crocodileeeee")
-        
+
 class Lion(Carnivore):
     #Inherits from class Carnivore
     def __init__(self,name):
         Animal.__init__(self,name)
-        self.roamBehaviour = RunBehaviour(); #Setting roam behaviour in the sub class 
+        self.roamBehaviour = RunBehaviour(); #Setting roam behaviour in the sub class
     def makenoise(self):
         print(self.name," : Raaaawrrr")
 
@@ -181,7 +203,7 @@ class Bear(Omnivore):
     #Inherits from class Omnivore
     def __init__(self,name):
         Animal.__init__(self,name)
-        self.roamBehaviour = RunBehaviour(); #Setting roam behaviour in the sub class 
+        self.roamBehaviour = RunBehaviour(); #Setting roam behaviour in the sub class
     def makeNoise(self):
         print(self.name," : Brrrrrr")
 
@@ -189,7 +211,7 @@ class Pig(Omnivore):
     #Inherits from class Omnivore
     def __init__(self,name):
         Animal.__init__(self,name)
-        self.roamBehaviour = WalkBehaviour(); #Setting roam behaviour in the sub class 
+        self.roamBehaviour = WalkBehaviour(); #Setting roam behaviour in the sub class
     def makeNoise(self):
         print(self.name," : Oink oink")
 
