@@ -2,5 +2,5 @@
  
  TEAM MEMBERS :
       1. Amatullah Sethjiwala
-      2. Keethika
+      2. Keerthika
       3. Swarnalatha
