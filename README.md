@@ -1,6 +1,6 @@
- CSCI5448-ObjectOrientedAnalysisDesign
- 
- TEAM MEMBERS :
-      1. Amatullah Sethjiwala
-      2. Keerthika
-      3. Swarnalatha
+# CSCI 5448 : Object Oriented Analysis and Design - Project 1
+**Team  Members :** 
+1. Amatullah Sethjiwala
+2. Keerthika Rajvel
+3. Swarnalatha Natarajan
+
