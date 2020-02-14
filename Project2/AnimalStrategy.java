@@ -26,6 +26,7 @@ public class AnimalStrategy { // Base Class
      System.out.println(this.name+" is going to sleep Zzzz.");
  }
 }
+//----STRATEGY PATTERN-------
 interface RoamBehaviour { //Behaviour Interface ---this shows the implementation of STRATEGY PATTERN
   public void roam(String name);
 }
@@ -45,6 +46,7 @@ class RunBehaviour implements RoamBehaviour {
     System.out.println(name + " : runs.");
   }
 }
+//----STRATEGY PATTERN-------
 //Subclasses of AnimalStrategys
 class Herbivore extends AnimalStrategy //Inherits the Class Animal
 {
@@ -86,18 +88,6 @@ class Giraffe extends Herbivore //Inherits the Class Herbivore
             case 4: System.out.println("*** Misbehavior ***");super.sleep();break;
         }
     }
-    /*public void roam()
-    {
-        Random rand=new Random();
-        int r=rand.nextInt((4 - 1) + 1) + 1; //Randomizing the Giraffe's response
-        switch (r)
-        {
-            case 1: System.out.println("*** Misbehavior ***");this.makeNoise(r);break;
-            case 2: System.out.println("*** Misbehavior ***");super.feed();break;
-            case 3: this.roam(r);break;
-            case 4: System.out.println("*** Misbehavior ***");super.sleep();break;
-        }
-    }*/
     public void sleep()
     {
         Random rand=new Random();
