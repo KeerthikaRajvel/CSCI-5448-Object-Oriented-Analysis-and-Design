@@ -6,7 +6,7 @@
 
 **Question 1(b)**<br/>
 1. Language used for development : Python
-2. Environment used : Jupyter notebook<br/>
+2. Environment used : Jupyter notebook<br/><br/>
 **Question 1(b)**<br/>
 For this question, we implemented the startegy pattern. Our previous project had the following class structure : 
 ![Test Image 1](Animals.jpeg)
