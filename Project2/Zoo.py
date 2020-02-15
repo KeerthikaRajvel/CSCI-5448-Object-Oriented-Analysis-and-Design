@@ -149,30 +149,9 @@ class Giraffe(Herbivore):
     #Inherits from class Herbivore
     def __init__(self,name):
         Animal.__init__(self,name)
-        self.roamBehaviour = WalkBehaviour(); #Setting roam behaviour in the sub class
+        self.roamBehaviour = WalkBehaviour(); #Setting roam behaviour in the sub class 
     def makeNoise(self):
-        r = random.randint(1,5)
-        switch(r):
-            case 1:
-                self.makeNoise(r)
-                break;
-            case 2:
-                print("*** Misbehavior ***"")
-                self.feed()
-                break;
-            case 3:
-                print("*** Misbehavior ***"")
-                self.sleep()
-                break;
-            case 4:
-                print("*** Misbehavior ***"")
-                self.roam()
-                break;
         print(self.name," : Giraffeeee")
-    def makeNoise(self,r):
-        print(self.name+"I am a Giraffeeeee.")
-    
-
 
 class Goat(Herbivore):
     #Inherits from class Herbivore
