@@ -171,7 +171,7 @@ class Giraffe(Herbivore):
         print(self.name," : Giraffeeee")
     def makeNoise(self,r):
         print(self.name+"I am a Giraffeeeee.")
-    def feed(self)
+    
 
 
 class Goat(Herbivore):
