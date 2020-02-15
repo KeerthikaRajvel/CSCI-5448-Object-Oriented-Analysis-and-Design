@@ -4,10 +4,10 @@
 2. Keerthika Rajvel
 3. Swarnalatha Natarajan
 
-**Question 1(b)**<br/>
+**Question 1(a),(b),(c)**<br/>
 1. Language used for development : Python
 2. Environment used : Jupyter notebook
-**Question 1(b)**
+<br/>**Question 1(b)**
 For this question, we implemented the startegy pattern. Our previous project had the following class structure : 
 ![Test Image 1](Animals.jpeg)
 Since the method 'roam()' varies among different kinds of animals, it is taken outside the class and encapsulated. We create a RoamBehaviour Interface that has a set of classes representing it's behaviour : WalkBehaviour, SwimBehaviour and RunBehaviour. The various subclasses then choose from these classes of behaviours. 
