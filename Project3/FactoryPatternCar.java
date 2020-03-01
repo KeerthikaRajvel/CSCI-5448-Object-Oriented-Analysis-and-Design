@@ -1,36 +1,38 @@
-interface Car{
-    void create_car();
+class Car{
+    void create_car(){
+        System.out.println("Overall");
+    }
 }
 
-class Economy implements Car{
+class Economy extends Car{
     @Override
     public void create_car(){
         System.out.println("Inside Economy");
     }
 }
 
-class Standard implements Car{
+class Standard extends Car{
     @Override
     public void create_car(){
         System.out.println("Inside Standard");
     }
 }
 
-class Luxury implements Car{
+class Luxury extends Car{
     @Override
     public void create_car(){
         System.out.println("Inside Luxury");
     }
 }
 
-class SUV implements Car{
+class SUV extends Car{
     @Override
     public void create_car(){
         System.out.println("Inside SUV");
     }
 }
 
-class Minivan implements Car{
+class Minivan extends Car{
     @Override
     public void create_car(){
         System.out.println("Inside Minivan");
