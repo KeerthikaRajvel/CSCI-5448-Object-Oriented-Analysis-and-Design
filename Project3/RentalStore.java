@@ -20,19 +20,23 @@ public class RentalStore extends Observable {
     }
     public void setupCars()
     {
-        String[] carType = new String[]{"Economy", "Luxury", "Standard","SUV","Minivan"};
+        String[] carType = new String[]{"ECONOMY", "LUXURY", "STANDARD","SUV","MINIVAN"};
         Random rand = new Random(); // adapted from https://mkyong.com/java/java-generate-random-integers-in-a-range/
         int r;
         CarFactory carFactory = new CarFactory();
         Car car;
         for (int i = 1; i <= 24; i++) {
-            r = rand.nextInt(((carType.length-1) - 0) + 1) + 0; //Randomizing the customer's type
-            car=carFactory.getType(carType[r]);
+            if(i<=10)
+                car=carFactory.getType(carType[(i-1)%5]);
+            else {
+                r = rand.nextInt(((carType.length - 1) - 0) + 1) + 0; //Randomizing the car's type
+                car = carFactory.getType(carType[r]);
+            }
             this.cars.add(car);
         }
     }
     public void setupCustomers() {
-        String[] customerType = new String[]{"Casual", "Regular", "Business"};
+        String[] customerType = new String[]{"CASUAL", "REGULAR", "BUSINESS"};
         Random rand = new Random(); // adapted from https://mkyong.com/java/java-generate-random-integers-in-a-range/
         int r;
         for (int i = 1; i <= 12; i++) {
@@ -40,15 +44,32 @@ public class RentalStore extends Observable {
             this.customers.add(new customerRecord("C" + Integer.toString(i), customerType[r]));
         }
     }
-    //Returns random customer object and type of car
-    public  Pair<customerRecord, String> customerIn()
+    //Returns random customer object, type of car, number of cars and days
+    public  Object[] customerIn()
     {
-        String[] carType = new String[]{"Economy", "Luxury", "Standard","SUV","Minivan"};
+        String[] carType = new String[]{"ECONOMY", "LUXURY", "STANDARD","SUV","MINIVAN"};
         Random rand = new Random(); // adapted from https://mkyong.com/java/java-generate-random-integers-in-a-range/
         int customerIndex = rand.nextInt(((this.customers.size()-1) - 0) + 1) + 0;
         int carTypeIndex = rand.nextInt(((carType.length-1) - 0) + 1) + 0;
-        Pair<customerRecord,String> result =new Pair<>(this.customers.get(customerIndex),carType[carTypeIndex]);
-        return result;
+        customerRecord C=this.customers.get(customerIndex);
+        int cars=1,nights=1;
+        switch (C.type)
+        {
+            case "CASUAL": // 1 car for 1 to 3 nights
+                cars=1;
+                nights=rand.nextInt((3 - 1) + 1) + 1;
+                System.out.println(nights);
+                break;
+            case "REGULAR": // 1-3 cars for 3 to 5 nights
+                cars=rand.nextInt((3 - 1) + 1) + 1;
+                nights=rand.nextInt((5 - 3) + 1) + 3;
+                break;
+            case "BUSINESS": // 3 cars for 7 nights
+                cars=3;
+                nights=7;
+                break;
+        }
+        return new Object[]{C,carType[carTypeIndex],cars,nights};
     }
     public static void main(String[] args)  {
 
@@ -62,14 +83,15 @@ public class RentalStore extends Observable {
 //            System.out.println(i);
 //            System.out.println(c.getClass());
 //        }
-        Pair<customerRecord,String> customer;
+        Object[] customerRequest;
+        customerRecord C;
         for(int day=1;day<=35;day++)
         {
             rentalStore.day=day;
-            customer=rentalStore.customerIn();
-            customerRecord c=customer.getKey();
-            System.out.println("Customer "+c.name+" asking for "+customer.getValue());
-            c.canRent(customer.getValue(),0);
+            customerRequest=rentalStore.customerIn();
+            C=(customerRecord)customerRequest[0];
+            System.out.println(C.name+" , "+C.type+" , "+customerRequest[1]+" , "+customerRequest[2]+" , "+customerRequest[3]);
+//            c.canRent(customer.getValue(),0,0);
         }
     }
 }
