@@ -51,7 +51,9 @@ public class RentalStore extends Observable {
 //        System.setOut(o);
 //
         RentalStore rentalStore = new RentalStore(0);
-
+        // Setting up the observer
+        observer o=new observer();
+        rentalStore.addObserver(o);
         for(int i=0;i<rentalStore.cars.size();i++)
         {
             Object c= rentalStore.cars.get(i);
