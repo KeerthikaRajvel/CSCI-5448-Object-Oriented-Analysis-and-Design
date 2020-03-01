@@ -41,7 +41,7 @@
 
 
 class CarFactory{
-    public Car getType(String carType){
+    public Car create(String carType){
         if(carType == null){
             return null;
         }
