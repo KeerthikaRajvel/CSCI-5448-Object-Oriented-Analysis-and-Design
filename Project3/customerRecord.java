@@ -9,7 +9,7 @@ public class customerRecord {
         this.type=type;
         this.cars_rented=new ArrayList<Object>();
     }
-    public Boolean canRent(String car_type) //Checks if the customer is eligible to rent a particular car
+    public Boolean canRent(String car_type,int days) //Checks if the customer is eligible to rent a particular car
     {
         return false;
     }

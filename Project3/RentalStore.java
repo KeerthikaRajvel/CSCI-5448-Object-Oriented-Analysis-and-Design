@@ -1,6 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
+import javafx.util.Pair;
 import java.util.*;
 import java.util.Random;
 
@@ -42,27 +40,36 @@ public class RentalStore extends Observable {
             this.customers.add(new customerRecord("C" + Integer.toString(i), customerType[r]));
         }
     }
+    //Returns random customer object and type of car
+    public  Pair<customerRecord, String> customerIn()
+    {
+        String[] carType = new String[]{"Economy", "Luxury", "Standard","SUV","Minivan"};
+        Random rand = new Random(); // adapted from https://mkyong.com/java/java-generate-random-integers-in-a-range/
+        int customerIndex = rand.nextInt(((this.customers.size()-1) - 0) + 1) + 0;
+        int carTypeIndex = rand.nextInt(((carType.length-1) - 0) + 1) + 0;
+        Pair<customerRecord,String> result =new Pair<>(this.customers.get(customerIndex),carType[carTypeIndex]);
+        return result;
+    }
+    public static void main(String[] args)  {
 
-    public static void main(String[] args) throws FileNotFoundException {
-
-        //Redirecting System.out.println() output to a file.
-
-//        PrintStream o = new PrintStream(new File("carSimulator.out")); //adapted from https://www.geeksforgeeks.org/redirecting-system-out-println-output-to-a-file-in-java/
-//        System.setOut(o);
-//
         RentalStore rentalStore = new RentalStore(0);
         // Setting up the observer
         observer o=new observer();
         rentalStore.addObserver(o);
-        for(int i=0;i<rentalStore.cars.size();i++)
+//        for(int i=0;i<rentalStore.cars.size();i++)
+//        {
+//            Object c= rentalStore.cars.get(i);
+//            System.out.println(i);
+//            System.out.println(c.getClass());
+//        }
+        Pair<customerRecord,String> customer;
+        for(int day=1;day<=35;day++)
         {
-            Object c= rentalStore.cars.get(i);
-            System.out.println(i);
-            System.out.println(c.getClass());
+            rentalStore.day=day;
+            customer=rentalStore.customerIn();
+            customerRecord c=customer.getKey();
+            System.out.println("Customer "+c.name+" asking for "+customer.getValue());
+            c.canRent(customer.getValue(),0);
         }
-//    for(int day=1;day<=35;day++)
-//    {
-//
-//    }
     }
 }
