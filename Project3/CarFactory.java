@@ -1,43 +1,3 @@
-// class Car{
-//     void create_car(){
-//         System.out.println("Overall");
-//     }
-// }
-//
-// class Economy extends Car{
-//     @Override
-//     public void create_car(){
-//         System.out.println("Inside Economy");
-//     }
-// }
-//
-// class Standard extends Car{
-//     @Override
-//     public void create_car(){
-//         System.out.println("Inside Standard");
-//     }
-// }
-//
-// class Luxury extends Car{
-//     @Override
-//     public void create_car(){
-//         System.out.println("Inside Luxury");
-//     }
-// }
-//
-// class SUV extends Car{
-//     @Override
-//     public void create_car(){
-//         System.out.println("Inside SUV");
-//     }
-// }
-//
-// class Minivan extends Car{
-//     @Override
-//     public void create_car(){
-//         System.out.println("Inside Minivan");
-//     }
-// }
 
 
 class CarFactory{
@@ -55,7 +15,7 @@ class CarFactory{
             return new Luxury();
         }
         else if(carType.equalsIgnoreCase("SUV")){
-            return new SUV();
+            return new Suv();
         }
         else if(carType.equalsIgnoreCase("Minivan")){
             return new Minivan();

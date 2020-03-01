@@ -8,7 +8,7 @@ public class RentalStore extends Observable {
     List<customerRecord> customers;
     List<Object> cars;
 
-    public RentalStore (int day) //Initial setup : instantiate cars and customers
+    public RentalStore (int day) //Initial setup : instantiate cars a   nd customers
     {
         this.day = day;
         this.day_amnt = 0;
@@ -27,10 +27,18 @@ public class RentalStore extends Observable {
         Car car;
         for (int i = 1; i <= 24; i++) {
             if(i<=10)
-                car=carFactory.getType(carType[(i-1)%5]);
+                car=carFactory.create(carType[(i-1)%5]);
             else {
                 r = rand.nextInt(((carType.length - 1) - 0) + 1) + 0; //Randomizing the car's type
-                car = carFactory.getType(carType[r]);
+                car = carFactory.create(carType[r]);
+            }
+            switch(car.getClass().getName())
+            {
+                case "Economy":Economy.count++;break;
+                case "Luxury":Luxury.count++;break;
+                case "Standard":Standard.count++;break;
+                case "Suv":Suv.count++;break;
+                case "Minivan":Minivan.count++;break;
             }
             this.cars.add(car);
         }
@@ -58,7 +66,6 @@ public class RentalStore extends Observable {
             case "CASUAL": // 1 car for 1 to 3 nights
                 cars=1;
                 nights=rand.nextInt((3 - 1) + 1) + 1;
-                System.out.println(nights);
                 break;
             case "REGULAR": // 1-3 cars for 3 to 5 nights
                 cars=rand.nextInt((3 - 1) + 1) + 1;
@@ -77,6 +84,7 @@ public class RentalStore extends Observable {
         // Setting up the observer
         observer o=new observer();
         rentalStore.addObserver(o);
+//        System.out.println(Economy.count+" , "+Luxury.count+" , "+Standard.count+" , "+Minivan.count+" , "+Suv.count);
 //        for(int i=0;i<rentalStore.cars.size();i++)
 //        {
 //            Object c= rentalStore.cars.get(i);
@@ -91,7 +99,7 @@ public class RentalStore extends Observable {
             customerRequest=rentalStore.customerIn();
             C=(customerRecord)customerRequest[0];
             System.out.println(C.name+" , "+C.type+" , "+customerRequest[1]+" , "+customerRequest[2]+" , "+customerRequest[3]);
-//            c.canRent(customer.getValue(),0,0);
+//          c.canRent(customer.getValue(),0,0);
         }
     }
 }
