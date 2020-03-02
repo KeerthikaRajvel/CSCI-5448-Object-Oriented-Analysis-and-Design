@@ -1,17 +1,16 @@
 //package trial;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
 import java.util.*;
 
 //CARS CLASS
 public abstract class Car {
     String license_no, ctype = "UNK", description;
-    int day_rented = 2 , day_due = 5, no_childseats , no_gps , no_satradio;
+    int day_rented  , day_due, no_childseats , no_gps , no_satradio;
     static int total_cars;
 
-    void create_car(){
-        System.out.println("Overall");
+    public Car()
+    {
+        this.day_rented=0;
+        this.day_due=0;
     }
     public String getDescription() {
         return description;
@@ -30,11 +29,8 @@ public abstract class Car {
 class Economy extends Car {
     static int count=0;
     public Economy(){
+        super();
         description = " an ECONOMY car with the following options : \n";
-    }
-    @Override
-    public void create_car(){
-        System.out.println("Inside Economy");
     }
     @Override
     public float cost( ) {
@@ -44,11 +40,8 @@ class Economy extends Car {
 class Standard extends Car {
     static int count=0;
     public Standard(){
+        super();
         description = " a STANDARD car with the following options : \n";
-    }
-    @Override
-    public void create_car(){
-        System.out.println("Inside Standard");
     }
     @Override
     public float cost( ) {
@@ -58,11 +51,8 @@ class Standard extends Car {
 class Luxury extends Car {
     static int count=0;
     public Luxury(){
+        super();
         description = " a LUXURY car with the following options : \n";
-    }
-    @Override
-    public void create_car(){
-        System.out.println("Inside Luxury");
     }
     @Override
     public float cost( ) {
@@ -72,11 +62,8 @@ class Luxury extends Car {
 class Suv extends Car {
     static int count=0;
     public Suv(){
+        super();
         description = " a SUV with the following options : \n";
-    }
-    @Override
-    public void create_car(){
-        System.out.println("Inside SUV");
     }
     @Override
     public float cost( ) {
@@ -86,11 +73,8 @@ class Suv extends Car {
 class Minivan extends Car {
     static int count=0;
     public Minivan(){
+        super();
         description = " a MINIVAN with the following options : \n";
-    }
-    @Override
-    public void create_car(){
-        System.out.println("Inside Minivan");
     }
     @Override
     public float cost( ) {

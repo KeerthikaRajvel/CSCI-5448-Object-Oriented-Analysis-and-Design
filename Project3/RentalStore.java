@@ -1,4 +1,3 @@
-import javafx.util.Pair;
 import java.util.*;
 import java.util.Random;
 
@@ -6,8 +5,8 @@ public class RentalStore extends Observable {
     int day;
     int day_amnt;
     List<customerRecord> customers;
-    List<Object> cars;
-
+    List<Object> cars,eco_cars,lux_cars,std_cars,suv_cars,mini_cars;
+    List<customerRecord> activeRecords;
     public RentalStore (int day) //Initial setup : instantiate cars a   nd customers
     {
         this.day = day;
@@ -40,11 +39,11 @@ public class RentalStore extends Observable {
             }
             switch(car.getClass().getName())
             {
-                case "Economy":Economy.count++; this.eco_car.add(car); break;
-                case "Luxury":Luxury.count++; this.lux_car.add(car); break;
-                case "Standard":Standard.count++; this.std_car.add(car); break;
-                case "Suv":Suv.count++; this.suv_car.add(car); break;
-                case "Minivan":Minivan.count++; this.mini_car.add(car); break;
+                case "Economy":Economy.count++; this.eco_cars.add(car); break;
+                case "Luxury":Luxury.count++; this.lux_cars.add(car); break;
+                case "Standard":Standard.count++; this.std_cars.add(car); break;
+                case "Suv":Suv.count++; this.suv_cars.add(car); break;
+                case "Minivan":Minivan.count++; this.mini_cars.add(car); break;
             }
             this.cars.add(car);
         }
@@ -54,7 +53,7 @@ public class RentalStore extends Observable {
         String[] carType = new String[]{"ECONOMY", "LUXURY", "STANDARD","SUV","MINIVAN"};
         Random rand = new Random(); // adapted from https://mkyong.com/java/java-generate-random-integers-in-a-range/
         int r;
-        int cr;
+        int cr,nights;
         for (int i = 1; i <= 12; i++) {
             r = rand.nextInt((2 - 0) + 1) + 0; //Randomizing the customer's type
             switch (customerType[r])
@@ -62,22 +61,18 @@ public class RentalStore extends Observable {
             case "CASUAL": // 1 car for 1 to 3 nights
                 cr = rand.nextInt(((carType.length-1) - 0) + 1) + 0; //Randomizing the car's type
                 
-                cars=1;
+                cr=1;
                 nights=rand.nextInt((3 - 1) + 1) + 1;
                 break;
             case "REGULAR": // 1-3 cars for 3 to 5 nights
-                cars=rand.nextInt((3 - 1) + 1) + 1;
+                cr=rand.nextInt((3 - 1) + 1) + 1;
                 nights=rand.nextInt((5 - 3) + 1) + 3;
                 break;
             case "BUSINESS": // 3 cars for 7 nights
-                cars=3;
+                cr=3;
                 nights=7;
                 break;
             }
-
-
-
-
             this.customers.add(new customerRecord("C" + Integer.toString(i), customerType[r]));
 
         }
@@ -108,6 +103,20 @@ public class RentalStore extends Observable {
         }
         return new Object[]{C,carType[carTypeIndex],cars,nights};
     }
+    public void returns(int day)
+    {
+        for(int i=0;i<activeRecords.size();i++)
+        {
+            customerRecord C = activeRecords.get(i);
+            for(int j=0;j<C.cars_rented.size();j++)
+            {
+                Car car=C.cars_rented.get(j);
+                if (car.day_due==day)
+                    C.cars_rented.remove(car);
+                    
+            }
+        }
+    }
     public static void main(String[] args)  {
 
         RentalStore rentalStore = new RentalStore(0);
@@ -126,10 +135,11 @@ public class RentalStore extends Observable {
         for(int day=1;day<=35;day++)
         {
             rentalStore.day=day;
-            customerRequest=rentalStore.customerIn();
-            C=(customerRecord)customerRequest[0];
-            System.out.println(C.name+" , "+C.type+" , "+customerRequest[1]+" , "+customerRequest[2]+" , "+customerRequest[3]);
-//          c.canRent(customer.getValue(),0,0);
+            rentalStore.returns(day);
+//             customerRequest=rentalStore.customerIn();
+//             C=(customerRecord)customerRequest[0];
+//             System.out.println(C.name+" , "+C.type+" , "+customerRequest[1]+" , "+customerRequest[2]+" , "+customerRequest[3]);
+// //          c.canRent(customer.getValue(),0,0);
         }
     }
 }
