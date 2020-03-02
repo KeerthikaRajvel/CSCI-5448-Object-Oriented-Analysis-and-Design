@@ -124,32 +124,6 @@ public class RentalStore extends Observable {
         this.customers.add(customer);
         }
     }
-    //Returns random customer object, type of car, number of cars and days
-    public  Object[] customerIn()
-    {
-        String[] carType = new String[]{"ECONOMY", "LUXURY", "STANDARD","SUV","MINIVAN"};
-        Random rand = new Random(); 
-        int customerIndex = rand.nextInt(((this.customers.size()-1) - 0) + 1) + 0;
-        int carTypeIndex = rand.nextInt(((carType.length-1) - 0) + 1) + 0;
-        customerRecord C=this.customers.get(customerIndex);
-        int cars=1,nights=1;
-        switch (C.type)
-        {
-            case "CASUAL": // 1 car for 1 to 3 nights
-                cars=1;
-                nights=rand.nextInt((3 - 1) + 1) + 1;
-                break;
-            case "REGULAR": // 1-3 cars for 3 to 5 nights
-                cars=rand.nextInt((3 - 1) + 1) + 1;
-                nights=rand.nextInt((5 - 3) + 1) + 3;
-                break;
-            case "BUSINESS": // 3 cars for 7 nights
-                cars=3;
-                nights=7;
-                break;
-        }
-        return new Object[]{C,carType[carTypeIndex],cars,nights};
-    }
     public void returns(int day)
     {
         CarFactory carFactory = new CarFactory();
@@ -168,6 +142,8 @@ public class RentalStore extends Observable {
             for(Car car:remove_cars)
             {
                 activeRecords.get(i).cars_rented.remove(car);
+                setChanged();
+                notifyObservers("Customer "+activeRecords.get(i).name+" returned "+car.ctype+" car with license plate "+car.license_no);
                 String lno=car.license_no;
                 String type=car.ctype;
                 car=carFactory.create(type);
@@ -178,7 +154,9 @@ public class RentalStore extends Observable {
                 remove_customers.add(activeRecords.get(i));
         }
         for(customerRecord c:remove_customers)
+        {
             this.activeRecords.remove(c);  
+        }
     }
     public static void main(String[] args)  {
 
