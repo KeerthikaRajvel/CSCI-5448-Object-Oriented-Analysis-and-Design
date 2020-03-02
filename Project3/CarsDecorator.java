@@ -17,19 +17,19 @@ class ChildSeat extends CarsDecorator {
     }
     public float cost() {
         float cost = car.cost();
-        if(car.getType() == "ECONOMY") {
+        if(car.getType() == "Economy") {
             cost += 5;
         }
-        if(car.getType() == "STANDARD") {
+        if(car.getType() == "Standard") {
             cost += 5.5;
         }
-        if(car.getType() == "LUXURY") {
+        if(car.getType() == "Luxury") {
             cost += 10;
         }
-        if(car.getType() == "SUV") {
+        if(car.getType() == "Suv") {
             cost += 7;
         }
-        if(car.getType() == "MINIVAN") {
+        if(car.getType() == "Minivan") {
             cost += 6;
         }
         return cost;
@@ -46,19 +46,19 @@ class Gps extends CarsDecorator {
     }
     public float cost() {
         float cost = car.cost();
-        if(car.getType() == "ECONOMY") {
+        if(car.getType() == "Economy") {
             cost += 10;
         }
-        if(car.getType() == "STANDARD") {
+        if(car.getType() == "Standard") {
             cost += 12;
         }
-        if(car.getType() == "LUXURY") {
+        if(car.getType() == "Luxury") {
             cost += 17;
         }
-        if(car.getType() == "SUV") {
+        if(car.getType() == "Suv") {
             cost += 13;
         }
-        if(car.getType() == "MINIVAN") {
+        if(car.getType() == "Minivan") {
             cost += 15;
         }
         return cost;
@@ -74,19 +74,19 @@ class SatRadio extends CarsDecorator {
     }
     public float cost() {
         float cost = car.cost();
-        if(car.getType() == "ECONOMY") {
+        if(car.getType() == "Economy") {
             cost += 15;
         }
-        if(car.getType() == "STANDARD") {
+        if(car.getType() == "Standard") {
             cost += 18;
         }
-        if(car.getType() == "LUXURY"){
+        if(car.getType() == "Luxury"){
             cost += 20;
         }
-        if(car.getType() == "SUV") {
+        if(car.getType() == "Suv") {
             cost += 13;
         }
-        if(car.getType() == "MINIVAN") {
+        if(car.getType() == "Minivan") {
             cost += 14;
         }
         return cost;
