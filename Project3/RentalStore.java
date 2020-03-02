@@ -159,28 +159,32 @@ public class RentalStore extends Observable {
     public void returns(int day)
     {
         CarFactory carFactory = new CarFactory();
+        List<customerRecord> remove_customers = new ArrayList<customerRecord>();
         for(int i=0;i<this.activeRecords.size();i++)
         {
-            customerRecord C = activeRecords.get(i);
-            for(int j=0;j<C.cars_rented.size();j++)
+            List<Car> remove_cars = new ArrayList<Car>();
+            for(int j=0;j<activeRecords.get(i).cars_rented.size();j++)
             {
-                Car car=C.cars_rented.get(j);
+                Car car=activeRecords.get(i).cars_rented.get(j);
                 if (car.day_due==day)
                 {
-                    C.cars_rented.remove(car);
-                    String lno=car.license_no;
-                    String type=car.ctype;
-                    car=carFactory.create(type);
-                    car.license_no=lno;
-                    this.cars.get(type).add(car); //Currently available
+                    remove_cars.add(car);
                 }
             }
-            if (C.cars_rented.size()==0){
-                this.activeRecords.remove(C);
-                System.out.println(this.activeRecords.size());
-            } 
+            for(Car car:remove_cars)
+            {
+                activeRecords.get(i).cars_rented.remove(car);
+                String lno=car.license_no;
+                String type=car.ctype;
+                car=carFactory.create(type);
+                car.license_no=lno;
+                this.cars.get(type).add(car); //Currently available
+            }
+            if (activeRecords.get(i).cars_rented.size()==0)
+                remove_customers.add(activeRecords.get(i));
         }
-        
+        for(customerRecord c:remove_customers)
+            this.activeRecords.remove(c);  
     }
     public static void main(String[] args)  {
 
@@ -198,13 +202,6 @@ public class RentalStore extends Observable {
         // Setting up the observer
         // observer o=new observer();
         // rentalStore.addObserver(o);
-//        System.out.println(Economy.count+" , "+Luxury.count+" , "+Standard.count+" , "+Minivan.count+" , "+Suv.count);
-//        for(int i=0;i<rentalStore.cars.size();i++)
-//        {
-//            Object c= rentalStore.cars.get(i);
-//            System.out.println(i);
-//            System.out.println(c.getClass());
-//        }
         Object[] customerRequest;
         customerRecord C;
         for(int day=1;day<=35;day++)
