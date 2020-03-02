@@ -24,6 +24,56 @@ public class RentalStore extends Observable {
         int r = rand.nextInt((max - min) + 1) + min;
         return r;
     }
+    public int getTotalCars()
+    {
+        String[] carType = new String[]{"Economy", "Luxury", "Standard","Suv","Minivan"};
+        int total_cars=0;
+        for(int j=0;j<5;j++)
+        {
+            total_cars += this.cars.get(carType[j]).size();
+        }
+       return total_cars;
+    }
+    public Car pickRandomCar()
+    {
+        String[] carType = new String[]{"Economy", "Luxury", "Standard","Suv","Minivan"};
+        int car_count=0; 
+        Car car=null;
+        while(car_count<10)
+        {
+            int r = this.randomGenerator(0,4); //Randomizing the car's type
+            if (this.cars.get(carType[r]).size()>0)
+            {
+                car=this.cars.get(carType[r]).get(0);
+                break;
+            }
+            car_count++;
+        }
+        return car;
+
+    }
+    //Uses decorator to add options 
+    public Car addOptions(Car car)
+    {
+        String license_temp = car.license_no;
+        String ctype_temp = car.ctype;
+        //Options using Decorator Pattern
+        int gps = this.randomGenerator(0,1);
+        int sat = this.randomGenerator(0,1);
+        int childseat = this.randomGenerator(0,4);
+        if(gps>0)
+            car = new Gps(car);
+        if(sat>0)
+            car = new SatRadio(car);
+        if(childseat>0)
+        {
+            for(int l=0;l<childseat;l++)
+                car = new ChildSeat(car);    
+        }
+        car.license_no = license_temp;
+        car.ctype = ctype_temp;
+        return car;
+    }
     public void setupCars()
     {
         String[] carType = new String[]{"Economy", "Luxury", "Standard","Suv","Minivan"};
@@ -35,7 +85,7 @@ public class RentalStore extends Observable {
         CarFactory carFactory = new CarFactory();
         Car car;
         for (int i = 1; i <= 24; i++) {
-            if(i<=10)
+            if(i<=10) //Minimum 2 cars of a type
                 car=carFactory.create(carType[(i-1)%5]);
             else {
                 int r = this.randomGenerator(0,(carType.length - 1)); //Randomizing the car's type
@@ -43,79 +93,52 @@ public class RentalStore extends Observable {
             }
             this.cars.get(car.getClass().getName()).add(car);
         }
+        
     }
     public void setupCustomers() {
         String[] customerType = new String[]{"Casual", "Regular", "Business"};
-        String[] carType = new String[]{"Economy", "Luxury", "Standard","Suv","Minivan"};
-        Random rand = new Random(); 
-        int r,count;
+        int r,n;
         customerRecord customer;
         for (int i = 1; i <= 12; i++) {
             r = this.randomGenerator(0,2);
             customer=new customerRecord("C"+Integer.toString(i),customerType[r]);
-            switch (customerType[r])
+            n=1;
+            if(customer.type=="Business")
+                n=3;
+            List<Car> cars_chosen=new ArrayList<Car>();
+            for(int j=0;j<n;j++)
+            {
+                Car car = this.pickRandomCar();
+                cars_chosen.add(car);
+                this.cars.get(car.ctype).remove(car);
+            }
+            switch (customer.type)
             {
             case "Casual": // 1 car for 1 to 3 nights
             {
-                count=0;
-                while(count<5)
-                {
-                    r = this.randomGenerator(0,4); //Randomizing the car's type
-                    if (this.cars.get(carType[r]).size()>0)
-                    {
-                        Car car=this.cars.get(carType[r]).get(0);
-                        this.cars.get(carType[r]).remove(car);
-                        customer.cars_rented.add(car);
-                        car.day_rented=0;
-                        car.day_due=this.randomGenerator(1,3);
-                        total_amnt+=car.cost();
-                        break;
-                    }
-                     
-                    count++;
-                }
+                cars_chosen.get(0).day_rented=0;
+                cars_chosen.get(0).day_due=this.randomGenerator(1,3);
+                customer.cars_rented.add(cars_chosen.get(0));
+                total_amnt+=cars_chosen.get(0).cost();
                 break;
             }
             case "Regular": // 1-3 cars for 3 to 5 nights
             {
-                count=0;
-                while(count<5)
-                {
-                    r = this.randomGenerator(0,4);//Randomizing the car's type
-                    if (this.cars.get(carType[r]).size()>0)
-                    {
-                        Car car=this.cars.get(carType[r]).get(0);
-                        this.cars.get(carType[r]).remove(car);
-                        customer.cars_rented.add(car);
-                        car.day_rented=0;
-                        car.day_due=this.randomGenerator(3,5);
-                        total_amnt+=car.cost();
-                        break;
-                    }
-                    count++;
-                }
+                cars_chosen.get(0).day_rented=0;
+                cars_chosen.get(0).day_due=this.randomGenerator(3,5);
+                customer.cars_rented.add(cars_chosen.get(0));
+                total_amnt+=cars_chosen.get(0).cost();
                 break;
+                   
             }
             case "Business": // 3 cars for 7 nights
             {
-                for(int j=0;j<3;j++)
+                for(int j=0;j<cars_chosen.size();j++)
                 {
-                    count=0;
-                    while(count<5)
-                    {
-                        r =this.randomGenerator(0,4); //Randomizing the car's type
-                        if (this.cars.get(carType[r]).size()>0)
-                        {
-                            Car car=this.cars.get(carType[r]).get(0);
-                            this.cars.get(carType[r]).remove(car);
-                            customer.cars_rented.add(car);
-                            car.day_rented=0;
-                            car.day_due=7;
-                            total_amnt+=car.cost();
-                            break;
-                        }
-                        count++;
-                    }
+                    cars_chosen.get(j).day_rented=0;
+                    cars_chosen.get(j).day_due=this.randomGenerator(3,5);
+                    customer.cars_rented.add(cars_chosen.get(j));
+                    total_amnt+=cars_chosen.get(j).cost();
                 }
                 break;
             }
@@ -123,220 +146,119 @@ public class RentalStore extends Observable {
         this.activeRecords.add(customer);
         this.customers.add(customer);
         }
+        
     }
 
-    public  Object[] customerIn(int day)
+    public  customerRecord customerIn(int day)
     {
-        Random rand = new Random();
-        int checkCustomer = rand.nextInt(1+1-0)+0;
+        int newOrOld = this.randomGenerator(0,1); //New or old customer
         String[] customerType = new String[]{"Casual", "Regular", "Business"};
-        String[] carType = new String[]{"Economy", "Luxury", "Standard","Suv","Minivan"};
-        int flag = 0;
-
-        if(checkCustomer == 1)
+        boolean active = false;
+        int r;
+        customerRecord customer=null;
+        if(newOrOld == 1) //New customer
         {
-            customerRecord customer;
-            r = rand.nextInt((2 - 0) + 1) + 0; //Randomizing the customer's type
-            customer=new customerRecord("C"+Integer.toString(i),customerType[r]);
+            r = this.randomGenerator(0,2); //Randomizing the customer's type
+            customer=new customerRecord("C"+Integer.toString(this.customers.size()+1),customerType[r]);
+            System.out.println("New Customer in : "+customer.name);
             this.customers.add(customer);
         }
-        else
+        else //Existing Customer
         {
-            int count = 0;
-            while(count<=12)
+            int randCustomer = this.randomGenerator(0,this.customers.size()-1);
+            customer=this.customers.get(randCustomer);
+            System.out.println("Existing customer in : "+customer.name);
+            //Checking if existing customer in active record
+            for(int i=0;i<this.activeRecords.size();i++)
             {
-                int randCustomer = rand.nextInt(this.customers.size()+1-0)+0;
-                String c = "C"+randCustomer;
-                for(i=0;i<this.activeRecords.size();i++)
+                if(customer.name==this.activeRecords.get(i).name) 
                 {
-                    customerRecord customer = activeRecords.get(randCustomer);
-                    if(customer.name == c)
-                    {
-                        flag = 1;
-                        if(customer.type == "Regular")
-                        {
-                            if(customer.cars_rented.size() < 3)
-                            {
-                                int car_count=0;
-                                int total_cars = 0;
-                                for(int i=0;i<5;i++)
-                                {
-                                    total_cars += this.cars.get(carType[i]).size();
-                                }
-                                int max = (3<total_cars)?3:total_cars;
-                                int num_cars = rand.nextInt(max-customer.cars_rented.size()+1-1)+1;
-                                for(i=0;i<num_cars;i++)
-                                {
-                                    car_count = 0;
-                                    while(car_count<10) 
-                                    {
-                                        r = rand.nextInt((4 - 0) + 1) + 0; //Randomizing the car's type
-                                        if (this.cars.get(carType[r]).size()>0)
-                                        {
-                                            Car car=this.cars.get(carType[r]).get(0);
-                                            this.cars.get(carType[r]).remove(car);
-                                            int gps = rand.nextInt(1+1-0)+0;
-                                            int sat = rand.nextInt(1+1-0)+0;
-                                            int childseat = rand.nextInt(4+1-0)+0;
-                                            if(gps)
-                                            car = new Gps(car);
-                                            if(sat)
-                                            car = new SatRadio(car);
-                                            if(childseat)
-                                            {
-                                                for(i=0;i<childseat;i++)
-                                                    car = new childseat(car);    
-                                            }
-                                            customer.cars_rented.add(car);
-                                            car.day_rented=day;
-                                            car.day_due= day + rand.nextInt((5 - 3) + 1) + 3;
-                                            total_amnt+=car.cost();
-                                            break;
-                                        }
-                                        car_count++;
-                                    }
-                                }
-    
-                            }
-                        }
-                    }
+                    System.out.println("Active customer : "+this.activeRecords.get(i).name);
+                    active = true;
+                    break;
                 }
             }
-        }
-        if(flag==0)
+            //Only active regular customers having less than 3 cars can rent further
+            if (active && customer.type == "Regular" && customer.cars_rented.size() < 3) 
+            {           
+                System.out.println("Active regular customer : "+customer.name);             
+                int num_cars=0;
+                if(this.getTotalCars()>1)
+                    num_cars = this.randomGenerator(1,Math.min(3-customer.cars_rented.size(),this.getTotalCars()));
+                else num_cars = 1;
+                for(int k=0;k<num_cars;k++)
+                {
+                    Car car=this.pickRandomCar();
+                    this.cars.get(car.ctype).remove(car);
+                    car=this.addOptions(car);
+                    car.day_rented=day;
+                    car.day_due= day + this.randomGenerator(3,5);
+                    customer.cars_rented.add(car);
+                    total_amnt+=car.cost();
+                }
+            }
+
+        }//Existing customer end
+        if(!active) //Existing but not in active record and new customer
         {
-            r = rand.nextInt((2 - 0) + 1) + 0; //Randomizing the customer's type
-            switch (customerType[r])
+            System.out.println("Adding "+customer.name+" in active record");
+            Car car = this.pickRandomCar();
+            switch (customer.type)
             {
                 case "Casual": // 1 car for 1 to 3 nights
                 {
-                    car_count=0; 
-                    while(car_count<10)
-                    {
-                        r = rand.nextInt((4 - 0) + 1) + 0; //Randomizing the car's type
-                        if (this.cars.get(carType[r]).size()>0)
-                        {
-                            Car car=this.cars.get(carType[r]).get(0);
-                            this.cars.get(carType[r]).remove(car);
-                            int gps = rand.nextInt(1+1-0)+0;
-                            int sat = rand.nextInt(1+1-0)+0;
-                            int childseat = rand.nextInt(4+1-0)+0;
-                            if(gps)
-                            car = new Gps(car);
-                            if(sat)
-                            car = new SatRadio(car);
-                            if(childseat)
-                            {
-                                for(i=0;i<childseat;i++)
-                                    car = new childseat(car);    
-                            }
-                            customer.cars_rented.add(car);
-                            car.day_rented=day;
-                            car.day_due= day + rand.nextInt((3 - 1) + 1) + 1;
-                            total_amnt+=car.cost();
-                            break;
-                        }
-                        car_count++;
-                    }break;
-                }
+                    this.cars.get(car.ctype).remove(car);
+                    car=this.addOptions(car);
+                    car.day_rented=day;
+                    car.day_due= day + this.randomGenerator(1,3);
+                    customer.cars_rented.add(car);
+                    total_amnt+=car.cost();
+                    break;
+                }  
                 case "Regular": // 1-3 cars for 3 to 5 nights
                 {
-                    int total_cars = 0;
-                    for(int i=0;i<5;i++)
+                    int num_cars;
+                    if(this.getTotalCars()>1)
+                        num_cars = this.randomGenerator(1,Math.min(3,this.getTotalCars()));
+                    else num_cars = 1;
+                    for(int j=0;j<num_cars;j++)
                     {
-                        total_cars += this.cars.get(carType[i]).size();
+                        car=this.pickRandomCar();
+                        this.cars.get(car.ctype).remove(car);
+                        this.addOptions(car);   
+                        car.day_rented=day;
+                        car.day_due= day + this.randomGenerator(3,5);
+                        customer.cars_rented.add(car);
+                        total_amnt+=car.cost();
                     }
-                    int max = (3<total_cars)?3:total_cars;
-                    num_cars = rand.nextInt(max+1-1)+1;
-                    for(i=0;i<num_cars;i++)
-                    {
-                        car_count = 0;
-                        while(car_count<10)
-                        {
-                            r = rand.nextInt((4 - 0) + 1) + 0; //Randomizing the car's type
-                            if (this.cars.get(carType[r]).size()>0)
-                            {
-                                Car car=this.cars.get(carType[r]).get(0);
-                                this.cars.get(carType[r]).remove(car);
-                                int gps = rand.nextInt(1+1-0)+0;
-                                int sat = rand.nextInt(1+1-0)+0;
-                                int childseat = rand.nextInt(4+1-0)+0;
-                                if(gps)
-                                car = new Gps(car);
-                                if(sat)
-                                car = new SatRadio(car);
-                                if(childseat)
-                                {
-                                    for(i=0;i<childseat;i++)
-                                        car = new childseat(car);    
-                                }
-                                customer.cars_rented.add(car);
-                                car.day_rented=day;
-                                car.day_due= day + rand.nextInt((5 - 3) + 1) + 3;
-                                total_amnt+=car.cost();
-                                break;
-                            }
-                            car_count++;
-                        }
-                    }break;
-                        
+                    break;
                 }
-
                 case "Business": // 3 cars for 7 nights
                 {
-                    int total_cars = 0;
-                    for(int i=0;i<5;i++)
-                    {
-                        total_cars += this.cars.get(carType[i]).size();
-                    }
-                    if(total_cars>=3)
+                    if(this.getTotalCars()>=3)
                     {
                         for(int j=0;j<3;j++)
                         {
-                            car_count=0;
-                            while(car_count<10)
-                            {
-                                r = rand.nextInt((4 - 0) + 1) + 0; //Randomizing the car's type
-                                if (this.cars.get(carType[r]).size()>0)
-                                {
-                                    Car car=this.cars.get(carType[r]).get(0);
-                                    this.cars.get(carType[r]).remove(car);
-                                    int gps = rand.nextInt(1+1-0)+0;
-                                    int sat = rand.nextInt(1+1-0)+0;
-                                    int childseat = rand.nextInt(4+1-0)+0;
-                                    if(gps)
-                                    car = new Gps(car);
-                                    if(sat)
-                                    car = new SatRadio(car);
-                                    if(childseat)
-                                    {
-                                        for(i=0;i<childseat;i++)
-                                            car = new childseat(car);    
-                                    }
-                                    customer.cars_rented.add(car);
-                                    car.day_rented=day;
-                                    car.day_due=day+7;
-                                    total_amnt+=car.cost();
-                                    break;                                
-                                }
-                                car_count++;
-                            }
-                            
+                            car=this.pickRandomCar();
+                            this.cars.get(car.ctype).remove(car);
+                            car = this.addOptions(car);    
+                            car.day_rented=day;
+                            car.day_due=day+7;
+                            customer.cars_rented.add(car);
+                            total_amnt+=car.cost();
                         }
-                    }break;
-                    
-                        
+                            
+                    }
+                    break;    
                 }
-
-
-                    
-            }
+            
+            }//switch end
             this.activeRecords.add(customer);
+        }//not active end
 
-        }
-                
-    return customer;
+        return customer;
     }
+
     public void returns(int day)
     {
         CarFactory carFactory = new CarFactory();
@@ -386,15 +308,29 @@ public class RentalStore extends Observable {
         // Setting up the observer
         observer o=new observer();
         rentalStore.addObserver(o);
-        for(int day=1;day<=35;day++)
+        for(int day=1;day<=20;day++)
         {
+            System.out.println("------"+day+"------");
             rentalStore.day=day;
             rentalStore.returns(day);
-            System.out.println(day+" , "+rentalStore.activeRecords.size());
-            customerRecord c = (customerRecord)rentalStore.customerIn(day);
-            System.out.println(c.name);
-
-
+            customerRecord C = rentalStore.customerIn(day);
+            System.out.println(C.name);
+            // for(int i=0;i<rentalStore.activeRecords.size();i++)
+            // {
+            //     customerRecord c=rentalStore.activeRecords.get(i);
+            //     System.out.println(c.name+" , "+c.type);
+            //     for(int j=0;j<c.cars_rented.size();j++)
+            //     {
+            //         System.out.println(c.cars_rented.get(j).license_no+" , "+c.cars_rented.get(j).getDescription()+" , "+c.cars_rented.get(j).day_rented+" , "+c.cars_rented.get(j).day_due+" , "+c.cars_rented.get(j).cost());
+            //     }
+            // }
+            // System.out.println(day+" , "+rentalStore.activeRecords.size());
+            // if(rentalStore.getTotalCars()>0)
+            // {
+            //     customerRecord c = rentalStore.customerIn(day);
+            // System.out.println(c.name);
+            // }
+       
         }
     }
 }
