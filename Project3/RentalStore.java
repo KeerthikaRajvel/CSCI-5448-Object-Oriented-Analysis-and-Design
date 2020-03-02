@@ -18,6 +18,12 @@ public class RentalStore extends Observable {
         this.customers = new ArrayList<customerRecord>();
         this.setupCustomers();//Instantiating customers
     }
+    public int randomGenerator(int min,int max)
+    {
+        Random rand = new Random(); 
+        int r = rand.nextInt((max - min) + 1) + min;
+        return r;
+    }
     public void setupCars()
     {
         String[] carType = new String[]{"Economy", "Luxury", "Standard","Suv","Minivan"};
@@ -26,15 +32,13 @@ public class RentalStore extends Observable {
                 this.cars.put(item, new ArrayList<Car>());
             }
         }
-        Random rand = new Random(); 
-        int r;
         CarFactory carFactory = new CarFactory();
         Car car;
         for (int i = 1; i <= 24; i++) {
             if(i<=10)
                 car=carFactory.create(carType[(i-1)%5]);
             else {
-                r = rand.nextInt(((carType.length - 1) - 0) + 1) + 0; //Randomizing the car's type
+                int r = this.randomGenerator(0,(carType.length - 1)); //Randomizing the car's type
                 car = carFactory.create(carType[r]);
             }
             this.cars.get(car.getClass().getName()).add(car);
@@ -48,7 +52,7 @@ public class RentalStore extends Observable {
         int r,count;
         customerRecord customer;
         for (int i = 1; i <= 12; i++) {
-            r = rand.nextInt((2 - 0) + 1) + 0; //Randomizing the customer's type
+            r = this.randomGenerator(0,2);
             customer=new customerRecord("C"+Integer.toString(i),customerType[r]);
             switch (customerType[r])
             {
@@ -57,14 +61,14 @@ public class RentalStore extends Observable {
                 count=0;
                 while(count<5)
                 {
-                    r = rand.nextInt((4 - 0) + 1) + 0; //Randomizing the car's type
+                    r = this.randomGenerator(0,4); //Randomizing the car's type
                     if (this.cars.get(carType[r]).size()>0)
                     {
                         Car car=this.cars.get(carType[r]).get(0);
                         this.cars.get(carType[r]).remove(car);
                         customer.cars_rented.add(car);
                         car.day_rented=0;
-                        car.day_due=rand.nextInt((3 - 1) + 1) + 1;
+                        car.day_due=this.randomGenerator(1,3);
                         total_amnt+=car.cost();
                         break;
                     }
@@ -78,14 +82,14 @@ public class RentalStore extends Observable {
                 count=0;
                 while(count<5)
                 {
-                    r = rand.nextInt((4 - 0) + 1) + 0; //Randomizing the car's type
+                    r = this.randomGenerator(0,4);//Randomizing the car's type
                     if (this.cars.get(carType[r]).size()>0)
                     {
                         Car car=this.cars.get(carType[r]).get(0);
                         this.cars.get(carType[r]).remove(car);
                         customer.cars_rented.add(car);
                         car.day_rented=0;
-                        car.day_due=rand.nextInt((5 - 3) + 1) + 3;
+                        car.day_due=this.randomGenerator(3,5);
                         total_amnt+=car.cost();
                         break;
                     }
@@ -100,7 +104,7 @@ public class RentalStore extends Observable {
                     count=0;
                     while(count<5)
                     {
-                        r = rand.nextInt((4 - 0) + 1) + 0; //Randomizing the car's type
+                        r =this.randomGenerator(0,4); //Randomizing the car's type
                         if (this.cars.get(carType[r]).size()>0)
                         {
                             Car car=this.cars.get(carType[r]).get(0);
