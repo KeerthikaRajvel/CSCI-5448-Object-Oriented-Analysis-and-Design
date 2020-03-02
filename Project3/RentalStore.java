@@ -17,7 +17,6 @@ public class RentalStore extends Observable {
         //Instantiate cars using factory
         this.setupCars();
         this.customers = new ArrayList<customerRecord>();
-        System.out.println(this.cars.get("Economy").size());
         this.setupCustomers();//Instantiating customers
     }
     public void setupCars()
@@ -160,7 +159,7 @@ public class RentalStore extends Observable {
     public void returns(int day)
     {
         CarFactory carFactory = new CarFactory();
-        for(int i=0;i<activeRecords.size();i++)
+        for(int i=0;i<this.activeRecords.size();i++)
         {
             customerRecord C = activeRecords.get(i);
             for(int j=0;j<C.cars_rented.size();j++)
@@ -176,7 +175,12 @@ public class RentalStore extends Observable {
                     this.cars.get(type).add(car); //Currently available
                 }
             }
+            if (C.cars_rented.size()==0){
+                this.activeRecords.remove(C);
+                System.out.println(this.activeRecords.size());
+            } 
         }
+        
     }
     public static void main(String[] args)  {
 
@@ -190,7 +194,6 @@ public class RentalStore extends Observable {
                 System.out.println(c.cars_rented.get(j).license_no+" , "+c.cars_rented.get(j).day_due+" , "+c.cars_rented.get(j).cost());
             }
         }       
-        System.out.println(rentalStore.cars.get("Economy").size());
 
         // Setting up the observer
         // observer o=new observer();
@@ -204,14 +207,15 @@ public class RentalStore extends Observable {
 //        }
         Object[] customerRequest;
         customerRecord C;
-//         for(int day=1;day<=35;day++)
-//         {
-//             rentalStore.day=day;
-//             rentalStore.returns(day);
-// //             customerRequest=rentalStore.customerIn();
-// //             C=(customerRecord)customerRequest[0];
-// //             System.out.println(C.name+" , "+C.type+" , "+customerRequest[1]+" , "+customerRequest[2]+" , "+customerRequest[3]);
-// // //          c.canRent(customer.getValue(),0,0);
-//         }
+        for(int day=1;day<=35;day++)
+        {
+            rentalStore.day=day;
+            rentalStore.returns(day);
+            System.out.println(day+" , "+rentalStore.activeRecords.size());
+//             customerRequest=rentalStore.customerIn();
+//             C=(customerRecord)customerRequest[0];
+//             System.out.println(C.name+" , "+C.type+" , "+customerRequest[1]+" , "+customerRequest[2]+" , "+customerRequest[3]);
+// //          c.canRent(customer.getValue(),0,0);
+        }
     }
 }
