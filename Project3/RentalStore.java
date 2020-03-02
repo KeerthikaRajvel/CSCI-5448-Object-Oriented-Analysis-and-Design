@@ -5,7 +5,6 @@ public class RentalStore extends Observable {
     float day_amnt,total_amnt;
     Map<String, List<Car>> cars;
     List<customerRecord> customers;
-    // List<Object> cars,eco_cars,lux_cars,std_cars,suv_cars,mini_cars;
     List<customerRecord> activeRecords;
     public RentalStore (int day) //Initial setup : instantiate cars and customers
     {
@@ -27,7 +26,7 @@ public class RentalStore extends Observable {
                 this.cars.put(item, new ArrayList<Car>());
             }
         }
-        Random rand = new Random(); // adapted from https://mkyong.com/java/java-generate-random-integers-in-a-range/
+        Random rand = new Random(); 
         int r;
         CarFactory carFactory = new CarFactory();
         Car car;
@@ -39,22 +38,13 @@ public class RentalStore extends Observable {
                 car = carFactory.create(carType[r]);
             }
             this.cars.get(car.getClass().getName()).add(car);
-            // switch(car.getClass().getName())
-            // {
-            //     case "Economy":Economy.count++; this.cars.get("Economy"); break;
-            //     case "Luxury":Luxury.count++; this.lux_cars.add(car); break;
-            //     case "Standard":Standard.count++; this.std_cars.add(car); break;
-            //     case "Suv":Suv.count++; this.suv_cars.add(car); break;
-            //     case "Minivan":Minivan.count++; this.mini_cars.add(car); break;
-            // }
-            // this.cars.add(car);
         }
     }
-    //name,type,car objects - day_rented, day_due,total cost
+   
     public void setupCustomers() {
         String[] customerType = new String[]{"Casual", "Regular", "Business"};
         String[] carType = new String[]{"Economy", "Luxury", "Standard","Suv","Minivan"};
-        Random rand = new Random(); // adapted from https://mkyong.com/java/java-generate-random-integers-in-a-range/
+        Random rand = new Random(); 
         int r,count;
         customerRecord customer;
         for (int i = 1; i <= 12; i++) {
@@ -134,7 +124,7 @@ public class RentalStore extends Observable {
     public  Object[] customerIn()
     {
         String[] carType = new String[]{"ECONOMY", "LUXURY", "STANDARD","SUV","MINIVAN"};
-        Random rand = new Random(); // adapted from https://mkyong.com/java/java-generate-random-integers-in-a-range/
+        Random rand = new Random(); 
         int customerIndex = rand.nextInt(((this.customers.size()-1) - 0) + 1) + 0;
         int carTypeIndex = rand.nextInt(((carType.length-1) - 0) + 1) + 0;
         customerRecord C=this.customers.get(customerIndex);
@@ -198,10 +188,9 @@ public class RentalStore extends Observable {
                 System.out.println(c.cars_rented.get(j).license_no+" , "+c.cars_rented.get(j).day_due+" , "+c.cars_rented.get(j).cost());
             }
         }       
-
         // Setting up the observer
-        // observer o=new observer();
-        // rentalStore.addObserver(o);
+        observer o=new observer();
+        rentalStore.addObserver(o);
         Object[] customerRequest;
         customerRecord C;
         for(int day=1;day<=35;day++)
@@ -209,10 +198,6 @@ public class RentalStore extends Observable {
             rentalStore.day=day;
             rentalStore.returns(day);
             System.out.println(day+" , "+rentalStore.activeRecords.size());
-//             customerRequest=rentalStore.customerIn();
-//             C=(customerRecord)customerRequest[0];
-//             System.out.println(C.name+" , "+C.type+" , "+customerRequest[1]+" , "+customerRequest[2]+" , "+customerRequest[3]);
-// //          c.canRent(customer.getValue(),0,0);
         }
     }
 }
