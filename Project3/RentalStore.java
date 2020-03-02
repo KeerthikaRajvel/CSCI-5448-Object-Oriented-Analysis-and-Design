@@ -55,6 +55,7 @@ public class RentalStore extends Observable {
     //Uses decorator to add options 
     public Car addOptions(Car car)
     {
+        System.out.println("Adding options ");
         String license_temp = car.license_no;
         String ctype_temp = car.ctype;
         //Options using Decorator Pattern
@@ -293,38 +294,33 @@ public class RentalStore extends Observable {
             this.activeRecords.remove(c);  
         }
     }
-    public static void main(String[] args)  {
-
-        RentalStore rentalStore = new RentalStore(0);
-        for(int i=0;i<rentalStore.activeRecords.size();i++)
+    public void printActiveRecords()
+    {
+        for(int i=0;i<this.activeRecords.size();i++)
         {
-            customerRecord c=rentalStore.activeRecords.get(i);
+            customerRecord c= this.activeRecords.get(i);
             System.out.println(c.name+" , "+c.type);
             for(int j=0;j<c.cars_rented.size();j++)
             {
-                System.out.println(c.cars_rented.get(j).license_no+" , "+c.cars_rented.get(j).day_due+" , "+c.cars_rented.get(j).cost());
+                System.out.println(c.cars_rented.get(j).license_no+" , "+c.cars_rented.get(j).getDescription()+" , "+c.cars_rented.get(j).day_rented+" , "+c.cars_rented.get(j).day_due+" , "+c.cars_rented.get(j).cost());
             }
-        }       
+        }
+    }
+    public static void main(String[] args)  {
+
+        RentalStore rentalStore = new RentalStore(0);
+        rentalStore.printActiveRecords();
         // Setting up the observer
         observer o=new observer();
         rentalStore.addObserver(o);
-        for(int day=1;day<=20;day++)
+        for(int day=1;day<=35;day++)
         {
-            System.out.println("------"+day+"------");
+            System.out.println("******************* DAY "+day+"*******************");
             rentalStore.day=day;
             rentalStore.returns(day);
             customerRecord C = rentalStore.customerIn(day);
             System.out.println(C.name);
-            // for(int i=0;i<rentalStore.activeRecords.size();i++)
-            // {
-            //     customerRecord c=rentalStore.activeRecords.get(i);
-            //     System.out.println(c.name+" , "+c.type);
-            //     for(int j=0;j<c.cars_rented.size();j++)
-            //     {
-            //         System.out.println(c.cars_rented.get(j).license_no+" , "+c.cars_rented.get(j).getDescription()+" , "+c.cars_rented.get(j).day_rented+" , "+c.cars_rented.get(j).day_due+" , "+c.cars_rented.get(j).cost());
-            //     }
-            // }
-            // System.out.println(day+" , "+rentalStore.activeRecords.size());
+            rentalStore.printActiveRecords();
             // if(rentalStore.getTotalCars()>0)
             // {
             //     customerRecord c = rentalStore.customerIn(day);
