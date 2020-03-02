@@ -21,6 +21,10 @@ public abstract class Car {
     public String getType() {
         return this.ctype;
     }
+    public void set_license(String s)
+    {
+        this.license_no=s;
+    }
     public abstract float cost();
 }
 
