@@ -12,7 +12,13 @@ public class RentalStore extends Observable {
     {
         this.day = day;
         this.day_amnt = 0;
-        this.cars = new ArrayList<Object>();
+        // this.cars = new ArrayList<Object>();
+        this.eco_cars = new ArrayList<Object>();
+        this.lux_cars = new ArrayList<Object>();
+        this.std_cars = new ArrayList<Object>();
+        this.suv_cars = new ArrayList<Object>();
+        this.mini_cars = new ArrayList<Object>();
+
         //Instantiate cars using factory
         this.setupCars();
         this.customers = new ArrayList<customerRecord>();
@@ -34,22 +40,46 @@ public class RentalStore extends Observable {
             }
             switch(car.getClass().getName())
             {
-                case "Economy":Economy.count++;break;
-                case "Luxury":Luxury.count++;break;
-                case "Standard":Standard.count++;break;
-                case "Suv":Suv.count++;break;
-                case "Minivan":Minivan.count++;break;
+                case "Economy":Economy.count++; this.eco_car.add(car); break;
+                case "Luxury":Luxury.count++; this.lux_car.add(car); break;
+                case "Standard":Standard.count++; this.std_car.add(car); break;
+                case "Suv":Suv.count++; this.suv_car.add(car); break;
+                case "Minivan":Minivan.count++; this.mini_car.add(car); break;
             }
             this.cars.add(car);
         }
     }
     public void setupCustomers() {
         String[] customerType = new String[]{"CASUAL", "REGULAR", "BUSINESS"};
+        String[] carType = new String[]{"ECONOMY", "LUXURY", "STANDARD","SUV","MINIVAN"};
         Random rand = new Random(); // adapted from https://mkyong.com/java/java-generate-random-integers-in-a-range/
         int r;
+        int cr;
         for (int i = 1; i <= 12; i++) {
             r = rand.nextInt((2 - 0) + 1) + 0; //Randomizing the customer's type
+            switch (customerType[r])
+            {
+            case "CASUAL": // 1 car for 1 to 3 nights
+                cr = rand.nextInt(((carType.length-1) - 0) + 1) + 0; //Randomizing the car's type
+                
+                cars=1;
+                nights=rand.nextInt((3 - 1) + 1) + 1;
+                break;
+            case "REGULAR": // 1-3 cars for 3 to 5 nights
+                cars=rand.nextInt((3 - 1) + 1) + 1;
+                nights=rand.nextInt((5 - 3) + 1) + 3;
+                break;
+            case "BUSINESS": // 3 cars for 7 nights
+                cars=3;
+                nights=7;
+                break;
+            }
+
+
+
+
             this.customers.add(new customerRecord("C" + Integer.toString(i), customerType[r]));
+
         }
     }
     //Returns random customer object, type of car, number of cars and days
