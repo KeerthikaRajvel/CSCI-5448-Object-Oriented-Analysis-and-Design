@@ -44,7 +44,6 @@ public class RentalStore extends Observable {
             this.cars.get(car.getClass().getName()).add(car);
         }
     }
-   
     public void setupCustomers() {
         String[] customerType = new String[]{"Casual", "Regular", "Business"};
         String[] carType = new String[]{"Economy", "Luxury", "Standard","Suv","Minivan"};
@@ -122,6 +121,7 @@ public class RentalStore extends Observable {
             }
         }
         this.activeRecords.add(customer);
+        this.customers.add(customer);
         }
     }
     //Returns random customer object, type of car, number of cars and days
@@ -195,8 +195,6 @@ public class RentalStore extends Observable {
         // Setting up the observer
         observer o=new observer();
         rentalStore.addObserver(o);
-        Object[] customerRequest;
-        customerRecord C;
         for(int day=1;day<=35;day++)
         {
             rentalStore.day=day;
