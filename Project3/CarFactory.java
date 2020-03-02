@@ -1,24 +1,55 @@
 
 
 class CarFactory{
+    int e = 0;
+    int l = 0;
+    int st = 0;
+    int s = 0;
+    int m = 0;
+    
     public Car create(String carType){
         if(carType == null){
             return null;
         }
         if(carType.equalsIgnoreCase("Economy")){
-            return new Economy();
+            e++;
+            Car c = new Economy();
+            c.setType("Economy");
+            String li = "eco" + e;
+            c.set_license(li);
+            return c;
         }
         else if(carType.equalsIgnoreCase("Standard")){
-            return new Standard();
+            st++;
+            Car c = new Standard();
+            c.setType("Standard");
+            String li = "std" + st;
+            c.set_license(li);
+            return c;
         }
         else if(carType.equalsIgnoreCase("Luxury")){
-            return new Luxury();
+            l++;
+            Car c = new Luxury();
+            c.setType("Luxury");
+            String li = "lux" + l;
+            c.set_license(li);
+            return c;
         }
         else if(carType.equalsIgnoreCase("SUV")){
-            return new Suv();
+            s++;
+            Car c = new Suv();
+            c.setType("Suv");
+            String li = "suv" + s;
+            c.set_license(li);
+            return c;
         }
         else if(carType.equalsIgnoreCase("Minivan")){
-            return new Minivan();
+            m++;
+            Car c = new Minivan();
+            c.setType("Minivan");
+            String li = "mini" + m;
+            c.set_license(li);
+            return c;
         }
         return null;
     }
