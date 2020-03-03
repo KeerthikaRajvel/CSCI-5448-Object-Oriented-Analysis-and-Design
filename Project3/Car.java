@@ -1,11 +1,10 @@
 //package trial;
 import java.util.*;
 
-//CARS CLASS
+//CAR CLASS
 public abstract class Car {
     String license_no, ctype, description;
     int day_rented  , day_due;
-    static int total_cars;
 
     public Car()
     {
@@ -29,9 +28,8 @@ public abstract class Car {
 }
 
 
-//SUBCLASSES OF CARS
+//SUBCLASSES OF CAR
 class Economy extends Car {
-    static int count=0;
     public Economy(){
         super();
         description = " an ECONOMY car";
@@ -42,7 +40,6 @@ class Economy extends Car {
     }
 }
 class Standard extends Car {
-    static int count=0;
     public Standard(){
         super();
         description = " a STANDARD car";
@@ -53,7 +50,6 @@ class Standard extends Car {
     }
 }
 class Luxury extends Car {
-    static int count=0;
     public Luxury(){
         super();
         description = " a LUXURY car";
@@ -64,7 +60,6 @@ class Luxury extends Car {
     }
 }
 class Suv extends Car {
-    static int count=0;
     public Suv(){
         super();
         description = " a SUV";
@@ -75,7 +70,6 @@ class Suv extends Car {
     }
 }
 class Minivan extends Car {
-    static int count=0;
     public Minivan(){
         super();
         description = " a MINIVAN";
