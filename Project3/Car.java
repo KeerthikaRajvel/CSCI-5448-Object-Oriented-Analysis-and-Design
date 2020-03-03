@@ -4,7 +4,7 @@ import java.util.*;
 //CARS CLASS
 public abstract class Car {
     String license_no, ctype, description;
-    int day_rented  , day_due, no_childseats , no_gps , no_satradio;
+    int day_rented  , day_due;
     static int total_cars;
 
     public Car()
