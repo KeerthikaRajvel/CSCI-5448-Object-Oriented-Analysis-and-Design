@@ -34,7 +34,7 @@ class Economy extends Car {
     static int count=0;
     public Economy(){
         super();
-        description = " an ECONOMY car with the following options : \n";
+        description = " an ECONOMY car";
     }
     @Override
     public float cost( ) {
@@ -45,7 +45,7 @@ class Standard extends Car {
     static int count=0;
     public Standard(){
         super();
-        description = " a STANDARD car with the following options : \n";
+        description = " a STANDARD car";
     }
     @Override
     public float cost( ) {
@@ -56,7 +56,7 @@ class Luxury extends Car {
     static int count=0;
     public Luxury(){
         super();
-        description = " a LUXURY car with the following options : \n";
+        description = " a LUXURY car";
     }
     @Override
     public float cost( ) {
@@ -67,7 +67,7 @@ class Suv extends Car {
     static int count=0;
     public Suv(){
         super();
-        description = " a SUV with the following options : \n";
+        description = " a SUV";
     }
     @Override
     public float cost( ) {
@@ -78,7 +78,7 @@ class Minivan extends Car {
     static int count=0;
     public Minivan(){
         super();
-        description = " a MINIVAN with the following options : \n";
+        description = " a MINIVAN";
     }
     @Override
     public float cost( ) {

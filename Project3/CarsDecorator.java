@@ -13,7 +13,7 @@ class ChildSeat extends CarsDecorator {
         this.car = car;
     }
     public String getDescription() {
-        return car.getDescription() + "Childseat \n";
+        return car.getDescription() + " with Childseat";
     }
     public float cost() {
         float cost = car.cost();
@@ -21,7 +21,7 @@ class ChildSeat extends CarsDecorator {
             cost += 5;
         }
         if(car.getType() == "Standard") {
-            cost += 5.5;
+            cost += 6;
         }
         if(car.getType() == "Luxury") {
             cost += 10;
@@ -30,7 +30,7 @@ class ChildSeat extends CarsDecorator {
             cost += 7;
         }
         if(car.getType() == "Minivan") {
-            cost += 6;
+            cost += 8;
         }
         return cost;
     }
@@ -42,7 +42,7 @@ class Gps extends CarsDecorator {
         this.car = car;
     }
     public String getDescription() {
-        return car.getDescription() + "GPS \n";
+        return car.getDescription() + " with GPS";
     }
     public float cost() {
         float cost = car.cost();
@@ -70,7 +70,7 @@ class SatRadio extends CarsDecorator {
         this.car = car;
     }
     public String getDescription() {
-        return car.getDescription() + "Satellite Radio \n";
+        return car.getDescription() + " with Satellite Radio";
     }
     public float cost() {
         float cost = car.cost();
