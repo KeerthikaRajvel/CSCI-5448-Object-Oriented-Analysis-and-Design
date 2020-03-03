@@ -267,11 +267,18 @@ public class RentalStore extends Observable {
             }
         }
     }
+    public void alertObserver(String s)
+    {
+        setChanged();
+        notifyObservers(s);
+    }
     //----MAIN FUNCTION ------
     public static void main(String[] args)  {
 
+        int day =0;
         RentalStore rentalStore = new RentalStore(0);
-        System.out.println("******************* DAY0 *******************");
+        String s ="******************* DAY"+day+" *******************";
+        rentalStore.alertObserver(s);
         rentalStore.printActiveRecords();
         System.out.println("\n---TOTAL AMOUNT MADE BY SHOP TODAY :  -----" + rentalStore.day_amnt);
         rentalStore.day_amnt = 0;
