@@ -10,7 +10,7 @@
 3. Environment used for development : Visual Studio
 
 **Program Design**
-![Test Image 1](Project3.png)
+![Test Image 1](Project3.png)<br><br>
 The Car Simulator is implemented using the classes RentalStore, CustomerRecord and Car. The RentalStore class has the car rental business simulator evoked in its main function. In the car rental business simulator, it begins by creating the 24 cars in the rental store inventory with help of the classes CarFactory and Car. The Factory pattern used here helps in encapsulating all the instatiation of the car objects together. After the creation of car objects, the initial set of 12 customers are set up with the help of the setupCustomers() function in Class RentalStore. This function randomly generates the 12 customers with randomly chosen customer type and random number of cars in the customer's active record in the rental store. Now, the rental store has 12 customers and 24 cars set up in its inventory.<br>
 Further, Everyday begins by evoking the returns() functions which check if there is any car return due on that particular day. If yes, that particular car due is returned. As a result, the active records and the rental store inventory are updated accordingly.<br><br>
 For 35 days, the customerIn() function is evoked to randomly generate an incoming customer. This customer could be an active customer or an existing customer (i.e. a customer who had rented a car in the past) or a new customer. All the above cases are handled accordingly. As a result, the active records and the rental store inventory are updated accordingly.<br><br>
