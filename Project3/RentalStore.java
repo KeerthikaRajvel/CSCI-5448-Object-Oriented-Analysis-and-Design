@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.util.*;
 
 public class RentalStore extends Observable {
@@ -321,7 +322,7 @@ public class RentalStore extends Observable {
         
     }
     //----MAIN FUNCTION ------
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws FileNotFoundException {
 
         int day = 0;
         String s=null;
