@@ -1,162 +1,180 @@
 	RENTAL STORE'S ACTIVE RECORD : Total ( 12 )
 
-Customer Name : C1 , Customer Type: Regular
+Customer Name : C1 , Customer Type: Business
 
 Number of cars rented : 3 
 
-Car : std1 ,  a STANDARD car with GPS    with 4 Childseat , Day Rented : 0 , Day Due : 4 , Total Cost : 156.0
-Car : suv1 ,  a SUV with Satellite Radio    with 4 Childseat , Day Rented : 0 , Day Due : 4 , Total Cost : 281.0
-Car : std2 ,  a STANDARD car with GPS with Satellite Radio    with 4 Childseat , Day Rented : 0 , Day Due : 3 , Total Cost : 144.0
+Car : std1 ,  a STANDARD car with GPS , Day Rented : 0 , Day Due : 7 , Total Cost : 222.0
+Car : eco1 ,  an ECONOMY car with Satellite Radio   with 3 Childseat , Day Rented : 0 , Day Due : 7 , Total Cost : 170.0
+Car : std2 ,  a STANDARD car with GPS    with 4 Childseat , Day Rented : 0 , Day Due : 7 , Total Cost : 246.0
 
-Customer Name : C2 , Customer Type: Casual
+Customer Name : C2 , Customer Type: Regular
+
+Number of cars rented : 3 
+
+Car : eco2 ,  an ECONOMY car   with 3 Childseat , Day Rented : 0 , Day Due : 5 , Total Cost : 115.0
+Car : lux1 ,  a LUXURY car with GPS  with 2 Childseat , Day Rented : 0 , Day Due : 5 , Total Cost : 387.0
+Car : std3 ,  a STANDARD car with Satellite Radio  with 2 Childseat , Day Rented : 0 , Day Due : 4 , Total Cost : 150.0
+
+Customer Name : C3 , Customer Type: Casual
 
 Number of cars rented : 1 
 
-Car : eco1 ,  an ECONOMY car with Satellite Radio , Day Rented : 0 , Day Due : 3 , Total Cost : 75.0
-
-Customer Name : C3 , Customer Type: Regular
-
-Number of cars rented : 3 
-
-Car : suv2 ,  a SUV with GPS with Satellite Radio   with 3 Childseat , Day Rented : 0 , Day Due : 5 , Total Cost : 347.0
-Car : eco2 ,  an ECONOMY car with Satellite Radio   with 3 Childseat , Day Rented : 0 , Day Due : 5 , Total Cost : 130.0
-Car : lux1 ,  a LUXURY car with GPS with Satellite Radio  with 2 Childseat , Day Rented : 0 , Day Due : 4 , Total Cost : 337.0
+Car : std4 ,  a STANDARD car with GPS with 1 Childseat , Day Rented : 0 , Day Due : 1 , Total Cost : 48.0
 
 Customer Name : C4 , Customer Type: Casual
 
 Number of cars rented : 1 
 
-Car : mini1 ,  a MINIVAN , Day Rented : 0 , Day Due : 1 , Total Cost : 25.0
+Car : lux2 ,  a LUXURY car with GPS with Satellite Radio    with 4 Childseat , Day Rented : 0 , Day Due : 2 , Total Cost : 217.0
 
-Customer Name : C5 , Customer Type: Regular
+Customer Name : C5 , Customer Type: Casual
 
-Number of cars rented : 2 
+Number of cars rented : 1 
 
-Car : std3 ,  a STANDARD car with GPS   with 3 Childseat , Day Rented : 0 , Day Due : 3 , Total Cost : 120.0
-Car : lux2 ,  a LUXURY car with GPS with Satellite Radio , Day Rented : 0 , Day Due : 3 , Total Cost : 247.0
+Car : suv1 ,  a SUV with Satellite Radio    with 4 Childseat , Day Rented : 0 , Day Due : 1 , Total Cost : 101.0
 
-Customer Name : C6 , Customer Type: Regular
+Customer Name : C6 , Customer Type: Casual
 
-Number of cars rented : 2 
+Number of cars rented : 1 
 
-Car : mini2 ,  a MINIVAN with GPS with Satellite Radio , Day Rented : 0 , Day Due : 3 , Total Cost : 104.0
-Car : std4 ,  a STANDARD car with GPS with Satellite Radio with 1 Childseat , Day Rented : 0 , Day Due : 4 , Total Cost : 156.0
+Car : std5 ,  a STANDARD car with Satellite Radio  with 2 Childseat , Day Rented : 0 , Day Due : 2 , Total Cost : 90.0
 
 Customer Name : C7 , Customer Type: Casual
 
 Number of cars rented : 1 
 
-Car : suv3 ,  a SUV with 1 Childseat , Day Rented : 0 , Day Due : 1 , Total Cost : 67.0
+Car : eco3 ,  an ECONOMY car    with 4 Childseat , Day Rented : 0 , Day Due : 2 , Total Cost : 60.0
 
-Customer Name : C8 , Customer Type: Business
+Customer Name : C8 , Customer Type: Casual
 
-Number of cars rented : 3 
+Number of cars rented : 1 
 
-Car : mini3 ,  a MINIVAN with 1 Childseat , Day Rented : 0 , Day Due : 7 , Total Cost : 183.0
-Car : mini4 ,  a MINIVAN with GPS with Satellite Radio , Day Rented : 0 , Day Due : 7 , Total Cost : 204.0
-Car : std5 ,  a STANDARD car with GPS with Satellite Radio   with 3 Childseat , Day Rented : 0 , Day Due : 7 , Total Cost : 258.0
+Car : std6 ,  a STANDARD car with Satellite Radio    with 4 Childseat , Day Rented : 0 , Day Due : 3 , Total Cost : 132.0
 
 Customer Name : C9 , Customer Type: Casual
 
 Number of cars rented : 1 
 
-Car : suv4 ,  a SUV , Day Rented : 0 , Day Due : 3 , Total Cost : 180.0
+Car : mini1 ,  a MINIVAN with GPS    with 4 Childseat , Day Rented : 0 , Day Due : 2 , Total Cost : 97.0
 
 Customer Name : C10 , Customer Type: Regular
 
 Number of cars rented : 2 
 
-Car : lux3 ,  a LUXURY car with GPS with Satellite Radio   with 3 Childseat , Day Rented : 0 , Day Due : 3 , Total Cost : 277.0
-Car : mini5 ,  a MINIVAN with GPS with Satellite Radio with 1 Childseat , Day Rented : 0 , Day Due : 3 , Total Cost : 112.0
+Car : mini2 ,  a MINIVAN with GPS  with 2 Childseat , Day Rented : 0 , Day Due : 5 , Total Cost : 156.0
+Car : suv2 ,  a SUV with GPS   with 3 Childseat , Day Rented : 0 , Day Due : 4 , Total Cost : 274.0
 
-Customer Name : C11 , Customer Type: Business
+Customer Name : C11 , Customer Type: Casual
 
-Number of cars rented : 3 
+Number of cars rented : 1 
 
-Car : lux4 ,  a LUXURY car    with 4 Childseat , Day Rented : 0 , Day Due : 7 , Total Cost : 530.0
-Car : suv5 ,  a SUV with Satellite Radio   with 3 Childseat , Day Rented : 0 , Day Due : 7 , Total Cost : 454.0
-Car : lux5 ,  a LUXURY car with Satellite Radio   with 3 Childseat , Day Rented : 0 , Day Due : 7 , Total Cost : 540.0
+Car : suv3 ,  a SUV , Day Rented : 0 , Day Due : 1 , Total Cost : 60.0
 
-Customer Name : C12 , Customer Type: Business
+Customer Name : C12 , Customer Type: Casual
 
-Number of cars rented : 0 
+Number of cars rented : 1 
 
+Car : eco4 ,  an ECONOMY car with Satellite Radio   with 3 Childseat , Day Rented : 0 , Day Due : 1 , Total Cost : 50.0
 
 
 
 ******************* DAY 1 *******************
 
---- 2 Number of Completed rentals on Day 1 ---
+--- 4 Number of Completed rentals on Day 1 ---
 
-Customer C4 returned Minivan car with license plate mini1 ,  a MINIVAN , Day Rented : 0 , Day Due : 1 , Total Cost : 25.0
-Customer C7 returned Suv car with license plate suv3 ,  a SUV with 1 Childseat , Day Rented : 0 , Day Due : 1 , Total Cost : 67.0
+Customer C3 returned Standard car with license plate std4 ,  a STANDARD car with GPS with 1 Childseat , Day Rented : 0 , Day Due : 1 , Total Cost : 48.0
+Customer C5 returned Suv car with license plate suv1 ,  a SUV with Satellite Radio    with 4 Childseat , Day Rented : 0 , Day Due : 1 , Total Cost : 101.0
+Customer C11 returned Suv car with license plate suv3 ,  a SUV , Day Rented : 0 , Day Due : 1 , Total Cost : 60.0
+Customer C12 returned Economy car with license plate eco4 ,  an ECONOMY car with Satellite Radio   with 3 Childseat , Day Rented : 0 , Day Due : 1 , Total Cost : 50.0
 
 
 ---- Rental records of Day 1-----
 
-C13 rented a MINIVAN (mini1), for 7 night(s), for a total cost of $175.0.
-C13 rented a SUV with GPS with Satellite Radio   with 3 Childseat (suv3), for 7 night(s), for a total cost of $467.0.
-C13 rented a LUXURY car with Satellite Radio  with 2 Childseat (lux6), for 7 night(s), for a total cost of $530.0.
-C15 rented a LUXURY car with Satellite Radio (lux7), for 2 night(s), for a total cost of $160.0.
+C3 rented a SUV    with 4 Childseat (suv4), for 3 night(s), for a total cost of $208.0.
 
 
----- Cars left in the inventory on Day 1 : 0 -----
+---- Cars left in the inventory on Day 1 : 10 -----
+
+Car Type : Minivan with license plate : mini3.
+Car Type : Minivan with license plate : mini4.
+Car Type : Economy with license plate : eco4.
+Car Type : Suv with license plate : suv5.
+Car Type : Suv with license plate : suv6.
+Car Type : Suv with license plate : suv1.
+Car Type : Suv with license plate : suv3.
+Car Type : Standard with license plate : std7.
+Car Type : Standard with license plate : std8.
+Car Type : Standard with license plate : std4.
 
 
-
---- Total Amount made on Day 1 : 1332.0 ---
+--- Total Amount made on Day 1 : 208.0 ---
 
 
 
 ******************* DAY 2 *******************
 
-	-- No Cars available in the Rental store today --	
+--- 4 Number of Completed rentals on Day 2 ---
+
+Customer C4 returned Luxury car with license plate lux2 ,  a LUXURY car with GPS with Satellite Radio    with 4 Childseat , Day Rented : 0 , Day Due : 2 , Total Cost : 217.0
+Customer C6 returned Standard car with license plate std5 ,  a STANDARD car with Satellite Radio  with 2 Childseat , Day Rented : 0 , Day Due : 2 , Total Cost : 90.0
+Customer C7 returned Economy car with license plate eco3 ,  an ECONOMY car    with 4 Childseat , Day Rented : 0 , Day Due : 2 , Total Cost : 60.0
+Customer C9 returned Minivan car with license plate mini1 ,  a MINIVAN with GPS    with 4 Childseat , Day Rented : 0 , Day Due : 2 , Total Cost : 97.0
+
 
 ---- Rental records of Day 2-----
 
+C13 rented a MINIVAN with Satellite Radio    with 4 Childseat (mini3), for 7 night(s), for a total cost of $221.0.
+C13 rented a SUV with GPS with Satellite Radio with 1 Childseat (suv5), for 7 night(s), for a total cost of $453.0.
+C13 rented a LUXURY car with GPS with Satellite Radio with 1 Childseat (lux2), for 7 night(s), for a total cost of $537.0.
+C14 rented a MINIVAN with GPS with Satellite Radio (mini4), for 3 night(s), for a total cost of $104.0.
 
 
----- Cars left in the inventory on Day 2 : 0 -----
+---- Cars left in the inventory on Day 2 : 10 -----
+
+Car Type : Minivan with license plate : mini1.
+Car Type : Economy with license plate : eco4.
+Car Type : Economy with license plate : eco3.
+Car Type : Suv with license plate : suv6.
+Car Type : Suv with license plate : suv1.
+Car Type : Suv with license plate : suv3.
+Car Type : Standard with license plate : std7.
+Car Type : Standard with license plate : std8.
+Car Type : Standard with license plate : std4.
+Car Type : Standard with license plate : std5.
 
 
-
---- Total Amount made on Day 2 : 0.0 ---
+--- Total Amount made on Day 2 : 1315.0 ---
 
 
 
 ******************* DAY 3 *******************
 
---- 9 Number of Completed rentals on Day 3 ---
+--- 1 Number of Completed rentals on Day 3 ---
 
-Customer C1 returned Standard car with license plate std2 ,  a STANDARD car with GPS with Satellite Radio    with 4 Childseat , Day Rented : 0 , Day Due : 3 , Total Cost : 144.0
-Customer C2 returned Economy car with license plate eco1 ,  an ECONOMY car with Satellite Radio , Day Rented : 0 , Day Due : 3 , Total Cost : 75.0
-Customer C5 returned Standard car with license plate std3 ,  a STANDARD car with GPS   with 3 Childseat , Day Rented : 0 , Day Due : 3 , Total Cost : 120.0
-Customer C5 returned Luxury car with license plate lux2 ,  a LUXURY car with GPS with Satellite Radio , Day Rented : 0 , Day Due : 3 , Total Cost : 247.0
-Customer C6 returned Minivan car with license plate mini2 ,  a MINIVAN with GPS with Satellite Radio , Day Rented : 0 , Day Due : 3 , Total Cost : 104.0
-Customer C9 returned Suv car with license plate suv4 ,  a SUV , Day Rented : 0 , Day Due : 3 , Total Cost : 180.0
-Customer C10 returned Luxury car with license plate lux3 ,  a LUXURY car with GPS with Satellite Radio   with 3 Childseat , Day Rented : 0 , Day Due : 3 , Total Cost : 277.0
-Customer C10 returned Minivan car with license plate mini5 ,  a MINIVAN with GPS with Satellite Radio with 1 Childseat , Day Rented : 0 , Day Due : 3 , Total Cost : 112.0
-Customer C15 returned Luxury car with license plate lux7 ,  a LUXURY car with Satellite Radio , Day Rented : 1 , Day Due : 3 , Total Cost : 160.0
+Customer C8 returned Standard car with license plate std6 ,  a STANDARD car with Satellite Radio    with 4 Childseat , Day Rented : 0 , Day Due : 3 , Total Cost : 132.0
 
 
 ---- Rental records of Day 3-----
 
-C9 rented a MINIVAN with Satellite Radio  with 2 Childseat (mini2), for 3 night(s), for a total cost of $105.0.
-C16 rented a SUV with GPS with Satellite Radio (suv4), for 7 night(s), for a total cost of $446.0.
-C16 rented a STANDARD car with GPS   with 3 Childseat (std2), for 7 night(s), for a total cost of $240.0.
-C16 rented a LUXURY car with GPS with Satellite Radio   with 3 Childseat (lux2), for 7 night(s), for a total cost of $557.0.
-C17 rented an ECONOMY car with Satellite Radio    with 4 Childseat (eco1), for 7 night(s), for a total cost of $175.0.
-C17 rented a LUXURY car with GPS with Satellite Radio  with 2 Childseat (lux3), for 7 night(s), for a total cost of $547.0.
-C17 rented a MINIVAN with Satellite Radio    with 4 Childseat (mini5), for 7 night(s), for a total cost of $221.0.
-C15 rented a LUXURY car with Satellite Radio   with 3 Childseat (lux7), for 3 night(s), for a total cost of $260.0.
+C15 rented a SUV with GPS with Satellite Radio with 1 Childseat (suv6), for 1 night(s), for a total cost of $93.0.
 
 
----- Cars left in the inventory on Day 3 : 1 -----
+---- Cars left in the inventory on Day 3 : 10 -----
 
-Car Type : Standard with license plate : std3.
+Car Type : Minivan with license plate : mini1.
+Car Type : Economy with license plate : eco4.
+Car Type : Economy with license plate : eco3.
+Car Type : Suv with license plate : suv1.
+Car Type : Suv with license plate : suv3.
+Car Type : Standard with license plate : std7.
+Car Type : Standard with license plate : std8.
+Car Type : Standard with license plate : std4.
+Car Type : Standard with license plate : std5.
+Car Type : Standard with license plate : std6.
 
 
---- Total Amount made on Day 3 : 2551.0 ---
+--- Total Amount made on Day 3 : 93.0 ---
 
 
 
@@ -164,57 +182,972 @@ Car Type : Standard with license plate : std3.
 
 --- 4 Number of Completed rentals on Day 4 ---
 
-Customer C1 returned Standard car with license plate std1 ,  a STANDARD car with GPS    with 4 Childseat , Day Rented : 0 , Day Due : 4 , Total Cost : 156.0
-Customer C1 returned Suv car with license plate suv1 ,  a SUV with Satellite Radio    with 4 Childseat , Day Rented : 0 , Day Due : 4 , Total Cost : 281.0
-Customer C3 returned Luxury car with license plate lux1 ,  a LUXURY car with GPS with Satellite Radio  with 2 Childseat , Day Rented : 0 , Day Due : 4 , Total Cost : 337.0
-Customer C6 returned Standard car with license plate std4 ,  a STANDARD car with GPS with Satellite Radio with 1 Childseat , Day Rented : 0 , Day Due : 4 , Total Cost : 156.0
+Customer C2 returned Standard car with license plate std3 ,  a STANDARD car with Satellite Radio  with 2 Childseat , Day Rented : 0 , Day Due : 4 , Total Cost : 150.0
+Customer C10 returned Suv car with license plate suv2 ,  a SUV with GPS   with 3 Childseat , Day Rented : 0 , Day Due : 4 , Total Cost : 274.0
+Customer C3 returned Suv car with license plate suv4 ,  a SUV    with 4 Childseat , Day Rented : 1 , Day Due : 4 , Total Cost : 208.0
+Customer C15 returned Suv car with license plate suv6 ,  a SUV with GPS with Satellite Radio with 1 Childseat , Day Rented : 3 , Day Due : 4 , Total Cost : 93.0
 
 
 ---- Rental records of Day 4-----
 
-C5 rented a SUV (suv1), for 4 night(s), for a total cost of $240.0.
-C5 rented a STANDARD car with GPS (std3), for 3 night(s), for a total cost of $102.0.
-C18 rented a STANDARD car with Satellite Radio (std1), for 4 night(s), for a total cost of $138.0.
-C19 rented a LUXURY car with GPS with 1 Childseat (lux1), for 2 night(s), for a total cost of $167.0.
-C20 rented a STANDARD car with Satellite Radio    with 4 Childseat (std4), for 1 night(s), for a total cost of $72.0.
+C9 rented a STANDARD car with Satellite Radio  with 2 Childseat (std7), for 1 night(s), for a total cost of $60.0.
 
 
----- Cars left in the inventory on Day 4 : 0 -----
+---- Cars left in the inventory on Day 4 : 13 -----
+
+Car Type : Minivan with license plate : mini1.
+Car Type : Economy with license plate : eco4.
+Car Type : Economy with license plate : eco3.
+Car Type : Suv with license plate : suv1.
+Car Type : Suv with license plate : suv3.
+Car Type : Suv with license plate : suv2.
+Car Type : Suv with license plate : suv4.
+Car Type : Suv with license plate : suv6.
+Car Type : Standard with license plate : std8.
+Car Type : Standard with license plate : std4.
+Car Type : Standard with license plate : std5.
+Car Type : Standard with license plate : std6.
+Car Type : Standard with license plate : std3.
 
 
-
---- Total Amount made on Day 4 : 719.0 ---
+--- Total Amount made on Day 4 : 60.0 ---
 
 
 
 ******************* DAY 5 *******************
 
---- 3 Number of Completed rentals on Day 5 ---
+--- 5 Number of Completed rentals on Day 5 ---
 
-Customer C3 returned Suv car with license plate suv2 ,  a SUV with GPS with Satellite Radio   with 3 Childseat , Day Rented : 0 , Day Due : 5 , Total Cost : 347.0
-Customer C3 returned Economy car with license plate eco2 ,  an ECONOMY car with Satellite Radio   with 3 Childseat , Day Rented : 0 , Day Due : 5 , Total Cost : 130.0
-Customer C20 returned Standard car with license plate std4 ,  a STANDARD car with Satellite Radio    with 4 Childseat , Day Rented : 4 , Day Due : 5 , Total Cost : 72.0
+Customer C2 returned Economy car with license plate eco2 ,  an ECONOMY car   with 3 Childseat , Day Rented : 0 , Day Due : 5 , Total Cost : 115.0
+Customer C2 returned Luxury car with license plate lux1 ,  a LUXURY car with GPS  with 2 Childseat , Day Rented : 0 , Day Due : 5 , Total Cost : 387.0
+Customer C10 returned Minivan car with license plate mini2 ,  a MINIVAN with GPS  with 2 Childseat , Day Rented : 0 , Day Due : 5 , Total Cost : 156.0
+Customer C14 returned Minivan car with license plate mini4 ,  a MINIVAN with GPS with Satellite Radio , Day Rented : 2 , Day Due : 5 , Total Cost : 104.0
+Customer C9 returned Standard car with license plate std7 ,  a STANDARD car with Satellite Radio  with 2 Childseat , Day Rented : 4 , Day Due : 5 , Total Cost : 60.0
 
 
 ---- Rental records of Day 5-----
 
-C21 rented an ECONOMY car    with 4 Childseat (eco2), for 7 night(s), for a total cost of $160.0.
-C21 rented a SUV with GPS with Satellite Radio  with 2 Childseat (suv2), for 7 night(s), for a total cost of $460.0.
-C21 rented a STANDARD car with GPS with 1 Childseat (std4), for 7 night(s), for a total cost of $228.0.
+C3 rented a LUXURY car with GPS with Satellite Radio with 1 Childseat (lux1), for 1 night(s), for a total cost of $117.0.
+C15 rented a STANDARD car with GPS with Satellite Radio    with 4 Childseat (std8), for 1 night(s), for a total cost of $84.0.
+C2 rented a SUV with GPS   with 3 Childseat (suv1), for 4 night(s), for a total cost of $274.0.
+C2 rented a MINIVAN with GPS with 1 Childseat (mini1), for 4 night(s), for a total cost of $123.0.
 
 
----- Cars left in the inventory on Day 5 : 0 -----
+---- Cars left in the inventory on Day 5 : 14 -----
+
+Car Type : Minivan with license plate : mini2.
+Car Type : Minivan with license plate : mini4.
+Car Type : Economy with license plate : eco4.
+Car Type : Economy with license plate : eco3.
+Car Type : Economy with license plate : eco2.
+Car Type : Suv with license plate : suv3.
+Car Type : Suv with license plate : suv2.
+Car Type : Suv with license plate : suv4.
+Car Type : Suv with license plate : suv6.
+Car Type : Standard with license plate : std4.
+Car Type : Standard with license plate : std5.
+Car Type : Standard with license plate : std6.
+Car Type : Standard with license plate : std3.
+Car Type : Standard with license plate : std7.
+
+
+--- Total Amount made on Day 5 : 598.0 ---
 
 
 
---- Total Amount made on Day 5 : 848.0 ---
+******************* DAY 6 *******************
+
+--- 2 Number of Completed rentals on Day 6 ---
+
+Customer C3 returned Luxury car with license plate lux1 ,  a LUXURY car with GPS with Satellite Radio with 1 Childseat , Day Rented : 5 , Day Due : 6 , Total Cost : 117.0
+Customer C15 returned Standard car with license plate std8 ,  a STANDARD car with GPS with Satellite Radio    with 4 Childseat , Day Rented : 5 , Day Due : 6 , Total Cost : 84.0
+
+
+---- Rental records of Day 6-----
+
+C12 rented a SUV with GPS    with 4 Childseat (suv3), for 3 night(s), for a total cost of $221.0.
+C16 rented an ECONOMY car with Satellite Radio with 1 Childseat (eco4), for 7 night(s), for a total cost of $160.0.
+C16 rented a STANDARD car with GPS (std4), for 7 night(s), for a total cost of $222.0.
+C16 rented an ECONOMY car with Satellite Radio   with 3 Childseat (eco3), for 7 night(s), for a total cost of $170.0.
+C17 rented an ECONOMY car   with 3 Childseat (eco2), for 7 night(s), for a total cost of $155.0.
+C17 rented a LUXURY car with GPS   with 3 Childseat (lux1), for 7 night(s), for a total cost of $537.0.
+C17 rented a STANDARD car with GPS  with 2 Childseat (std5), for 7 night(s), for a total cost of $234.0.
+
+
+---- Cars left in the inventory on Day 6 : 9 -----
+
+Car Type : Minivan with license plate : mini2.
+Car Type : Minivan with license plate : mini4.
+Car Type : Suv with license plate : suv2.
+Car Type : Suv with license plate : suv4.
+Car Type : Suv with license plate : suv6.
+Car Type : Standard with license plate : std6.
+Car Type : Standard with license plate : std3.
+Car Type : Standard with license plate : std7.
+Car Type : Standard with license plate : std8.
+
+
+--- Total Amount made on Day 6 : 1699.0 ---
+
+
+
+******************* DAY 7 *******************
+
+--- 3 Number of Completed rentals on Day 7 ---
+
+Customer C1 returned Standard car with license plate std1 ,  a STANDARD car with GPS , Day Rented : 0 , Day Due : 7 , Total Cost : 222.0
+Customer C1 returned Economy car with license plate eco1 ,  an ECONOMY car with Satellite Radio   with 3 Childseat , Day Rented : 0 , Day Due : 7 , Total Cost : 170.0
+Customer C1 returned Standard car with license plate std2 ,  a STANDARD car with GPS    with 4 Childseat , Day Rented : 0 , Day Due : 7 , Total Cost : 246.0
+
+
+---- Rental records of Day 7-----
+
+C18 rented a SUV with 1 Childseat (suv2), for 3 night(s), for a total cost of $187.0.
+
+
+---- Cars left in the inventory on Day 7 : 11 -----
+
+Car Type : Minivan with license plate : mini2.
+Car Type : Minivan with license plate : mini4.
+Car Type : Economy with license plate : eco1.
+Car Type : Suv with license plate : suv4.
+Car Type : Suv with license plate : suv6.
+Car Type : Standard with license plate : std6.
+Car Type : Standard with license plate : std3.
+Car Type : Standard with license plate : std7.
+Car Type : Standard with license plate : std8.
+Car Type : Standard with license plate : std1.
+Car Type : Standard with license plate : std2.
+
+
+--- Total Amount made on Day 7 : 187.0 ---
+
+
+
+******************* DAY 8 *******************
+
+---- Rental records of Day 8-----
+
+C15 rented a SUV with GPS   with 3 Childseat (suv4), for 2 night(s), for a total cost of $154.0.
+C19 rented a STANDARD car with GPS with Satellite Radio  with 2 Childseat (std6), for 1 night(s), for a total cost of $72.0.
+C3 rented an ECONOMY car with Satellite Radio   with 3 Childseat (eco1), for 1 night(s), for a total cost of $50.0.
+
+
+---- Cars left in the inventory on Day 8 : 8 -----
+
+Car Type : Minivan with license plate : mini2.
+Car Type : Minivan with license plate : mini4.
+Car Type : Suv with license plate : suv6.
+Car Type : Standard with license plate : std3.
+Car Type : Standard with license plate : std7.
+Car Type : Standard with license plate : std8.
+Car Type : Standard with license plate : std1.
+Car Type : Standard with license plate : std2.
+
+
+--- Total Amount made on Day 8 : 276.0 ---
+
+
+
+******************* DAY 9 *******************
+
+--- 8 Number of Completed rentals on Day 9 ---
+
+Customer C13 returned Minivan car with license plate mini3 ,  a MINIVAN with Satellite Radio    with 4 Childseat , Day Rented : 2 , Day Due : 9 , Total Cost : 221.0
+Customer C13 returned Suv car with license plate suv5 ,  a SUV with GPS with Satellite Radio with 1 Childseat , Day Rented : 2 , Day Due : 9 , Total Cost : 453.0
+Customer C13 returned Luxury car with license plate lux2 ,  a LUXURY car with GPS with Satellite Radio with 1 Childseat , Day Rented : 2 , Day Due : 9 , Total Cost : 537.0
+Customer C2 returned Suv car with license plate suv1 ,  a SUV with GPS   with 3 Childseat , Day Rented : 5 , Day Due : 9 , Total Cost : 274.0
+Customer C2 returned Minivan car with license plate mini1 ,  a MINIVAN with GPS with 1 Childseat , Day Rented : 5 , Day Due : 9 , Total Cost : 123.0
+Customer C12 returned Suv car with license plate suv3 ,  a SUV with GPS    with 4 Childseat , Day Rented : 6 , Day Due : 9 , Total Cost : 221.0
+Customer C19 returned Standard car with license plate std6 ,  a STANDARD car with GPS with Satellite Radio  with 2 Childseat , Day Rented : 8 , Day Due : 9 , Total Cost : 72.0
+Customer C3 returned Economy car with license plate eco1 ,  an ECONOMY car with Satellite Radio   with 3 Childseat , Day Rented : 8 , Day Due : 9 , Total Cost : 50.0
+
+
+---- Rental records of Day 9-----
+
+C10 rented a LUXURY car with GPS (lux2), for 4 night(s), for a total cost of $297.0.
+C10 rented a SUV with 1 Childseat (suv6), for 5 night(s), for a total cost of $307.0.
+C20 rented a SUV    with 4 Childseat (suv5), for 7 night(s), for a total cost of $448.0.
+C20 rented a SUV with GPS with Satellite Radio    with 4 Childseat (suv1), for 7 night(s), for a total cost of $474.0.
+C20 rented a STANDARD car with GPS    with 4 Childseat (std3), for 7 night(s), for a total cost of $246.0.
+C8 rented an ECONOMY car with 1 Childseat (eco1), for 3 night(s), for a total cost of $65.0.
+
+
+---- Cars left in the inventory on Day 9 : 10 -----
+
+Car Type : Minivan with license plate : mini2.
+Car Type : Minivan with license plate : mini4.
+Car Type : Minivan with license plate : mini3.
+Car Type : Minivan with license plate : mini1.
+Car Type : Suv with license plate : suv3.
+Car Type : Standard with license plate : std7.
+Car Type : Standard with license plate : std8.
+Car Type : Standard with license plate : std1.
+Car Type : Standard with license plate : std2.
+Car Type : Standard with license plate : std6.
+
+
+--- Total Amount made on Day 9 : 1837.0 ---
+
+
+
+******************* DAY 10 *******************
+
+--- 2 Number of Completed rentals on Day 10 ---
+
+Customer C18 returned Suv car with license plate suv2 ,  a SUV with 1 Childseat , Day Rented : 7 , Day Due : 10 , Total Cost : 187.0
+Customer C15 returned Suv car with license plate suv4 ,  a SUV with GPS   with 3 Childseat , Day Rented : 8 , Day Due : 10 , Total Cost : 154.0
+
+
+---- Rental records of Day 10-----
+
+C21 rented a MINIVAN with 1 Childseat (mini2), for 3 night(s), for a total cost of $83.0.
+C13 rented a SUV    with 4 Childseat (suv3), for 7 night(s), for a total cost of $448.0.
+C13 rented a SUV with Satellite Radio (suv2), for 7 night(s), for a total cost of $433.0.
+C13 rented a SUV with Satellite Radio with 1 Childseat (suv4), for 7 night(s), for a total cost of $440.0.
+C22 rented a MINIVAN with Satellite Radio (mini4), for 3 night(s), for a total cost of $89.0.
+
+
+---- Cars left in the inventory on Day 10 : 7 -----
+
+Car Type : Minivan with license plate : mini3.
+Car Type : Minivan with license plate : mini1.
+Car Type : Standard with license plate : std7.
+Car Type : Standard with license plate : std8.
+Car Type : Standard with license plate : std1.
+Car Type : Standard with license plate : std2.
+Car Type : Standard with license plate : std6.
+
+
+--- Total Amount made on Day 10 : 1493.0 ---
+
+
+
+******************* DAY 11 *******************
+
+---- Rental records of Day 11-----
+
+C23 rented a STANDARD car with GPS   with 3 Childseat (std7), for 5 night(s), for a total cost of $180.0.
+C23 rented a STANDARD car with Satellite Radio (std8), for 5 night(s), for a total cost of $168.0.
+C23 rented a STANDARD car with GPS with Satellite Radio with 1 Childseat (std1), for 5 night(s), for a total cost of $186.0.
+C14 rented a MINIVAN with GPS  with 2 Childseat (mini3), for 3 night(s), for a total cost of $106.0.
+
+
+---- Cars left in the inventory on Day 11 : 3 -----
+
+Car Type : Minivan with license plate : mini1.
+Car Type : Standard with license plate : std2.
+Car Type : Standard with license plate : std6.
+
+
+--- Total Amount made on Day 11 : 640.0 ---
+
+
+
+******************* DAY 12 *******************
+
+--- 1 Number of Completed rentals on Day 12 ---
+
+Customer C8 returned Economy car with license plate eco1 ,  an ECONOMY car with 1 Childseat , Day Rented : 9 , Day Due : 12 , Total Cost : 65.0
+
+
+---- Rental records of Day 12-----
+
+C24 rented a MINIVAN with GPS with Satellite Radio (mini1), for 7 night(s), for a total cost of $204.0.
+C24 rented a STANDARD car with GPS   with 3 Childseat (std2), for 7 night(s), for a total cost of $240.0.
+C24 rented an ECONOMY car with Satellite Radio    with 4 Childseat (eco1), for 7 night(s), for a total cost of $175.0.
+C2 rented a STANDARD car with GPS with Satellite Radio   with 3 Childseat (std6), for 5 night(s), for a total cost of $198.0.
+
+
+---- Cars left in the inventory on Day 12 : 0 -----
+
+
+
+--- Total Amount made on Day 12 : 817.0 ---
+
+
+
+******************* DAY 13 *******************
+
+--- 9 Number of Completed rentals on Day 13 ---
+
+Customer C16 returned Economy car with license plate eco4 ,  an ECONOMY car with Satellite Radio with 1 Childseat , Day Rented : 6 , Day Due : 13 , Total Cost : 160.0
+Customer C16 returned Standard car with license plate std4 ,  a STANDARD car with GPS , Day Rented : 6 , Day Due : 13 , Total Cost : 222.0
+Customer C16 returned Economy car with license plate eco3 ,  an ECONOMY car with Satellite Radio   with 3 Childseat , Day Rented : 6 , Day Due : 13 , Total Cost : 170.0
+Customer C17 returned Economy car with license plate eco2 ,  an ECONOMY car   with 3 Childseat , Day Rented : 6 , Day Due : 13 , Total Cost : 155.0
+Customer C17 returned Luxury car with license plate lux1 ,  a LUXURY car with GPS   with 3 Childseat , Day Rented : 6 , Day Due : 13 , Total Cost : 537.0
+Customer C17 returned Standard car with license plate std5 ,  a STANDARD car with GPS  with 2 Childseat , Day Rented : 6 , Day Due : 13 , Total Cost : 234.0
+Customer C10 returned Luxury car with license plate lux2 ,  a LUXURY car with GPS , Day Rented : 9 , Day Due : 13 , Total Cost : 297.0
+Customer C21 returned Minivan car with license plate mini2 ,  a MINIVAN with 1 Childseat , Day Rented : 10 , Day Due : 13 , Total Cost : 83.0
+Customer C22 returned Minivan car with license plate mini4 ,  a MINIVAN with Satellite Radio , Day Rented : 10 , Day Due : 13 , Total Cost : 89.0
+
+
+---- Rental records of Day 13-----
+
+C25 rented a STANDARD car with GPS with Satellite Radio  with 2 Childseat (std4), for 3 night(s), for a total cost of $132.0.
+C26 rented an ECONOMY car with Satellite Radio   with 3 Childseat (eco4), for 5 night(s), for a total cost of $130.0.
+C27 rented an ECONOMY car with GPS with Satellite Radio (eco3), for 7 night(s), for a total cost of $165.0.
+C27 rented an ECONOMY car    with 4 Childseat (eco2), for 7 night(s), for a total cost of $160.0.
+C27 rented a STANDARD car with GPS with Satellite Radio    with 4 Childseat (std5), for 7 night(s), for a total cost of $264.0.
+
+
+---- Cars left in the inventory on Day 13 : 4 -----
+
+Car Type : Minivan with license plate : mini2.
+Car Type : Minivan with license plate : mini4.
+Car Type : Luxury with license plate : lux1.
+Car Type : Luxury with license plate : lux2.
+
+
+--- Total Amount made on Day 13 : 851.0 ---
+
+
+
+******************* DAY 14 *******************
+
+--- 2 Number of Completed rentals on Day 14 ---
+
+Customer C10 returned Suv car with license plate suv6 ,  a SUV with 1 Childseat , Day Rented : 9 , Day Due : 14 , Total Cost : 307.0
+Customer C14 returned Minivan car with license plate mini3 ,  a MINIVAN with GPS  with 2 Childseat , Day Rented : 11 , Day Due : 14 , Total Cost : 106.0
+
+
+---- Rental records of Day 14-----
+
+C17 rented a LUXURY car  with 2 Childseat (lux1), for 7 night(s), for a total cost of $510.0.
+C17 rented a MINIVAN with GPS (mini2), for 7 night(s), for a total cost of $190.0.
+C17 rented a LUXURY car with Satellite Radio    with 4 Childseat (lux2), for 7 night(s), for a total cost of $550.0.
+C28 rented a MINIVAN with 1 Childseat (mini4), for 3 night(s), for a total cost of $83.0.
+C29 rented a SUV with Satellite Radio   with 3 Childseat (suv6), for 1 night(s), for a total cost of $94.0.
+
+
+---- Cars left in the inventory on Day 14 : 1 -----
+
+Car Type : Minivan with license plate : mini3.
+
+
+--- Total Amount made on Day 14 : 1427.0 ---
+
+
+
+******************* DAY 15 *******************
+
+--- 1 Number of Completed rentals on Day 15 ---
+
+Customer C29 returned Suv car with license plate suv6 ,  a SUV with Satellite Radio   with 3 Childseat , Day Rented : 14 , Day Due : 15 , Total Cost : 94.0
+
+
+---- Rental records of Day 15-----
+
+C31 rented a MINIVAN with GPS (mini3), for 5 night(s), for a total cost of $140.0.
+C31 rented a SUV with GPS with Satellite Radio   with 3 Childseat (suv6), for 3 night(s), for a total cost of $227.0.
+
+
+---- Cars left in the inventory on Day 15 : 0 -----
+
+
+
+--- Total Amount made on Day 15 : 367.0 ---
+
+
+
+******************* DAY 16 *******************
+
+--- 7 Number of Completed rentals on Day 16 ---
+
+Customer C20 returned Suv car with license plate suv5 ,  a SUV    with 4 Childseat , Day Rented : 9 , Day Due : 16 , Total Cost : 448.0
+Customer C20 returned Suv car with license plate suv1 ,  a SUV with GPS with Satellite Radio    with 4 Childseat , Day Rented : 9 , Day Due : 16 , Total Cost : 474.0
+Customer C20 returned Standard car with license plate std3 ,  a STANDARD car with GPS    with 4 Childseat , Day Rented : 9 , Day Due : 16 , Total Cost : 246.0
+Customer C23 returned Standard car with license plate std7 ,  a STANDARD car with GPS   with 3 Childseat , Day Rented : 11 , Day Due : 16 , Total Cost : 180.0
+Customer C23 returned Standard car with license plate std8 ,  a STANDARD car with Satellite Radio , Day Rented : 11 , Day Due : 16 , Total Cost : 168.0
+Customer C23 returned Standard car with license plate std1 ,  a STANDARD car with GPS with Satellite Radio with 1 Childseat , Day Rented : 11 , Day Due : 16 , Total Cost : 186.0
+Customer C25 returned Standard car with license plate std4 ,  a STANDARD car with GPS with Satellite Radio  with 2 Childseat , Day Rented : 13 , Day Due : 16 , Total Cost : 132.0
+
+
+---- Rental records of Day 16-----
+
+C32 rented a SUV with Satellite Radio with 1 Childseat (suv5), for 4 night(s), for a total cost of $260.0.
+C32 rented a SUV with GPS with Satellite Radio    with 4 Childseat (suv1), for 4 night(s), for a total cost of $294.0.
+C33 rented a STANDARD car with Satellite Radio  with 2 Childseat (std3), for 3 night(s), for a total cost of $120.0.
+C33 rented a STANDARD car with GPS with Satellite Radio  with 2 Childseat (std7), for 3 night(s), for a total cost of $132.0.
+C33 rented a STANDARD car with GPS with 1 Childseat (std8), for 3 night(s), for a total cost of $108.0.
+C33 rented a STANDARD car with GPS with Satellite Radio    with 4 Childseat (std1), for 4 night(s), for a total cost of $174.0.
+
+
+---- Cars left in the inventory on Day 16 : 1 -----
+
+Car Type : Standard with license plate : std4.
+
+
+--- Total Amount made on Day 16 : 1088.0 ---
+
+
+
+******************* DAY 17 *******************
+
+--- 5 Number of Completed rentals on Day 17 ---
+
+Customer C13 returned Suv car with license plate suv3 ,  a SUV    with 4 Childseat , Day Rented : 10 , Day Due : 17 , Total Cost : 448.0
+Customer C13 returned Suv car with license plate suv2 ,  a SUV with Satellite Radio , Day Rented : 10 , Day Due : 17 , Total Cost : 433.0
+Customer C13 returned Suv car with license plate suv4 ,  a SUV with Satellite Radio with 1 Childseat , Day Rented : 10 , Day Due : 17 , Total Cost : 440.0
+Customer C2 returned Standard car with license plate std6 ,  a STANDARD car with GPS with Satellite Radio   with 3 Childseat , Day Rented : 12 , Day Due : 17 , Total Cost : 198.0
+Customer C28 returned Minivan car with license plate mini4 ,  a MINIVAN with 1 Childseat , Day Rented : 14 , Day Due : 17 , Total Cost : 83.0
+
+
+---- Rental records of Day 17-----
+
+C23 rented a SUV with Satellite Radio  with 2 Childseat (suv3), for 4 night(s), for a total cost of $267.0.
+C23 rented a MINIVAN with GPS  with 2 Childseat (mini4), for 4 night(s), for a total cost of $131.0.
+
+
+---- Cars left in the inventory on Day 17 : 4 -----
+
+Car Type : Suv with license plate : suv2.
+Car Type : Suv with license plate : suv4.
+Car Type : Standard with license plate : std4.
+Car Type : Standard with license plate : std6.
+
+
+--- Total Amount made on Day 17 : 398.0 ---
+
+
+
+******************* DAY 18 *******************
+
+--- 2 Number of Completed rentals on Day 18 ---
+
+Customer C26 returned Economy car with license plate eco4 ,  an ECONOMY car with Satellite Radio   with 3 Childseat , Day Rented : 13 , Day Due : 18 , Total Cost : 130.0
+Customer C31 returned Suv car with license plate suv6 ,  a SUV with GPS with Satellite Radio   with 3 Childseat , Day Rented : 15 , Day Due : 18 , Total Cost : 227.0
+
+
+---- Rental records of Day 18-----
+
+C12 rented a STANDARD car with Satellite Radio   with 3 Childseat (std4), for 3 night(s), for a total cost of $126.0.
+C34 rented an ECONOMY car with GPS   with 3 Childseat (eco4), for 5 night(s), for a total cost of $125.0.
+
+
+---- Cars left in the inventory on Day 18 : 4 -----
+
+Car Type : Suv with license plate : suv2.
+Car Type : Suv with license plate : suv4.
+Car Type : Suv with license plate : suv6.
+Car Type : Standard with license plate : std6.
+
+
+--- Total Amount made on Day 18 : 251.0 ---
+
+
+
+******************* DAY 19 *******************
+
+--- 6 Number of Completed rentals on Day 19 ---
+
+Customer C24 returned Minivan car with license plate mini1 ,  a MINIVAN with GPS with Satellite Radio , Day Rented : 12 , Day Due : 19 , Total Cost : 204.0
+Customer C24 returned Standard car with license plate std2 ,  a STANDARD car with GPS   with 3 Childseat , Day Rented : 12 , Day Due : 19 , Total Cost : 240.0
+Customer C24 returned Economy car with license plate eco1 ,  an ECONOMY car with Satellite Radio    with 4 Childseat , Day Rented : 12 , Day Due : 19 , Total Cost : 175.0
+Customer C33 returned Standard car with license plate std3 ,  a STANDARD car with Satellite Radio  with 2 Childseat , Day Rented : 16 , Day Due : 19 , Total Cost : 120.0
+Customer C33 returned Standard car with license plate std7 ,  a STANDARD car with GPS with Satellite Radio  with 2 Childseat , Day Rented : 16 , Day Due : 19 , Total Cost : 132.0
+Customer C33 returned Standard car with license plate std8 ,  a STANDARD car with GPS with 1 Childseat , Day Rented : 16 , Day Due : 19 , Total Cost : 108.0
+
+
+---- Rental records of Day 19-----
+
+C35 rented a STANDARD car with GPS with Satellite Radio  with 2 Childseat (std6), for 1 night(s), for a total cost of $72.0.
+C36 rented a STANDARD car with 1 Childseat (std2), for 7 night(s), for a total cost of $216.0.
+C36 rented a STANDARD car with GPS with Satellite Radio (std3), for 7 night(s), for a total cost of $240.0.
+C36 rented a SUV with GPS with Satellite Radio  with 2 Childseat (suv2), for 7 night(s), for a total cost of $460.0.
+C37 rented a MINIVAN with GPS with Satellite Radio with 1 Childseat (mini1), for 3 night(s), for a total cost of $112.0.
+C6 rented an ECONOMY car with 1 Childseat (eco1), for 2 night(s), for a total cost of $45.0.
+C38 rented a STANDARD car with GPS    with 4 Childseat (std7), for 7 night(s), for a total cost of $246.0.
+C38 rented a STANDARD car with GPS with Satellite Radio  with 2 Childseat (std8), for 7 night(s), for a total cost of $252.0.
+C38 rented a SUV  with 2 Childseat (suv4), for 7 night(s), for a total cost of $434.0.
+
+
+---- Cars left in the inventory on Day 19 : 1 -----
+
+Car Type : Suv with license plate : suv6.
+
+
+--- Total Amount made on Day 19 : 2077.0 ---
+
+
+
+******************* DAY 20 *******************
+
+--- 8 Number of Completed rentals on Day 20 ---
+
+Customer C27 returned Economy car with license plate eco3 ,  an ECONOMY car with GPS with Satellite Radio , Day Rented : 13 , Day Due : 20 , Total Cost : 165.0
+Customer C27 returned Economy car with license plate eco2 ,  an ECONOMY car    with 4 Childseat , Day Rented : 13 , Day Due : 20 , Total Cost : 160.0
+Customer C27 returned Standard car with license plate std5 ,  a STANDARD car with GPS with Satellite Radio    with 4 Childseat , Day Rented : 13 , Day Due : 20 , Total Cost : 264.0
+Customer C31 returned Minivan car with license plate mini3 ,  a MINIVAN with GPS , Day Rented : 15 , Day Due : 20 , Total Cost : 140.0
+Customer C32 returned Suv car with license plate suv5 ,  a SUV with Satellite Radio with 1 Childseat , Day Rented : 16 , Day Due : 20 , Total Cost : 260.0
+Customer C32 returned Suv car with license plate suv1 ,  a SUV with GPS with Satellite Radio    with 4 Childseat , Day Rented : 16 , Day Due : 20 , Total Cost : 294.0
+Customer C33 returned Standard car with license plate std1 ,  a STANDARD car with GPS with Satellite Radio    with 4 Childseat , Day Rented : 16 , Day Due : 20 , Total Cost : 174.0
+Customer C35 returned Standard car with license plate std6 ,  a STANDARD car with GPS with Satellite Radio  with 2 Childseat , Day Rented : 19 , Day Due : 20 , Total Cost : 72.0
+
+
+---- Rental records of Day 20-----
+
+C39 rented a MINIVAN (mini3), for 3 night(s), for a total cost of $75.0.
+C39 rented a STANDARD car with GPS    with 4 Childseat (std5), for 4 night(s), for a total cost of $156.0.
+
+
+---- Cars left in the inventory on Day 20 : 7 -----
+
+Car Type : Economy with license plate : eco3.
+Car Type : Economy with license plate : eco2.
+Car Type : Suv with license plate : suv6.
+Car Type : Suv with license plate : suv5.
+Car Type : Suv with license plate : suv1.
+Car Type : Standard with license plate : std1.
+Car Type : Standard with license plate : std6.
+
+
+--- Total Amount made on Day 20 : 231.0 ---
+
+
+
+******************* DAY 21 *******************
+
+--- 7 Number of Completed rentals on Day 21 ---
+
+Customer C17 returned Luxury car with license plate lux1 ,  a LUXURY car  with 2 Childseat , Day Rented : 14 , Day Due : 21 , Total Cost : 510.0
+Customer C17 returned Minivan car with license plate mini2 ,  a MINIVAN with GPS , Day Rented : 14 , Day Due : 21 , Total Cost : 190.0
+Customer C17 returned Luxury car with license plate lux2 ,  a LUXURY car with Satellite Radio    with 4 Childseat , Day Rented : 14 , Day Due : 21 , Total Cost : 550.0
+Customer C23 returned Suv car with license plate suv3 ,  a SUV with Satellite Radio  with 2 Childseat , Day Rented : 17 , Day Due : 21 , Total Cost : 267.0
+Customer C23 returned Minivan car with license plate mini4 ,  a MINIVAN with GPS  with 2 Childseat , Day Rented : 17 , Day Due : 21 , Total Cost : 131.0
+Customer C12 returned Standard car with license plate std4 ,  a STANDARD car with Satellite Radio   with 3 Childseat , Day Rented : 18 , Day Due : 21 , Total Cost : 126.0
+Customer C6 returned Economy car with license plate eco1 ,  an ECONOMY car with 1 Childseat , Day Rented : 19 , Day Due : 21 , Total Cost : 45.0
+
+
+---- Rental records of Day 21-----
+
+C28 rented an ECONOMY car with GPS (eco3), for 1 night(s), for a total cost of $30.0.
+
+
+---- Cars left in the inventory on Day 21 : 13 -----
+
+Car Type : Minivan with license plate : mini2.
+Car Type : Minivan with license plate : mini4.
+Car Type : Economy with license plate : eco2.
+Car Type : Economy with license plate : eco1.
+Car Type : Luxury with license plate : lux1.
+Car Type : Luxury with license plate : lux2.
+Car Type : Suv with license plate : suv6.
+Car Type : Suv with license plate : suv5.
+Car Type : Suv with license plate : suv1.
+Car Type : Suv with license plate : suv3.
+Car Type : Standard with license plate : std1.
+Car Type : Standard with license plate : std6.
+Car Type : Standard with license plate : std4.
+
+
+--- Total Amount made on Day 21 : 30.0 ---
+
+
+
+******************* DAY 22 *******************
+
+--- 2 Number of Completed rentals on Day 22 ---
+
+Customer C37 returned Minivan car with license plate mini1 ,  a MINIVAN with GPS with Satellite Radio with 1 Childseat , Day Rented : 19 , Day Due : 22 , Total Cost : 112.0
+Customer C28 returned Economy car with license plate eco3 ,  an ECONOMY car with GPS , Day Rented : 21 , Day Due : 22 , Total Cost : 30.0
+
+
+---- Rental records of Day 22-----
+
+C40 rented an ECONOMY car with GPS with Satellite Radio (eco2), for 4 night(s), for a total cost of $105.0.
+C41 rented a SUV with Satellite Radio    with 4 Childseat (suv6), for 7 night(s), for a total cost of $461.0.
+C41 rented a STANDARD car with GPS   with 3 Childseat (std1), for 7 night(s), for a total cost of $240.0.
+C41 rented a STANDARD car with GPS (std6), for 7 night(s), for a total cost of $222.0.
+C42 rented a MINIVAN with GPS with 1 Childseat (mini2), for 3 night(s), for a total cost of $98.0.
+C43 rented a LUXURY car with Satellite Radio    with 4 Childseat (lux1), for 7 night(s), for a total cost of $550.0.
+C43 rented a MINIVAN   with 3 Childseat (mini4), for 7 night(s), for a total cost of $199.0.
+C43 rented a MINIVAN    with 4 Childseat (mini1), for 7 night(s), for a total cost of $207.0.
+
+
+---- Cars left in the inventory on Day 22 : 7 -----
+
+Car Type : Economy with license plate : eco1.
+Car Type : Economy with license plate : eco3.
+Car Type : Luxury with license plate : lux2.
+Car Type : Suv with license plate : suv5.
+Car Type : Suv with license plate : suv1.
+Car Type : Suv with license plate : suv3.
+Car Type : Standard with license plate : std4.
+
+
+--- Total Amount made on Day 22 : 2082.0 ---
+
+
+
+******************* DAY 23 *******************
+
+--- 2 Number of Completed rentals on Day 23 ---
+
+Customer C34 returned Economy car with license plate eco4 ,  an ECONOMY car with GPS   with 3 Childseat , Day Rented : 18 , Day Due : 23 , Total Cost : 125.0
+Customer C39 returned Minivan car with license plate mini3 ,  a MINIVAN , Day Rented : 20 , Day Due : 23 , Total Cost : 75.0
+
+
+---- Rental records of Day 23-----
+
+C44 rented a LUXURY car    with 4 Childseat (lux2), for 4 night(s), for a total cost of $320.0.
+C44 rented an ECONOMY car with GPS  with 2 Childseat (eco1), for 5 night(s), for a total cost of $120.0.
+C44 rented a MINIVAN with Satellite Radio (mini3), for 5 night(s), for a total cost of $139.0.
+C3 rented an ECONOMY car with Satellite Radio    with 4 Childseat (eco3), for 1 night(s), for a total cost of $55.0.
+
+
+---- Cars left in the inventory on Day 23 : 5 -----
+
+Car Type : Economy with license plate : eco4.
+Car Type : Suv with license plate : suv5.
+Car Type : Suv with license plate : suv1.
+Car Type : Suv with license plate : suv3.
+Car Type : Standard with license plate : std4.
+
+
+--- Total Amount made on Day 23 : 634.0 ---
+
+
+
+******************* DAY 24 *******************
+
+--- 2 Number of Completed rentals on Day 24 ---
+
+Customer C39 returned Standard car with license plate std5 ,  a STANDARD car with GPS    with 4 Childseat , Day Rented : 20 , Day Due : 24 , Total Cost : 156.0
+Customer C3 returned Economy car with license plate eco3 ,  an ECONOMY car with Satellite Radio    with 4 Childseat , Day Rented : 23 , Day Due : 24 , Total Cost : 55.0
+
+
+---- Rental records of Day 24-----
+
+C9 rented a SUV with GPS with Satellite Radio  with 2 Childseat (suv5), for 3 night(s), for a total cost of $220.0.
+C45 rented an ECONOMY car with GPS (eco4), for 3 night(s), for a total cost of $70.0.
+C46 rented a STANDARD car with Satellite Radio    with 4 Childseat (std4), for 7 night(s), for a total cost of $252.0.
+C46 rented a STANDARD car with GPS    with 4 Childseat (std5), for 7 night(s), for a total cost of $246.0.
+C46 rented a SUV with GPS  with 2 Childseat (suv1), for 7 night(s), for a total cost of $447.0.
+C47 rented an ECONOMY car with GPS (eco3), for 5 night(s), for a total cost of $110.0.
+C47 rented a SUV with GPS with Satellite Radio  with 2 Childseat (suv3), for 5 night(s), for a total cost of $340.0.
+
+
+---- Cars left in the inventory on Day 24 : 0 -----
+
+
+
+--- Total Amount made on Day 24 : 1685.0 ---
+
+
+
+******************* DAY 25 *******************
+
+--- 1 Number of Completed rentals on Day 25 ---
+
+Customer C42 returned Minivan car with license plate mini2 ,  a MINIVAN with GPS with 1 Childseat , Day Rented : 22 , Day Due : 25 , Total Cost : 98.0
+
+
+---- Rental records of Day 25-----
+
+C51 rented a MINIVAN with GPS with Satellite Radio with 1 Childseat (mini2), for 4 night(s), for a total cost of $137.0.
+
+
+---- Cars left in the inventory on Day 25 : 0 -----
+
+
+
+--- Total Amount made on Day 25 : 137.0 ---
+
+
+
+******************* DAY 26 *******************
+
+--- 7 Number of Completed rentals on Day 26 ---
+
+Customer C36 returned Standard car with license plate std2 ,  a STANDARD car with 1 Childseat , Day Rented : 19 , Day Due : 26 , Total Cost : 216.0
+Customer C36 returned Standard car with license plate std3 ,  a STANDARD car with GPS with Satellite Radio , Day Rented : 19 , Day Due : 26 , Total Cost : 240.0
+Customer C36 returned Suv car with license plate suv2 ,  a SUV with GPS with Satellite Radio  with 2 Childseat , Day Rented : 19 , Day Due : 26 , Total Cost : 460.0
+Customer C38 returned Standard car with license plate std7 ,  a STANDARD car with GPS    with 4 Childseat , Day Rented : 19 , Day Due : 26 , Total Cost : 246.0
+Customer C38 returned Standard car with license plate std8 ,  a STANDARD car with GPS with Satellite Radio  with 2 Childseat , Day Rented : 19 , Day Due : 26 , Total Cost : 252.0
+Customer C38 returned Suv car with license plate suv4 ,  a SUV  with 2 Childseat , Day Rented : 19 , Day Due : 26 , Total Cost : 434.0
+Customer C40 returned Economy car with license plate eco2 ,  an ECONOMY car with GPS with Satellite Radio , Day Rented : 22 , Day Due : 26 , Total Cost : 105.0
+
+
+---- Rental records of Day 26-----
+
+C30 rented a STANDARD car with GPS with Satellite Radio   with 3 Childseat (std2), for 7 night(s), for a total cost of $258.0.
+C30 rented an ECONOMY car with 1 Childseat (eco2), for 7 night(s), for a total cost of $145.0.
+C30 rented a STANDARD car with Satellite Radio (std3), for 7 night(s), for a total cost of $228.0.
+
+
+---- Cars left in the inventory on Day 26 : 4 -----
+
+Car Type : Suv with license plate : suv2.
+Car Type : Suv with license plate : suv4.
+Car Type : Standard with license plate : std7.
+Car Type : Standard with license plate : std8.
+
+
+--- Total Amount made on Day 26 : 631.0 ---
+
+
+
+******************* DAY 27 *******************
+
+--- 3 Number of Completed rentals on Day 27 ---
+
+Customer C44 returned Luxury car with license plate lux2 ,  a LUXURY car    with 4 Childseat , Day Rented : 23 , Day Due : 27 , Total Cost : 320.0
+Customer C9 returned Suv car with license plate suv5 ,  a SUV with GPS with Satellite Radio  with 2 Childseat , Day Rented : 24 , Day Due : 27 , Total Cost : 220.0
+Customer C45 returned Economy car with license plate eco4 ,  an ECONOMY car with GPS , Day Rented : 24 , Day Due : 27 , Total Cost : 70.0
+
+
+---- Rental records of Day 27-----
+
+C52 rented a STANDARD car with GPS with 1 Childseat (std7), for 1 night(s), for a total cost of $48.0.
+C53 rented a STANDARD car with Satellite Radio with 1 Childseat (std8), for 3 night(s), for a total cost of $114.0.
+C53 rented a LUXURY car with GPS (lux2), for 4 night(s), for a total cost of $297.0.
+C53 rented a SUV   with 3 Childseat (suv2), for 5 night(s), for a total cost of $321.0.
+C13 rented a SUV with Satellite Radio  with 2 Childseat (suv4), for 7 night(s), for a total cost of $447.0.
+C13 rented an ECONOMY car with GPS with Satellite Radio  with 2 Childseat (eco4), for 7 night(s), for a total cost of $175.0.
+C13 rented a SUV with GPS    with 4 Childseat (suv5), for 7 night(s), for a total cost of $461.0.
+
+
+---- Cars left in the inventory on Day 27 : 0 -----
+
+
+
+--- Total Amount made on Day 27 : 1863.0 ---
+
+
+
+******************* DAY 28 *******************
+
+--- 3 Number of Completed rentals on Day 28 ---
+
+Customer C44 returned Economy car with license plate eco1 ,  an ECONOMY car with GPS  with 2 Childseat , Day Rented : 23 , Day Due : 28 , Total Cost : 120.0
+Customer C44 returned Minivan car with license plate mini3 ,  a MINIVAN with Satellite Radio , Day Rented : 23 , Day Due : 28 , Total Cost : 139.0
+Customer C52 returned Standard car with license plate std7 ,  a STANDARD car with GPS with 1 Childseat , Day Rented : 27 , Day Due : 28 , Total Cost : 48.0
+
+
+---- Rental records of Day 28-----
+
+C54 rented a STANDARD car with 1 Childseat (std7), for 3 night(s), for a total cost of $96.0.
+C54 rented a MINIVAN with GPS  with 2 Childseat (mini3), for 5 night(s), for a total cost of $156.0.
+C54 rented an ECONOMY car with Satellite Radio with 1 Childseat (eco1), for 3 night(s), for a total cost of $80.0.
+
+
+---- Cars left in the inventory on Day 28 : 0 -----
+
+
+
+--- Total Amount made on Day 28 : 332.0 ---
+
+
+
+******************* DAY 29 *******************
+
+--- 9 Number of Completed rentals on Day 29 ---
+
+Customer C41 returned Suv car with license plate suv6 ,  a SUV with Satellite Radio    with 4 Childseat , Day Rented : 22 , Day Due : 29 , Total Cost : 461.0
+Customer C41 returned Standard car with license plate std1 ,  a STANDARD car with GPS   with 3 Childseat , Day Rented : 22 , Day Due : 29 , Total Cost : 240.0
+Customer C41 returned Standard car with license plate std6 ,  a STANDARD car with GPS , Day Rented : 22 , Day Due : 29 , Total Cost : 222.0
+Customer C43 returned Luxury car with license plate lux1 ,  a LUXURY car with Satellite Radio    with 4 Childseat , Day Rented : 22 , Day Due : 29 , Total Cost : 550.0
+Customer C43 returned Minivan car with license plate mini4 ,  a MINIVAN   with 3 Childseat , Day Rented : 22 , Day Due : 29 , Total Cost : 199.0
+Customer C43 returned Minivan car with license plate mini1 ,  a MINIVAN    with 4 Childseat , Day Rented : 22 , Day Due : 29 , Total Cost : 207.0
+Customer C47 returned Economy car with license plate eco3 ,  an ECONOMY car with GPS , Day Rented : 24 , Day Due : 29 , Total Cost : 110.0
+Customer C47 returned Suv car with license plate suv3 ,  a SUV with GPS with Satellite Radio  with 2 Childseat , Day Rented : 24 , Day Due : 29 , Total Cost : 340.0
+Customer C51 returned Minivan car with license plate mini2 ,  a MINIVAN with GPS with Satellite Radio with 1 Childseat , Day Rented : 25 , Day Due : 29 , Total Cost : 137.0
+
+
+---- Rental records of Day 29-----
+
+C55 rented a LUXURY car with GPS with Satellite Radio    with 4 Childseat (lux1), for 7 night(s), for a total cost of $567.0.
+C55 rented a SUV with GPS with Satellite Radio   with 3 Childseat (suv6), for 7 night(s), for a total cost of $467.0.
+C55 rented an ECONOMY car with Satellite Radio   with 3 Childseat (eco3), for 7 night(s), for a total cost of $170.0.
+C4 rented a STANDARD car    with 4 Childseat (std1), for 2 night(s), for a total cost of $84.0.
+C1 rented a MINIVAN with GPS   with 3 Childseat (mini4), for 7 night(s), for a total cost of $214.0.
+C1 rented a MINIVAN   with 3 Childseat (mini1), for 7 night(s), for a total cost of $199.0.
+C1 rented a STANDARD car with GPS with Satellite Radio  with 2 Childseat (std6), for 7 night(s), for a total cost of $252.0.
+C56 rented a SUV    with 4 Childseat (suv3), for 3 night(s), for a total cost of $208.0.
+
+
+---- Cars left in the inventory on Day 29 : 1 -----
+
+Car Type : Minivan with license plate : mini2.
+
+
+--- Total Amount made on Day 29 : 2161.0 ---
+
+
+
+******************* DAY 30 *******************
+
+--- 1 Number of Completed rentals on Day 30 ---
+
+Customer C53 returned Standard car with license plate std8 ,  a STANDARD car with Satellite Radio with 1 Childseat , Day Rented : 27 , Day Due : 30 , Total Cost : 114.0
+
+
+---- Rental records of Day 30-----
+
+C57 rented a STANDARD car   with 3 Childseat (std8), for 3 night(s), for a total cost of $108.0.
+C10 rented a MINIVAN with Satellite Radio    with 4 Childseat (mini2), for 4 night(s), for a total cost of $146.0.
+
+
+---- Cars left in the inventory on Day 30 : 0 -----
+
+
+
+--- Total Amount made on Day 30 : 254.0 ---
+
+
+
+******************* DAY 31 *******************
+
+--- 7 Number of Completed rentals on Day 31 ---
+
+Customer C46 returned Standard car with license plate std4 ,  a STANDARD car with Satellite Radio    with 4 Childseat , Day Rented : 24 , Day Due : 31 , Total Cost : 252.0
+Customer C46 returned Standard car with license plate std5 ,  a STANDARD car with GPS    with 4 Childseat , Day Rented : 24 , Day Due : 31 , Total Cost : 246.0
+Customer C46 returned Suv car with license plate suv1 ,  a SUV with GPS  with 2 Childseat , Day Rented : 24 , Day Due : 31 , Total Cost : 447.0
+Customer C53 returned Luxury car with license plate lux2 ,  a LUXURY car with GPS , Day Rented : 27 , Day Due : 31 , Total Cost : 297.0
+Customer C54 returned Standard car with license plate std7 ,  a STANDARD car with 1 Childseat , Day Rented : 28 , Day Due : 31 , Total Cost : 96.0
+Customer C54 returned Economy car with license plate eco1 ,  an ECONOMY car with Satellite Radio with 1 Childseat , Day Rented : 28 , Day Due : 31 , Total Cost : 80.0
+Customer C4 returned Standard car with license plate std1 ,  a STANDARD car    with 4 Childseat , Day Rented : 29 , Day Due : 31 , Total Cost : 84.0
+
+
+---- Rental records of Day 31-----
+
+C6 rented an ECONOMY car   with 3 Childseat (eco1), for 1 night(s), for a total cost of $35.0.
+C15 rented a LUXURY car  with 2 Childseat (lux2), for 1 night(s), for a total cost of $90.0.
+
+
+---- Cars left in the inventory on Day 31 : 5 -----
+
+Car Type : Suv with license plate : suv1.
+Car Type : Standard with license plate : std4.
+Car Type : Standard with license plate : std5.
+Car Type : Standard with license plate : std7.
+Car Type : Standard with license plate : std1.
+
+
+--- Total Amount made on Day 31 : 125.0 ---
+
+
+
+******************* DAY 32 *******************
+
+--- 4 Number of Completed rentals on Day 32 ---
+
+Customer C53 returned Suv car with license plate suv2 ,  a SUV   with 3 Childseat , Day Rented : 27 , Day Due : 32 , Total Cost : 321.0
+Customer C56 returned Suv car with license plate suv3 ,  a SUV    with 4 Childseat , Day Rented : 29 , Day Due : 32 , Total Cost : 208.0
+Customer C6 returned Economy car with license plate eco1 ,  an ECONOMY car   with 3 Childseat , Day Rented : 31 , Day Due : 32 , Total Cost : 35.0
+Customer C15 returned Luxury car with license plate lux2 ,  a LUXURY car  with 2 Childseat , Day Rented : 31 , Day Due : 32 , Total Cost : 90.0
+
+
+---- Rental records of Day 32-----
+
+C59 rented a LUXURY car with GPS (lux2), for 7 night(s), for a total cost of $507.0.
+C59 rented an ECONOMY car with GPS    with 4 Childseat (eco1), for 7 night(s), for a total cost of $170.0.
+C59 rented a STANDARD car with GPS with Satellite Radio with 1 Childseat (std4), for 7 night(s), for a total cost of $246.0.
+
+
+---- Cars left in the inventory on Day 32 : 6 -----
+
+Car Type : Suv with license plate : suv1.
+Car Type : Suv with license plate : suv2.
+Car Type : Suv with license plate : suv3.
+Car Type : Standard with license plate : std5.
+Car Type : Standard with license plate : std7.
+Car Type : Standard with license plate : std1.
+
+
+--- Total Amount made on Day 32 : 923.0 ---
+
+
+
+******************* DAY 33 *******************
+
+--- 5 Number of Completed rentals on Day 33 ---
+
+Customer C30 returned Standard car with license plate std2 ,  a STANDARD car with GPS with Satellite Radio   with 3 Childseat , Day Rented : 26 , Day Due : 33 , Total Cost : 258.0
+Customer C30 returned Economy car with license plate eco2 ,  an ECONOMY car with 1 Childseat , Day Rented : 26 , Day Due : 33 , Total Cost : 145.0
+Customer C30 returned Standard car with license plate std3 ,  a STANDARD car with Satellite Radio , Day Rented : 26 , Day Due : 33 , Total Cost : 228.0
+Customer C54 returned Minivan car with license plate mini3 ,  a MINIVAN with GPS  with 2 Childseat , Day Rented : 28 , Day Due : 33 , Total Cost : 156.0
+Customer C57 returned Standard car with license plate std8 ,  a STANDARD car   with 3 Childseat , Day Rented : 30 , Day Due : 33 , Total Cost : 108.0
+
+
+---- Rental records of Day 33-----
+
+C60 rented a SUV with GPS with Satellite Radio    with 4 Childseat (suv1), for 5 night(s), for a total cost of $354.0.
+C60 rented a MINIVAN    with 4 Childseat (mini3), for 5 night(s), for a total cost of $157.0.
+C60 rented a STANDARD car with 1 Childseat (std5), for 4 night(s), for a total cost of $126.0.
+C61 rented an ECONOMY car (eco2), for 3 night(s), for a total cost of $60.0.
+C30 rented a SUV with Satellite Radio   with 3 Childseat (suv2), for 7 night(s), for a total cost of $454.0.
+C30 rented a STANDARD car    with 4 Childseat (std7), for 7 night(s), for a total cost of $234.0.
+C30 rented a STANDARD car with 1 Childseat (std1), for 7 night(s), for a total cost of $216.0.
+C62 rented a STANDARD car    with 4 Childseat (std2), for 7 night(s), for a total cost of $234.0.
+C62 rented a STANDARD car  with 2 Childseat (std3), for 7 night(s), for a total cost of $222.0.
+C62 rented a STANDARD car with GPS    with 4 Childseat (std8), for 7 night(s), for a total cost of $246.0.
+
+
+---- Cars left in the inventory on Day 33 : 1 -----
+
+Car Type : Suv with license plate : suv3.
+
+
+--- Total Amount made on Day 33 : 2303.0 ---
+
+
+
+******************* DAY 34 *******************
+
+--- 4 Number of Completed rentals on Day 34 ---
+
+Customer C13 returned Suv car with license plate suv4 ,  a SUV with Satellite Radio  with 2 Childseat , Day Rented : 27 , Day Due : 34 , Total Cost : 447.0
+Customer C13 returned Economy car with license plate eco4 ,  an ECONOMY car with GPS with Satellite Radio  with 2 Childseat , Day Rented : 27 , Day Due : 34 , Total Cost : 175.0
+Customer C13 returned Suv car with license plate suv5 ,  a SUV with GPS    with 4 Childseat , Day Rented : 27 , Day Due : 34 , Total Cost : 461.0
+Customer C10 returned Minivan car with license plate mini2 ,  a MINIVAN with Satellite Radio    with 4 Childseat , Day Rented : 30 , Day Due : 34 , Total Cost : 146.0
+
+
+---- Rental records of Day 34-----
+
+C14 rented a MINIVAN with GPS with Satellite Radio   with 3 Childseat (mini2), for 1 night(s), for a total cost of $78.0.
+C63 rented an ECONOMY car with Satellite Radio    with 4 Childseat (eco4), for 3 night(s), for a total cost of $95.0.
+C63 rented a SUV with GPS with Satellite Radio (suv3), for 5 night(s), for a total cost of $326.0.
+C63 rented a SUV with GPS with Satellite Radio with 1 Childseat (suv4), for 3 night(s), for a total cost of $213.0.
+C64 rented a SUV with GPS  with 2 Childseat (suv5), for 2 night(s), for a total cost of $147.0.
+
+
+---- Cars left in the inventory on Day 34 : 0 -----
+
+
+
+--- Total Amount made on Day 34 : 859.0 ---
+
+
+
+******************* DAY 35 *******************
+
+--- 1 Number of Completed rentals on Day 35 ---
+
+Customer C14 returned Minivan car with license plate mini2 ,  a MINIVAN with GPS with Satellite Radio   with 3 Childseat , Day Rented : 34 , Day Due : 35 , Total Cost : 78.0
+
+
+---- Rental records of Day 35-----
+
+C65 rented a MINIVAN with GPS with Satellite Radio (mini2), for 4 night(s), for a total cost of $129.0.
+
+
+---- Cars left in the inventory on Day 35 : 0 -----
+
+
+
+--- Total Amount made on Day 35 : 129.0 ---
 
 
 
 ******************* After 35 Days *******************
 
-Total Completed Rentals : 18
+Total Amount : 30061.0
 
-Casual : 6
-Regular : 12
+Total Completed Rentals : 132
+
+Casual : 41
+Regular : 43
+Business : 48
 

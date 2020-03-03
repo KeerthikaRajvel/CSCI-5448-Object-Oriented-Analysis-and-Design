@@ -106,6 +106,8 @@ public class RentalStore extends Observable {
     //----ADDING CAR TO CUSTOMER RECORDS----
     public void addingCars(int day_r, customerRecord cust)
     {
+        try
+        {
         Car car = this.pickRandomCar();
         this.cars.get(car.ctype).remove(car);
         car.day_rented=day_r;
@@ -118,15 +120,25 @@ public class RentalStore extends Observable {
         car=this.addOptions(car);
         cust.cars_rented.add(car);
         this.day_amnt+=car.cost(); 
+        }
+        catch(NullPointerException e)
+        {
+
+        }
     }
 
     //----INITIAL SETUP OF 12 CUSTOMERS ------
     public void setupCustomers() {
         String[] customerType = new String[]{"Casual", "Regular", "Business"};
         int r;
+        int business_count = 0;
         customerRecord customer;
         for (int i = 1; i <= 12; i++) {
             r = this.randomGenerator(0,2);
+            if(r==2)
+            business_count += 1;
+            if(business_count>1)
+            r = this.randomGenerator(0,1);
             customer=new customerRecord("C"+Integer.toString(i),customerType[r]);
             switch (customer.type)
             {
@@ -307,6 +319,7 @@ public class RentalStore extends Observable {
     {
         String[] customerType = new String[]{"Casual", "Regular", "Business"};
         String s = "\n\n******************* After 35 Days *******************\n\n";
+        s+="Total Amount : "+this.total_amnt+"\n\n";
         String t="";
         int totalRents=0;
         for(int j=0;j<3;j++)
@@ -332,7 +345,7 @@ public class RentalStore extends Observable {
         rentalStore.printActiveRecords();
         rentalStore.day_amnt = 0;
         int num_cust, n;
-        for(day=1;day<=5;day++)
+        for(day=1;day<=35;day++)
         {
             s ="\n\n******************* DAY "+day+" *******************";
             rentalStore.alertObserver(s);
