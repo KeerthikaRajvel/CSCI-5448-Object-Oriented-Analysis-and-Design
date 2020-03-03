@@ -255,12 +255,10 @@ public class RentalStore extends Observable {
                 }
             }
             carsRemoved+=remove_cars.size();
-            // s =remove_cars.size()+" Number of Completed rentals on Day "+Integer.toString(day)+"\n\n";
             for(Car car:remove_cars)
             {
                 activeRecords.get(i).cars_rented.remove(car);
-                // setChanged();
-                s+="Customer "+activeRecords.get(i).name+" returned "+car.ctype+" car with license plate "+car.license_no+" , "+this.getDescription(car)+" , Day Rented : "+car.day_rented+" , Day Due : "+car.day_due+" , Total Cost : "+car.cost()+"\n";
+                s+="Customer "+activeRecords.get(i).name+" returned car with license plate "+car.license_no+" : "+this.getDescription(car)+" for "+(car.day_due-car.day_rented)+" night(s). Total Cost : $"+car.cost()+"\n";
                 String lno=car.license_no;
                 String type=car.ctype;
                 car=carFactory.create(type);
@@ -275,29 +273,34 @@ public class RentalStore extends Observable {
             this.activeRecords.remove(c);  
         }
         if(carsRemoved>0)
-            this.alertObserver("\n--- "+carsRemoved+" Number of Completed rentals on Day "+Integer.toString(day)+" ---\n\n"+s);
+            this.alertObserver("\n---NUMBER OF RETURNS (COMPLETED RENTALS) ON DAY "+Integer.toString(day)+" : "+carsRemoved+" ---\n"+s);
     }
     //----PRINTS ACTIVE RENTALS ------
     public void printActiveRecords()
     {
-        String s = "\tRENTAL STORE'S ACTIVE RECORD : Total ( "+this.activeRecords.size()+" )\n";
+        String s = "--------------------------------------------------------------------------------------------------------------------\n";
+        s += "\t\t\tSTARPRIME RENT-A-CAR\n";
+        s += "--------------------------------------------------------------------------------------------------------------------\n\n";
+        s += "Rental Store's Initial active record - Total customers currently : "+this.activeRecords.size()+".\n";
         for(int i=0;i<this.activeRecords.size();i++)
         {
             customerRecord c= this.activeRecords.get(i);
-            s += "\nCustomer Name : "+c.name+" , Customer Type: "+c.type+"\n\nNumber of cars rented : "+c.cars_rented.size()+" \n\n";
+            s += "\nCustomer Name : "+c.name+" , Customer Type: "+c.type+", Number of cars rented : "+c.cars_rented.size()+" \n";
             for(int j=0;j<c.cars_rented.size();j++)
             {
                 
-                s+="Car : "+c.cars_rented.get(j).license_no+" , "+this.getDescription(c.cars_rented.get(j))+" , Day Rented : "+c.cars_rented.get(j).day_rented+" , Day Due : "+c.cars_rented.get(j).day_due+" , Total Cost : "+c.cars_rented.get(j).cost()+"\n";
+                s+="Car : "+c.cars_rented.get(j).license_no+" , "+this.getDescription(c.cars_rented.get(j))+" for "+(c.cars_rented.get(j).day_due-c.cars_rented.get(j).day_rented)+" nights(s). Total Cost : $"+c.cars_rented.get(j).cost()+"\n";
             }
         }
         this.alertObserver(s);
     }
+    //---ALERTING THE OBSERVER -----
     public void alertObserver(String s)
     {
         setChanged();
         notifyObservers(s);
     }
+     //----PRINTING OPTIONS OF THE CAR ------
     public String getDescription(Car car)
     {
         String descp=car.getDescription();
@@ -307,6 +310,7 @@ public class RentalStore extends Observable {
             d+="with "+Integer.toString(childSeatCount)+" Childseat";
         return d;
 }
+     //----ADDING TO LIST OF COMPLETED RENTALS (RETURNS)------
     public void addCompletedRental(String customerType)
     {
         if (this.completedRentals.containsKey(customerType)) 
@@ -315,11 +319,12 @@ public class RentalStore extends Observable {
         this.completedRentals.put(customerType, 1);
   
     }
+     //----FUNCTION TO PRINT ON THE LAST DAY ------
     public void finalStep()
     {
         String[] customerType = new String[]{"Casual", "Regular", "Business"};
-        String s = "\n\n******************* After 35 Days *******************\n\n";
-        s+="Total Amount : "+this.total_amnt+"\n\n";
+        String s = "\n\n*************************** AFTER 35 DAYS ***************************\n\n";
+        s+="Total Amount : $"+this.total_amnt+"\n\n";
         String t="";
         int totalRents=0;
         for(int j=0;j<3;j++)
@@ -347,13 +352,13 @@ public class RentalStore extends Observable {
         int num_cust, n;
         for(day=1;day<=35;day++)
         {
-            s ="\n\n******************* DAY "+day+" *******************";
+            s ="\n\n*************************** DAY "+day+" ***************************";
             rentalStore.alertObserver(s);
             rentalStore.day=day;
             rentalStore.returns(day);
             if(rentalStore.getTotalCars() == 0)
             {   
-                s= "\n\t-- No Cars available in the Rental store today --\t";
+                s= "\n\t-- No Cars available in the Rental store today and no customers came in!--\t";
                 rentalStore.alertObserver(s);
             }
             else {
@@ -364,7 +369,7 @@ public class RentalStore extends Observable {
                     n++;
                 }
             }
-            s="\n---- Rental records of Day "+day+"-----\n\n";
+            s="\n---- RENTAL RECORDS OF DAY "+day+"-----\n";
             for(int j=0;j<rentalStore.activeRecords.size();j++)
             {
                 customerRecord c= rentalStore.activeRecords.get(j);
@@ -375,7 +380,17 @@ public class RentalStore extends Observable {
                 }
             }
             rentalStore.alertObserver(s);
-            s="\n---- Cars left in the inventory on Day "+day+" : "+ rentalStore.getTotalCars()+" -----\n\n";
+            s="\n---- TOTAL ACTIVE RENTALS AT THE END OF DAY "+day+" : " + rentalStore.activeRecords.size()+"-----";
+            for(int k=0;k<rentalStore.activeRecords.size();k++) {
+                customerRecord c= rentalStore.activeRecords.get(k);
+                s += "\nCustomer Name : "+c.name+" , Customer Type: "+c.type+", Number of cars rented : "+c.cars_rented.size()+" \n";
+                for(int j=0;j<c.cars_rented.size();j++){
+                    
+                    s+="Car : "+c.cars_rented.get(j).license_no+" , "+rentalStore.getDescription(c.cars_rented.get(j))+" for "+(c.cars_rented.get(j).day_due-c.cars_rented.get(j).day_rented)+" nights(s). Total Cost : $"+c.cars_rented.get(j).cost()+"\n";
+                }
+            }
+            rentalStore.alertObserver(s);
+            s="\n---- CARS LEFT IN THE INVENTORY ON DAY "+day+" : "+ rentalStore.getTotalCars()+" -----\n";
             Car car;
             for (String car_type : rentalStore.cars.keySet()) {
                 for(int j = 0; j < rentalStore.cars.get(car_type).size(); j++) {
@@ -384,7 +399,7 @@ public class RentalStore extends Observable {
                 }
             }
             rentalStore.alertObserver(s);
-            s="\n--- Total Amount made on Day "+day+" : " + rentalStore.day_amnt+" ---\n";
+            s="\n--- Total Amount made on Day "+day+" : $" + rentalStore.day_amnt+" ---\n";
             rentalStore.alertObserver(s);
             rentalStore.total_amnt += rentalStore.day_amnt;   
             rentalStore.day_amnt = 0;
