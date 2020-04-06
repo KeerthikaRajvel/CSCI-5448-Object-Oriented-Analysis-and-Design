@@ -1,13 +1,14 @@
-from flask import Flask, render_template, request
+from collections import namedtuple
+from flask import Flask, render_template
 
-class Controller(object):
-    def __init__(self):
-        self.app=Flask(__name__)
-        self.port=3400
-        @self.app.route('/')
-        def index():
-           return render_template('index.html')
+app = Flask(__name__)
 
-if __name__ == '__main__':
-    controller=Controller()
-    controller.app.run(debug = True,port=controller.port)
+
+class Controller:
+    def hello(self):
+        return render_template('index.html')
+
+
+controller = Controller()
+app.add_url_rule('/', 'index', lambda: controller.hello())
+app.run(debug = True,port=3400)
