@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-from flask import jsonify
 
 class Controller(object):
     def __init__(self):
