@@ -1,5 +1,7 @@
 <head>
     <link rel="stylesheet" href="./static/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript"  src="./static/profilepic.js"></script>
 <title>
    Sign-Up
 </title>
@@ -7,5 +9,18 @@
 <body>
  <div id="bg">
         <img src="./static/images/bg1.png" alt="">
+    </div>
+<div class="signup-form">
+        <h1>Sign-Up</h1>
+            <form  action="http://localhost:3400/dashboard" method="POST">
+
+             <div class="avatar-wrapper">
+                <img class="profile-pic" src=""/>
+                <div class="upload-button">
+                    <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                </div>
+                <input class="file-upload" type="file" accept="image/*"/>
+            </div>
+            </form>
     </div>
 </body>
