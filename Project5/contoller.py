@@ -11,9 +11,11 @@ class Controller:
         return render_template('dashboard.html')
     def signup(self):
         return render_template('signup.html')
-
+    def fillRoom(self):
+        return render_template('fillRoom.html')
 controller = Controller()
 app.add_url_rule('/', 'index', lambda: controller.hello())
 app.add_url_rule('/dashboard','dashboard', lambda: controller.dashboard(),methods=['POST'])
 app.add_url_rule('/signup','signup', lambda: controller.signup())
+app.add_url_rule('/fillRoom','fillRoom', lambda: controller.fillRoom())
 app.run(debug = True,port=3400)
