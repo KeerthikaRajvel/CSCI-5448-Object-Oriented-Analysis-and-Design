@@ -1,10 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Questionnaire</title>
+    <link rel="stylesheet" type="text/css" href="./static/fillRoom.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title> Fill A Room </title>
 </head>
 <body>
+    <div id="bg">
+        <img src="./static/images/bg1.png" alt="" >
+    </div>
+    <div class="fillaroom-form">
+        <h3>Fill A Room Questionnaire</h3>
+            <form  action="http://localhost:3400/dashboard" method="POST">
+                <p><label class="date">Room Availability from:</label></p> <br>
+                    <input type="date" id="date" name="date">
+                <label>Rent (including utilities) :</label>
+                    <input type="text" name="rent"> <br>
+                <p>Room Details :</p><br>
+                    <input type="text" name="room">
+                <label for="img">Attach Room Images:</label>
+                    <input type="file" id="img" name="img" accept="image/*" multiple>
+                <label>Number of tenants already in the room :</label>
+                    <select type = "options" id="tenants" name="tenants">
+                        <option value="zero">0</option>
+                        <option value="one">1</option>
+                        <option value=">2r">>1</option>
+                    </select><br><br>
+                <label>Preferred Sex :</label>
+                    <select type = "options" id="sex" name="sex">
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Either">Either</option>
+                    </select><br><br>
+                <label>Preferred Age range :</label>
+                    <select type = "options" id="age" name="age">
+                        <option value="nothing">No Restriction</option>
+                        <option value="Teen">18-25</option>
+                        <option value="Adult">25-30</option>
+                        <option value="Old">>30</option>
+                    </select> <br><br>
+                <label>Preferred Dietary Options :</label>
+                    <select type = "options" id="diet" name="age">
+                        <option value="Vegan">Vegan</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Non-Vegetaerian">Non-Vegetaerian</option>
+                        <option value="None">No Restriction</option>
+                    </select><br><br>
+                <label>Do you prefer a Non-Smoker ? : </label>
+                <p class="onoff"><input type="checkbox" value="1" id="smoker"><label for="smoker"></label></p><br><br>
+                <label>Do you prefer a Non-Drinker ? : </label>
+                <p class="onoff"><input type="checkbox" value="1" id="drinker"><label for="drinker"></label></p><br><br>
+                <label>Do you often play loud music ? : </label>
+                <p class="onoff"><input type="checkbox" value="1" id="loudmusic"><label for="loudmusic"></label></p><br><br>
+                <label>Do you have friends over often ? : </label>
+                <p class="onoff"><input type="checkbox" value="1" id="friends"><label for="friends"></label></p>
+                <br><br>
 
+                <input type="submit" name="Submit" value="Submit">
+            </form>
+    </div>
 </body>
-</html>
