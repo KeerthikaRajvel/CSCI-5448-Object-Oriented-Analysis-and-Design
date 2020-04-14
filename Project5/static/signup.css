@@ -77,9 +77,14 @@ span.radioOption
 }
 .signup-form input[type="submit"],input[type="button"]:hover
 {
+   border: none;
+  outline: none;
+  height: 40px;
   cursor: pointer;
   background: #000;
   color: #FFD700;
+  font-size: 18px;
+  border-radius: 20px;
 }
 /*Yes-No Slider*/
 .onoff {

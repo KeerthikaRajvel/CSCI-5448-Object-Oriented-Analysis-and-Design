@@ -5,6 +5,21 @@ app = Flask(__name__)
 
 
 class Controller:
+    instance=None
+    @staticmethod
+    def getInstance():
+        """ Static access method. """
+        if Controller.instance == None:
+            Controller()
+        return Controller.instance
+
+    def __init__(self):
+        """ Virtually private constructor. """
+        if Controller.instance != None:
+            raise Exception("This class is a singleton!")
+        else:
+            Controller.instance = self
+
     def hello(self):
         return render_template('index.html')
     def dashboard(self):
@@ -13,9 +28,12 @@ class Controller:
         return render_template('signup.html')
     def fillRoom(self):
         return render_template('fillRoom.html')
-controller = Controller()
-app.add_url_rule('/', 'index', lambda: controller.hello())
-app.add_url_rule('/dashboard','dashboard', lambda: controller.dashboard(),methods=['POST'])
-app.add_url_rule('/signup','signup', lambda: controller.signup())
-app.add_url_rule('/fillRoom','fillRoom', lambda: controller.fillRoom())
+
+
+controller1 = Controller()
+controller2 = Controller.getInstance() #Singleton Pattern
+app.add_url_rule('/', 'index', lambda: controller2.hello())
+app.add_url_rule('/dashboard','dashboard', lambda: controller2.dashboard(),methods=['POST'])
+app.add_url_rule('/signup','signup', lambda: controller2.signup())
+app.add_url_rule('/fillRoom','fillRoom', lambda: controller2.fillRoom())
 app.run(debug = True,port=3400)
