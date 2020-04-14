@@ -16,7 +16,7 @@
     </div>
 <div class="signup-form">
         <h3>Sign-Up Profile Details</h3>
-            <form  action="http://localhost:3400/dashboard" method="POST">
+            <form>
                  <div class="picture-container">
                     <div class="picture">
                         <img src="./static/images/profilepic.jpg" class="picture-src" id="wizardPicturePreview" title="">
@@ -64,7 +64,7 @@
                  <p>Are you a Drinker ?</p><br>
                 <p class="onoff"><input type="checkbox" value="1" id="drinker"><label for="drinker"></label></p>
                 <br><br>
-                <input type="submit" name="find" value="Find a Room">
+                 <input type="button" onclick="location.href='http://localhost:3400/findRoom'" name="find" value="Find a Room">
                 <input type="button" onclick="location.href='http://localhost:3400/fillRoom'" name="fill" value="Fill a Room">
             </form>
     </div>
