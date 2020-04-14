@@ -17,54 +17,41 @@
 <div class="signup-form">
         <h3>Sign-Up Profile Details</h3>
             <form>
-                 <div class="picture-container">
+                <div class="picture-container">
                     <div class="picture">
                         <img src="./static/images/profilepic.jpg" class="picture-src" id="wizardPicturePreview" title="">
                         <input type="file" id="wizard-picture" class="">
                     </div><h6 class="">Choose Profile Picture</h6>
-                 </div>
+                </div>
+                <p>Name :</p><br>
+                  <input type="text" name="name">
                 <p>Email :</p><br>
-                <input type="text" name="email">
+                    <input type="text" name="email">
                 <p>Password :</p><br>
-                <input type="password" name="password">
-                <p>Gender :</p><br>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio" checked>
-                   <span class="radioOption" >Female</span>
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">
-                    <span class="radioOption">Male</span>
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">
-                    <span class="radioOption">Other</span>
-                </label><br>
+                  <input type="password" name="password">
+                <p>Describe Yourself :</p><br>
+                  <input type="text" name="description">
+                <label>Sex :</label>
+                    <select type = "options" id="sex" name="sex">
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                    </select><br><br>
                 <p>Age :</p><br>
-                 <input type="text" name="age"><br>
-                <p>What type of food eater best describes you?</p><br>
-                 <label class="radio-inline">
-                  <input type="radio" name="optradio" checked>
-                   <span class="radioOption">Vegan</span>
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">
-                    <span class="radioOption">Vegetarian</span>
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">
-                    <span class="radioOption">Non-vegetarian</span>
-                </label><br>
-                <label class="radio-inline">
-                  <input type="radio" name="optradio">
-                    <span class="radioOption">Other</span>
-                </label><br><br>
-                <p>Are you a Smoker ?</p><br>
+                    <input type="text" name="age"><br>
+                <label>Preferred Dietary Options :</label>
+                 <select type = "options" id="diet" name="age">
+                     <option value="Vegan">Vegan</option>
+                     <option value="Vegetarian">Vegetarian</option>
+                     <option value="Non-Vegetaerian">Non-Vegetaerian</option>
+                     <option value="None">No Restriction</option>
+                 </select><br><br>
+                <label>Are you a Smoker ? : </label>
                 <p class="onoff"><input type="checkbox" value="1" id="smoker"><label for="smoker"></label></p><br><br>
-                 <p>Are you a Drinker ?</p><br>
-                <p class="onoff"><input type="checkbox" value="1" id="drinker"><label for="drinker"></label></p>
+                <label>Are you a Drinker ? : </label>
+                <p class="onoff"><input type="checkbox" value="1" id="drinker"><label for="drinker"></label></p><br><br>
                 <br><br>
-                 <input type="button" onclick="location.href='http://localhost:3400/findRoom'" name="find" value="Find a Room">
+                
+                <input type="button" onclick="location.href='http://localhost:3400/findRoom'" name="find" value="Find a Room">
                 <input type="button" onclick="location.href='http://localhost:3400/fillRoom'" name="fill" value="Fill a Room">
             </form>
     </div>
