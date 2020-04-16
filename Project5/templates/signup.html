@@ -16,7 +16,7 @@
     </div>
 <div class="signup-form">
         <h3>Sign-Up Profile Details</h3>
-            <form>
+            <form action="http://localhost:3400/aftersignup" method="post">
                 <div class="picture-container">
                     <div class="picture">
                         <img src="./static/images/profilepic.jpg" class="picture-src" id="wizardPicturePreview" title="">
@@ -29,8 +29,8 @@
                     <input type="text" name="email">
                 <p>Password :</p><br>
                   <input type="password" name="password">
-                <p>Describe Yourself :</p><br>
-                  <input type="text" name="description">
+                <!-- <p>Describe Yourself :</p><br>
+                  <input type="text" name="description"> -->
                 <label>Sex :</label>
                     <select type = "options" id="sex" name="sex">
                         <option value="Female">Female</option>
@@ -39,20 +39,22 @@
                 <p>Age :</p><br>
                     <input type="text" name="age"><br>
                 <label>Preferred Dietary Options :</label>
-                 <select type = "options" id="diet" name="age">
+                 <select type = "options" id="diet" name="diet">
                      <option value="Vegan">Vegan</option>
                      <option value="Vegetarian">Vegetarian</option>
                      <option value="Non-Vegetaerian">Non-Vegetaerian</option>
                      <option value="None">No Restriction</option>
                  </select><br><br>
                 <label>Are you a Smoker ? : </label>
-                <p class="onoff"><input type="checkbox" value="1" id="smoker"><label for="smoker"></label></p><br><br>
+                <p class="onoff"><input type="checkbox" name="smoker" value="1" id="smoker"><label for="smoker"></label></p><br><br>
+                <input type="hidden" name="smoker" value="0">
                 <label>Are you a Drinker ? : </label>
-                <p class="onoff"><input type="checkbox" value="1" id="drinker"><label for="drinker"></label></p><br><br>
+                <p class="onoff"><input type="checkbox" name="drinker" value="1" id="drinker"><label for="drinker"></label></p><br><br>
+                <input type="hidden" name="drinker" value="0">
                 <br><br>
-                
-                <input type="button" onclick="location.href='http://localhost:3400/findRoom'" name="find" value="Find a Room">
-                <input type="button" onclick="location.href='http://localhost:3400/fillRoom'" name="fill" value="Fill a Room">
+
+                <input type="submit" name="signupButton" value="Find">
+                <input type="submit" name="signupButton" value="Fill">
             </form>
     </div>
 </body>

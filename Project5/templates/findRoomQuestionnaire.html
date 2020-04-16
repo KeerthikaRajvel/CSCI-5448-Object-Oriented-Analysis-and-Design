@@ -9,7 +9,7 @@
     </div>
     <div class="findaroom-form">
         <h3>Find A Room Questionnaire</h3>
-            <form  action="http://localhost:3400/dashboard" method="POST">
+            <form action="http://localhost:3400/afterfindroom" method="post">
                 <p><label class="date">Tentative Move-In Date:</label></p> <br>
                     <input type="date" id="date" name="date">
                 <label>Preferred Rent Range (including utilities) :</label>
@@ -37,20 +37,24 @@
                         <option value="Old">>30</option>
                     </select> <br><br>
                 <label>Preferred Dietary Options :</label>
-                    <select type = "options" id="diet" name="age">
+                    <select type = "options" id="diet" name="diet">
                         <option value="Vegan">Vegan</option>
                         <option value="Vegetarian">Vegetarian</option>
                         <option value="Non-Vegetaerian">Non-Vegetaerian</option>
                         <option value="None">No Restriction</option>
                     </select><br><br>
                 <label>Are you a Smoker ? : </label>
-                <p class="onoff"><input type="checkbox" value="1" id="smoker"><label for="smoker"></label></p><br><br>
+                <p class="onoff"><input type="checkbox" value="1" name="smoker" id="smoker"><label for="smoker"></label></p><br><br>
+                <input type="hidden" name="smoker" value="0">
                 <label>Are you a Drinker ? : </label>
-                <p class="onoff"><input type="checkbox" value="1" id="drinker"><label for="drinker"></label></p><br><br>
+                <p class="onoff"><input type="checkbox" value="1" name="drinker" id="drinker"><label for="drinker"></label></p><br><br>
+                <input type="hidden" name="drinker" value="0">
                 <label>Do you mind music ? : </label>
-                <p class="onoff"><input type="checkbox" value="1" id="loudmusic"><label for="loudmusic"></label></p><br><br>
+                <p class="onoff"><input type="checkbox" value="1" name="music" id="loudmusic"><label for="loudmusic"></label></p><br><br>
+                <input type="hidden" name="music" value="0">
                 <label>Do you mind friends over ? : </label>
-                <p class="onoff"><input type="checkbox" value="1" id="friends"><label for="friends"></label></p>
+                <p class="onoff"><input type="checkbox" value="1" name="friends" id="friends"><label for="friends"></label></p>
+                <input type="hidden" name="friends" value="0">
                 <br><br>
 
                 <input type="submit" name="Submit" value="Submit">
