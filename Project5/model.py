@@ -2,8 +2,7 @@ from pymongo import MongoClient
 class Model:
     def __init__(self):
         try:
-            cluster = MongoClient(
-                "mongodb+srv://bunkbud:ooad@cluster0-xythq.mongodb.net/test?retryWrites=true&w=majority")
+            cluster = MongoClient("mongodb+srv://bunkbud:ooad@cluster0-xythq.mongodb.net/test?retryWrites=true&w=majority")
             print("Connected!")
         except:
             print("Counldnt connect!")

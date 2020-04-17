@@ -90,6 +90,18 @@ h1{
   color: #fff;
   font-size: 16px;
 }
+.login-box input[type="email"]
+{
+  border: none;
+  outline: none;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
 .login-box input[type="submit"]
 {
   border: none;

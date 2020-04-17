@@ -84,7 +84,7 @@ h3{
   color: #fff;
   font-size: 16px;
 }
-.findaroom-form input[type="submit"],input[type="button"]
+.findaroom-form input[type="submit"]
 {
   border: none;
   outline: none;
@@ -94,11 +94,11 @@ h3{
   font-size: 18px;
   border-radius: 20px;
 }
-.findaroom-form input[type="submit"],input[type="button"]:hover
+.findaroom-form input[type="submit"]:hover
 {
   cursor: pointer;
-  background: #FFD700;;
-  color: #000;;
+  background: #000;
+  color: #FFD700;
 }
 /*Yes-No Slider*/
 .onoff {

@@ -4,6 +4,7 @@ from model import Model
 app = Flask(__name__)
 
 class Controller:
+
     instance=None
     model=None
     port=None
@@ -43,10 +44,10 @@ class Controller:
     def display_questionnaire(self):
         if request.method == 'POST':
             self.model.add_User(request.form)
-            if request.form['signupButton'] == 'Find':
+            if request.form['signupButton'] == 'Find Room':
                 return render_template('findRoomQuestionnaire.html')
                 # return render_template('pass.html',name=name,email=email,password=password,description=description,gender=gender,age=age,diet=diet,smoker=smoker,drinker=drinker)
-            if request.form['signupButton'] == 'Fill':
+            if request.form['signupButton'] == 'Fill Room':
                 return render_template('fillRoomQuestionnaire.html')
 
 
