@@ -57,3 +57,11 @@ class Model:
                "diet": diet, "smoker": smoker, "drinker": drinker, "music": music, "friends": friends}
         print("Document to be inserted: ", doc)
         self.fillroom_collection.insert_one(doc)
+
+    def getCredentials(self,email): #Fetching the password for a given email id
+        record = self.users_collection.find({"email":email})
+        if record!=None:
+            for r in record:
+                return r['password']
+        else:
+            return None
