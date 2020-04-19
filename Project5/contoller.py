@@ -70,6 +70,20 @@ class Controller:
 
 def findroom(model):
     model.add_findroom(request.form)
+    user_details, findroom_details, fillroom_details = model.get_findroom()
+    print("User Details")
+    print(user_details)
+    for doc in user_details:
+        print(doc)
+        print('\n')
+    print("User Preference")
+    for doc in findroom_details:
+        print(doc)
+        print('\n')
+    print("Other users")
+    for doc in fillroom_details:
+        print(doc)
+        print('\n')
     return render_template('dashboard.html')
 
 def fillroom(model):

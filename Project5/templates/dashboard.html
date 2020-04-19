@@ -1,1 +1,22 @@
-DASHBOARD
+<head>
+    <link rel="stylesheet" type="text/css" href="./static/dashboard.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title> Dashboard </title>
+</head>
+<body>
+    <div id="bg">
+        <img src="./static/images/bg1.png" alt="" >
+    </div>
+    <div class="header">
+    </div>
+    <div class="description">
+        <h3>Description</h3>
+        {%for doc in findroom_details%}
+            {%for key,value in doc.items()%}
+                <p>{{key}}</p>
+            {%endfor%}
+        {%endfor%} 
+    </div>
+    
+
+</body>

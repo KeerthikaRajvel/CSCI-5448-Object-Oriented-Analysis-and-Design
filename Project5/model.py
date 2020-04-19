@@ -11,10 +11,12 @@ class Model:
         self.users_collection = self.db["users"]
         self.findroom_collection = self.db["findroom"]
         self.fillroom_collection = self.db["fillroom"]
+        self.email = ""
 
     def add_User(self,record):
         name = record['name']
         email = record['email']
+        self.email = email
         password = record['password']
         # description = request.form['description']
         gender = record['sex']
@@ -41,6 +43,15 @@ class Model:
         doc = {"email":email,"date": date, "rent": rent, "occupancy": occupancy, "gender": gender, "age": age, "diet": diet,
                "smoker": smoker, "drinker": drinker, "music": music, "friends": friends}
         self.findroom_collection.insert_one(doc)
+    
+    def get_findroom(self):
+        user_details = self.users_collection.find({"email": self.email})
+        findroom_details = self.findroom_collection.find({"email": self.email})
+        if user_details!=None:
+            for r in user_details:
+                diet= r['diet']
+            fillroom_details = self.fillroom_collection.find({"diet":diet})
+        return user_details, findroom_details, fillroom_details
 
     def add_fillroom(self,record):
         email = record['email']
