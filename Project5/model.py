@@ -27,6 +27,7 @@ class Model:
         self.users_collection.insert_one(doc)
 
     def add_findroom(self,record):
+        email = record['email']
         date = record['date']
         rent = record['rent']
         occupancy = record['tenants']
@@ -37,11 +38,12 @@ class Model:
         drinker = record['drinker']
         music = record['music']
         friends = record['friends']
-        doc = {"date": date, "rent": rent, "occupancy": occupancy, "gender": gender, "age": age, "diet": diet,
+        doc = {"email":email,"date": date, "rent": rent, "occupancy": occupancy, "gender": gender, "age": age, "diet": diet,
                "smoker": smoker, "drinker": drinker, "music": music, "friends": friends}
         self.findroom_collection.insert_one(doc)
 
     def add_fillroom(self,record):
+        email = record['email']
         date = record['date']
         rent = record['rent']
         room = record['room']
@@ -53,7 +55,7 @@ class Model:
         drinker = record['drinker']
         music = record['music']
         friends = record['friends']
-        doc = {"date": date, "rent": rent, "room": room, "occupancy": occupancy, "gender": gender, "age": age,
+        doc = {"email":email,"date": date, "rent": rent, "room": room, "occupancy": occupancy, "gender": gender, "age": age,
                "diet": diet, "smoker": smoker, "drinker": drinker, "music": music, "friends": friends}
         print("Document to be inserted: ", doc)
         self.fillroom_collection.insert_one(doc)

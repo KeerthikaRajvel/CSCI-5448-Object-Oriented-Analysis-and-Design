@@ -56,10 +56,11 @@ class Controller:
         if request.method == 'POST':
             if self.signupObj.go(self.model, request.form['email'], request.form['password']) == "Success":
                 self.model.add_User(request.form)
+                email = request.form['email']
                 if request.form['signupButton'] == 'Find Room':
-                    return render_template('findRoomQuestionnaire.html')
+                    return render_template('findRoomQuestionnaire.html',email=email)
                 if request.form['signupButton'] == 'Fill Room':
-                    return render_template('fillRoomQuestionnaire.html')
+                    return render_template('fillRoomQuestionnaire.html',email=email)
             else:
                 return render_template('signup.html', message="Account already exists")
 

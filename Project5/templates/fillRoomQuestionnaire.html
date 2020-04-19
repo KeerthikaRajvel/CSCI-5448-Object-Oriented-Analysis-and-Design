@@ -13,7 +13,12 @@
                 <p><label class="date">Room Availability from:</label></p> <br>
                     <input type="date" id="date" name="date">
                 <label>Rent (including utilities) :</label>
-                    <input type="text" name="rent"> <br>
+                    <!-- <input type="text" name="rent"> <br> -->
+                    <select type = "options" id="rent" name="rent">
+                        <option value="less"> less than $300</option>
+                        <option value="mid">$300-$500</option>
+                        <option value="high">> $500</option>
+                    </select><br><br>
                 <p>Room Details :</p><br>
                     <input type="text" name="room">
                 <label for="img">Attach Room Images:</label>
@@ -57,7 +62,7 @@
                 <p class="onoff"><input type="checkbox" value="1" name="friends" id="friends"><label for="friends"></label></p>
                 <input type="hidden" name="friends" value="0">
                 <br><br>
-
+                <input type="hidden" name="email" id="email" value={{email}}>
                 <input type="submit" name="Submit" value="Submit">
             </form>
     </div>
