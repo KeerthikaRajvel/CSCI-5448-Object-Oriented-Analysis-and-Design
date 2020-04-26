@@ -96,7 +96,6 @@ class MatchingAlgo():
             opt[user['email']] = score
         
         #Returning the Top 4 results
-        print(opt)
         count = 1
         options = {}
         while(count <=4 and opt):
@@ -104,7 +103,6 @@ class MatchingAlgo():
             options[a] = opt[a]
             del opt[a]
             count +=1
-        print(options)
         return options
         
 
