@@ -28,6 +28,10 @@ class Model:
                "smoker": smoker, "drinker":drinker}
         self.users_collection.insert_one(doc)
 
+    #def get_User(self, email):
+    #    return self.users_collection.find({"email": email})
+
+
     def add_findroom(self,record):
         email = record['email']
         date = record['date']
@@ -44,8 +48,7 @@ class Model:
                "smoker": smoker, "drinker": drinker, "music": music, "friends": friends}
         self.findroom_collection.insert_one(doc)
     
-    def get_findroom(self):
-        user_details = self.users_collection.find({"email": self.email})
+    def get_findroom(self, user_details):
         findroom_details = self.findroom_collection.find({"email": self.email})
         if user_details!=None:
             for r in user_details:
