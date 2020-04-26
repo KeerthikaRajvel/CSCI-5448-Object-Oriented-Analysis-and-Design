@@ -9,7 +9,7 @@
     </div>
     <div class="findaroom-form">
         <h3>Find A Room Questionnaire</h3>
-            <form action="http://localhost:3400/findroom_dashboard" method="post">
+            <form action="http://localhost:3400/matching" method="post">
                 <p><label class="date">Tentative Move-In Date:</label></p> <br>
                     <input type="date" id="date" name="date">
                 <label>Preferred Rent Range (including utilities) :</label>
@@ -57,7 +57,7 @@
                 <input type="hidden" name="friends" value="0">
                 <br><br>
                 <input type="hidden" name="email" id="email" value={{email}}>
-                <input type="submit" name="Submit" value="Submit">
+                <input type="submit" name="Submit" value="FindSubmit">
             </form>
     </div>
 </body>

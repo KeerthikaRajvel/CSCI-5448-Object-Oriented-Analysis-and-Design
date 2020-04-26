@@ -9,7 +9,7 @@
     </div>
     <div class="fillaroom-form">
         <h3>Fill A Room Questionnaire</h3>
-            <form  action="http://localhost:3400/fillroom_dashboard" method="POST">
+            <form  action="http://localhost:3400/matching" method="POST">
                 <p><label class="date">Room Availability from:</label></p> <br>
                     <input type="date" id="date" name="date">
                 <label>Rent (including utilities) :</label>
@@ -63,7 +63,7 @@
                 <input type="hidden" name="friends" value="0">
                 <br><br>
                 <input type="hidden" name="email" id="email" value={{email}}>
-                <input type="submit" name="Submit" value="Submit">
+                <input type="submit" name="Submit" value="FillSubmit">
             </form>
     </div>
 </body>
