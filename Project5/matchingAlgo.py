@@ -12,14 +12,14 @@ class MatchingAlgo():
         self.model = Model()
         self.matchUsers = []
 
-    def findMatch(self, temp, opt):
+    def findMatch(self, temp, opt1):
 
         #Fetching User Details
         for t in temp:
             self.userInfo = t
 
         #Fetching Options Details
-        if(opt == 'fill'):
+        if(opt1 == 'fill'):
             self.type = self.model.fillroom_collection.find()
         else:
             self.type = self.model.findroom_collection.find()
@@ -42,7 +42,7 @@ class MatchingAlgo():
             else:
                 score += 5
             #Checking Occupancy (Different) - for user finding a room
-            if(opt == 'fill'):
+            if(opt1 == 'fill'):
                 if ( (self.userInfo['occupancy']=='alone' and user['occupancy']=='0') or (self.userInfo['occupancy']=='people' and (user['occupancy']=='one' or user['occupancy']=='>2r')) ):
                     score += 15
                 else:
