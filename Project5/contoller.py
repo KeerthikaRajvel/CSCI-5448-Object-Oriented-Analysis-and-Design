@@ -4,8 +4,10 @@ from signin import Signin
 from signup import Signup
 from matchingAlgo import MatchingAlgo
 
+##--Starting the Web Server--##
 app = Flask(__name__)
 
+##-- MVC Pattern --##
 class Controller:
 
     instance=None
@@ -15,6 +17,7 @@ class Controller:
     signupObj=None
     matchingObj = None
 
+    ##-- Singleton Pattern --##
     @staticmethod
     def getInstance():
         """ Static access method. """
@@ -30,6 +33,8 @@ class Controller:
             Controller.instance = self
             Controller.model = Model()
             Controller.port = 3400
+
+            ##--- HAS-A Relationship (Composition) ---###
             Controller.signupObj = Signup()
             Controller.signinObj = Signin()
             Controller.matchingObj = MatchingAlgo()
@@ -41,9 +46,11 @@ class Controller:
         app.add_url_rule('/questionnaire', 'questionnaire', lambda: controller2.display_questionnaire(),methods=['POST'])
         app.add_url_rule('/matching', 'matching', lambda: controller2.matching_signup(),methods=['POST'])
        
+    ##-- Login Page --##
     def hello(self):
         return render_template('index.html')
 
+    ##--- Verifying existing user crdentials and displaying their Matches Dashboard ---##
     def login(self):
         if request.form['submit'] == 'Login':
             if self.signinObj.go(self.model,request.form['email'],request.form['password']) == "Success":
@@ -56,10 +63,13 @@ class Controller:
                     options = self.matchingObj.findMatch(type, 'find' )
                 return render_template('dashboard.html', options=options)
 
-
+    ##-- SignUp Page--##
     def signup(self):
         return render_template('signup.html')
 
+    ###--- Strategy Pattern ---###
+    ##--- Verifying and Storing new user info using Model Class --##
+    ##--- Directing New Users to fill their preferences eother Fill a Room or Find a Room
     def display_questionnaire(self):
         if request.method == 'POST':
             if self.signupObj.go(self.model, request.form['email'], request.form['password']) == "Success":
@@ -72,6 +82,7 @@ class Controller:
             else:
                 return render_template('signup.html', message="Account already exists")
 
+    ##-- Calling the Matcing Algo after SignUp and displaying the Match Dashboard --##
     def matching_signup(self):
         if request.method == 'POST':
             if request.form['Submit'] == 'Fill/Submit':

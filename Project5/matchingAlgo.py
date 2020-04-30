@@ -2,6 +2,7 @@ from model import Model
 from datetime import datetime, timedelta
 import operator
 from collections import defaultdict 
+
 class MatchingAlgo():
     userInfo = None
     matchUsers = None
