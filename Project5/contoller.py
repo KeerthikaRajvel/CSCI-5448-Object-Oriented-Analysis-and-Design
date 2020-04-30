@@ -74,11 +74,11 @@ class Controller:
 
     def matching_signup(self):
         if request.method == 'POST':
-            if request.form['Submit'] == 'FillSubmit':
+            if request.form['Submit'] == 'Fill/Submit':
                 self.model.add_fillroom(request.form)
                 type = self.model.fillroom_collection.find({"email": request.form['email']})
                 options = self.matchingObj.findMatch(type, 'find' )
-            elif request.form['Submit'] == 'FindSubmit':
+            elif request.form['Submit'] == 'Find/Submit':
                 self.model.add_findroom(request.form)
                 type = self.model.findroom_collection.find({"email": request.form['email']})
                 options = self.matchingObj.findMatch(type, 'fill' )

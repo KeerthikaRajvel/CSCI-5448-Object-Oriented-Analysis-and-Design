@@ -1,7 +1,7 @@
 from model import Model
 from datetime import datetime, timedelta
 import operator
-
+from collections import defaultdict 
 class MatchingAlgo():
     userInfo = None
     matchUsers = None
@@ -98,11 +98,17 @@ class MatchingAlgo():
         #Returning the Top 4 results
         count = 1
         options = {}
+        new_dict = defaultdict(list)  
         while(count <=4 and opt):
             a = max(opt.items(), key=operator.itemgetter(1))[0]
             options[a] = opt[a]
+            new_dict[a].append(opt[a])
+
+            new_dict[a].append("./static/images/profileImages/"+a+".jpg")
             del opt[a]
             count +=1
-        return options
+            
+        # return options
+        return new_dict
         
 

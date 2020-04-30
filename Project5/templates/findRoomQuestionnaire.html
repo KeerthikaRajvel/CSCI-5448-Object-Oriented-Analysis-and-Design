@@ -1,63 +1,87 @@
 <head>
-    <link rel="stylesheet" type="text/css" href="./static/findRoom.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <title> Find A Room </title>
+  <link rel="stylesheet" type="text/css" href="./static/findRoom.css" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+  />
+  <title>Find A Room</title>
 </head>
 <body>
-    <div id="bg">
-        <img src="./static/images/bg1.png" alt="" >
-    </div>
-    <div class="findaroom-form">
-        <h3>Find A Room Questionnaire</h3>
-            <form action="http://localhost:3400/matching" method="post">
-                <p><label class="date">Tentative Move-In Date:</label></p> <br>
-                    <input type="date" id="date" name="date">
-                <label>Preferred Rent Range (including utilities) :</label>
-                    <select type = "options" id="rent" name="rent">
-                        <option value="less"> less than $300</option>
-                        <option value="mid">$300-$500</option>
-                        <option value="high">> $500</option>
-                    </select><br><br>
-                <label>Do you prefer a roommate or a Single Room?</label>
-                    <select type = "options" id="tenants" name="tenants">
-                        <option value="alone">Single Room</option>
-                        <option value="people">Roommate</option>
-                    </select><br><br>
-                <label>Preferred Sex :</label>
-                    <select type = "options" id="sex" name="sex">
-                        <option value="Female">Female</option>
-                        <option value="Male">Male</option>
-                        <option value="Either">Either</option>
-                    </select><br><br>
-                <label>Preferred Age range :</label>
-                    <select type = "options" id="age" name="age">
-                        <option value="nothing">No Restriction</option>
-                        <option value="Teen">18-25</option>
-                        <option value="Adult">25-30</option>
-                        <option value="Old">>30</option>
-                    </select> <br><br>
-                <label>Preferred Dietary Options :</label>
-                    <select type = "options" id="diet" name="diet">
-                        <option value="Vegan">Vegan</option>
-                        <option value="Vegetarian">Vegetarian</option>
-                        <option value="Non-Vegetaerian">Non-Vegetaerian</option>
-                        <option value="None">No Restriction</option>
-                    </select><br><br>
-                <label>Are you a Smoker ? : </label>
-                <p class="onoff"><input type="checkbox" value="1" name="smoker" id="smoker"><label for="smoker"></label></p><br><br>
-                <input type="hidden" name="smoker" value="0">
-                <label>Are you a Drinker ? : </label>
-                <p class="onoff"><input type="checkbox" value="1" name="drinker" id="drinker"><label for="drinker"></label></p><br><br>
-                <input type="hidden" name="drinker" value="0">
-                <label>Do you mind music ? : </label>
-                <p class="onoff"><input type="checkbox" value="1" name="music" id="loudmusic"><label for="loudmusic"></label></p><br><br>
-                <input type="hidden" name="music" value="0">
-                <label>Do you mind friends over ? : </label>
-                <p class="onoff"><input type="checkbox" value="1" name="friends" id="friends"><label for="friends"></label></p>
-                <input type="hidden" name="friends" value="0">
-                <br><br>
-                <input type="hidden" name="email" id="email" value={{email}}>
-                <input type="submit" name="Submit" value="FindSubmit">
-            </form>
-    </div>
+  <div id="bg">
+    <img src="./static/images/bg1.png" alt="" />
+  </div>
+  <div class="findaroom-form">
+    <h3>Find A Room Questionnaire</h3>
+    <form action="http://localhost:3400/matching" method="post">
+      <p><label class="date">Tentative Move-In Date:</label></p>
+      <br />
+      <input type="date" id="date" name="date" />
+      <label>Preferred Rent Range (including utilities) :</label>
+      <select type="options" id="rent" name="rent">
+        <option value="less"> less than $300</option>
+        <option value="mid">$300-$500</option>
+        <option value="high">> $500</option> </select
+      ><br /><br />
+      <label>Do you prefer a roommate or a Single Room?</label>
+      <select type="options" id="tenants" name="tenants">
+        <option value="alone">Single Room</option>
+        <option value="people">Roommate</option> </select
+      ><br /><br />
+      <label>Preferred Sex :</label>
+      <select type="options" id="sex" name="sex">
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Either">Either</option> </select
+      ><br /><br />
+      <label>Preferred Age range :</label>
+      <select type="options" id="age" name="age">
+        <option value="nothing">No Restriction</option>
+        <option value="Teen">18-25</option>
+        <option value="Adult">25-30</option>
+        <option value="Old">>30</option>
+      </select>
+      <br /><br />
+      <label>Preferred Dietary Options :</label>
+      <select type="options" id="diet" name="diet">
+        <option value="Vegan">Vegan</option>
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="Non-Vegetaerian">Non-Vegetaerian</option>
+        <option value="None">No Restriction</option> </select
+      ><br /><br />
+      <label>Are you a Smoker ? : </label>
+      <p class="onoff">
+        <input type="checkbox" value="1" name="smoker" id="smoker" /><label
+          for="smoker"
+        ></label>
+      </p>
+      <br /><br />
+      <input type="hidden" name="smoker" value="0" />
+      <label>Are you a Drinker ? : </label>
+      <p class="onoff">
+        <input type="checkbox" value="1" name="drinker" id="drinker" /><label
+          for="drinker"
+        ></label>
+      </p>
+      <br /><br />
+      <input type="hidden" name="drinker" value="0" />
+      <label>Do you mind music ? : </label>
+      <p class="onoff">
+        <input type="checkbox" value="1" name="music" id="loudmusic" /><label
+          for="loudmusic"
+        ></label>
+      </p>
+      <br /><br />
+      <input type="hidden" name="music" value="0" />
+      <label>Do you mind friends over ? : </label>
+      <p class="onoff">
+        <input type="checkbox" value="1" name="friends" id="friends" /><label
+          for="friends"
+        ></label>
+      </p>
+      <input type="hidden" name="friends" value="0" />
+      <br /><br />
+      <input type="hidden" name="email" id="email" value="{{email}}" />
+      <input type="submit" name="Submit" value="Find/Submit" />
+    </form>
+  </div>
 </body>
