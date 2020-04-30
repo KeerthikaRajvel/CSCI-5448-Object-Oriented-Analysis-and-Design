@@ -42,6 +42,12 @@ h3{
   text-align: center;
   font-size: 22px;
 }
+#diet{
+color:rgba(0, 0,0,1);
+}
+#sex{
+color:rgba(0, 0,0,1);
+}
 .signup-form p{
   margin: 0;
   padding: 0;

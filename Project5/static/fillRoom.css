@@ -19,6 +19,21 @@ body
     min-width: 50%;
     min-height: 50%;
   }
+#rent{
+ color:rgba(0, 0,0,1);
+}
+#tenants{
+color:rgba(0, 0,0,1);
+}
+#age{
+color:rgba(0, 0,0,1);
+}
+#sex{
+color:rgba(0, 0,0,1);
+}
+#diet{
+color:rgba(0, 0,0,1);
+}
 .fillaroom-form{
   width: 700px;
   height: overflow;
